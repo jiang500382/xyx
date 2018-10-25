@@ -1,0 +1,68 @@
+<notification id="notification"></notification>
+<view class="bottom_img">
+    <image src="../../image/bottom_bg.png"></image>
+</view>
+<view class="tips">答对{{questionNum}}题挑战成功
+  <view bindtap="musicSet" class="animg" wx:if="{{!musicOff}}">
+        <image src="../../image/icon-music.png"></image>
+    </view>
+    <view bindtap="musicSet" class="animg_off" wx:if="{{musicOff}}">
+        <image src="../../image/icon-music-off.png"></image>
+    </view>
+</view>
+<view class="bar">
+    <view class="bar1"></view>
+    <view class="bar2 {{bar_status}}" style="animation-duration:{{questionArr[level].time_limit}}s;"></view>
+    <view class="bar3"></view>
+</view>
+<view class="score">第{{level+1}}题</view>
+<view class="question">
+    <view class="{{questionArr[level].word.length>=7?'question-title2':'question-title'}}  {{index+1==questionArr[level].mix_num?'question-title-active':''}}" wx:for="{{questionArr[level].word}}">{{item}}</view>
+</view>
+<view class="select_ans clearfix">
+    <view bindtap="select" class="fl {{right_status==0?'right':''}} {{wrong_status==0?'wrong':''}}" data-id="0" data-txt="{{questionArr[level].option[0]}}">{{questionArr[level].option[0]}}</view>
+    <view bindtap="select" class="fr {{right_status==1?'right':''}} {{wrong_status==1?'wrong':''}}" data-id="1" data-txt="{{questionArr[level].option[1]}}">{{questionArr[level].option[1]}}</view>
+</view>
+<view class="banner-ad" wx:if="{{gameAd.length>0&&adShow}}">
+    <block wx:if="{{item.open_ad==1}}" wx:for="{{gameAd}}">
+        <ad unitId="{{adid}}" wx:if="{{item.type==1}}"></ad>
+        <block wx:else>
+            <navigator appId="{{item.appid}}" bindtap="navigateStatistics" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" hoverClass="hover-class" openType="navigate" path="{{item.link_path}}" target="miniProgram" wx:if="{{isNewNav}}">
+                <image mode="widthFix" src="{{item.app_icon}}" style="width:100%;"></image>
+            </navigator>
+            <image bindtap="navigate2Mini" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" mode="widthFix" src="{{item.app_icon}}" style="width:100%;" wx:else></image>
+        </block>
+    </block>
+</view>
+<view class="popup-win {{tk_win}}">
+    <view class="popup-blacklist" wx:if="{{black_user}}">
+        <image src="../../image/zan.png"></image>
+        <view bindtap="closeTk" class="btn">继续挑战</view>
+    </view>
+    <view class="popup-panel" wx:else>
+        <view class="popup-main">
+            <image class="title" src="../../image/app-plgy.png"></image>
+            <view class="message">恭喜发财,大吉大利</view>
+            <view class="buttons">
+                <view bindtap="bind2Profile" class="button-share {{startPacket?'rotateBtn':''}}">开</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="popup-fail {{tk_fail}}">
+    <view class="popup-panel">
+        <image class="top_img" src="../../image/faild.png" wx:if="{{!timeOver}}"></image>
+        <image class="top_img" src="../../image/timeover.png" wx:if="{{timeOver}}"></image>
+        <view class="title">{{questionArr[level].primary}}</view>
+        <view class="explain">
+            <text>拼音：{{questionArr[level].pinyin}}</text>
+            <text>释义：{{questionArr[level].intro}}</text>
+        </view>
+        <button class="fail_share" openType="share" wx:if="{{!black_user}}">{{shareOptions.game_failed_text_friends}}</button>
+        <view bindtap="closeTk" class="closeBtn">{{shareOptions.game_failed_text_again}}</view>
+        <view bindtap="closeTk" class="close">
+            <image src="../../image/close.png"></image>
+        </view>
+    </view>
+</view>
+<wxs module="utility" src="../../utils/utility.wxs" />

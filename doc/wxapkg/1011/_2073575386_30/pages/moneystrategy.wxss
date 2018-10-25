@@ -1,0 +1,27 @@
+@import "../__wuBaseWxss__/2.wxss";
+
+page {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.imgBox {
+    width: 100%;
+    height: 100%;
+}
+
+.imgBox .imgOne {
+    width: 750rpx;
+}
+
+.imgBox .imgTwo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

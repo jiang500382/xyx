@@ -1,0 +1,145 @@
+image {
+    width: 100%;
+    height: 100%;
+}
+
+button:after {
+    border: 0;
+}
+
+.btn {
+    padding: 0;
+    font-size: inherit;
+    line-height: 2;
+    border: none;
+}
+
+.Mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 110;
+}
+
+.modal {
+    position: fixed;
+    top: 400rpx;
+    left: 80rpx;
+    width: 590rpx;
+    font-size: 30rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    z-index: 111;
+}
+
+.modalT {
+    height: 80rpx;
+    background: #a171eb;
+    color: #fff;
+    text-align: center;
+    font-size: 36rpx;
+    font-weight: bold;
+    line-height: 80rpx;
+    border-radius: 20rpx 20rpx 0 0;
+}
+
+.modalC {
+    padding: 20rpx 0;
+}
+
+.modalC .note {
+    font-size: 28rpx;
+    color: #444;
+    text-align: justify;
+    margin: 0 38rpx;
+}
+
+.note:only-child {
+    font-size: 30rpx;
+    margin: 35rpx 38rpx;
+}
+
+.subBtn {
+    margin: 40rpx auto;
+}
+
+.subBtn .btn {
+    width: 190rpx;
+    height: 63rpx;
+}
+
+.certainBtn {
+    color: #fff;
+    background: url('http://paopao.hi-hai.com/img/xcx/gameHall/activity/invited/btn_purple.png') no-repeat;
+    background-size: 100%;
+}
+
+.checkBox {
+    max-width: 60%;
+    margin: 0 auto;
+    font-size: 22rpx;
+    text-align: center;
+}
+
+.checkBox:before {
+    display: inline-block;
+    width: 22rpx;
+    height: 22rpx;
+    padding: 4rpx;
+    padding-left: 3rpx;
+    font-size: 30rpx;
+    color: #999;
+    line-height: 1;
+    border: 2rpx solid #ccc;
+    content: '　';
+}
+
+.checkBox[data-status='true']:before {
+    content: '✓';
+}
+
+.btnGroup {
+    padding: 50rpx 50rpx 60rpx;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.btnGroup .btnChild {
+    position: relative;
+    width: 190rpx;
+    height: 63rpx;
+}
+
+.btnGroup .btnChild image {
+    width: 190rpx;
+    height: 63rpx;
+}
+
+.btnGroup .btnChild .fontBtn {
+    width: 190rpx;
+    height: 63rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 63rpx;
+    font-weight: 700;
+    color: white;
+}
+
+.btnGroup .btn2 {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.noteT2 {
+    padding-top: 80rpx;
+    font-size: 36rpx;
+    text-align: justify;
+    color: #a171eb;
+}

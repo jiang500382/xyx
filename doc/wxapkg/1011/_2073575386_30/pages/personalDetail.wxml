@@ -1,0 +1,181 @@
+<view class="page _cbe8d12">
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee _cbe8d12">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="top _cbe8d12" style="background:url('https://res.xingqiu123.com/image/userInfo/pngbgtop.png') no-repeat;background-size:100% 100%">
+        <view class="portrait _cbe8d12">
+            <image class="_cbe8d12" mode="aspectFill" src="{{info.avstar}}"></image>
+        </view>
+        <view class="nickname _cbe8d12">
+            <view class="weight _cbe8d12" style="font-weight:bold">{{info.nickname}}</view>
+            <view class="_cbe8d12">ID：{{info.id}}</view>
+        </view>
+        <view class="edit _cbe8d12">
+            <navigator class="_cbe8d12" url="/pages/information">
+                <image class="_cbe8d12" src="https://res.xingqiu123.com/image/userInfo/pngedit.png"></image>
+            </navigator>
+        </view>
+    </view>
+    <view class="rgwrap _cbe8d12">
+        <view class="rmbAndBeans _cbe8d12">
+            <view class="rmb _cbe8d12">
+                <view class="_cbe8d12">
+                    <image bindtap="recharge" class="_cbe8d12" src="https://res.xingqiu123.com/hall/redpacket/gold.png"></image>
+                </view>
+                <view bindtap="recharge" class="weight _cbe8d12">{{gold}}</view>
+            </view>
+            <view class="beans _cbe8d12">
+                <image bindtap="gotoWithDraw" class="_cbe8d12" src="https://res.xingqiu123.com/image/userInfo/pngredpacket.png"></image>
+                <view bindtap="gotoWithDraw" class="weight _cbe8d12">{{rmb}}元</view>
+            </view>
+        </view>
+    </view>
+    <view class="group _4d998cf _cbe8d12">
+        <view class="list _4d998cf" style="padding-left:{{item.bigicon?'0':'30rpx'}};width:{{item.bigicon?'720rpx':'690rpx'}};height:{{item.bigicon?'110rpx':'100rpx'}};" wx:for="{{$invite$list}}" wx:key="index">
+            <navigator class="jump {{item.class}} _4d998cf" url="{{item.url}}" wx:if="{{item.url}}"></navigator>
+            <view class="content _4d998cf">
+                <view class="bigicon _4d998cf" wx:if="{{item.bigicon}}">
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="icon _4d998cf" wx:else>
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="text _4d998cf" style="margin-left:{{item.bigicon?'0':'20rpx'}};padding-right:{{item.bigicon?'40rpx':'0rpx'}}">{{item.text}}</view>
+                <view class="tip _4d998cf" wx:if="{{item.tip}}">{{item.tip}}</view>
+                <view class="gt _4d998cf">
+                    <view class="gtC _4d998cf"></view>
+                </view>
+            </view>
+            <button class="jump {{item.class}} _4d998cf" openType="contact" wx:if="{{item.type}}"></button>
+        </view>
+    </view>
+    <view class="group _4d998cf _cbe8d12" wx:if="{{isAndroid}}">
+        <view class="list _4d998cf" style="padding-left:{{item.bigicon?'0':'30rpx'}};width:{{item.bigicon?'720rpx':'690rpx'}};height:{{item.bigicon?'110rpx':'100rpx'}};" wx:for="{{$benefitlist$list}}" wx:key="index">
+            <navigator class="jump {{item.class}} _4d998cf" url="{{item.url}}" wx:if="{{item.url}}"></navigator>
+            <view class="content _4d998cf">
+                <view class="bigicon _4d998cf" wx:if="{{item.bigicon}}">
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="icon _4d998cf" wx:else>
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="text _4d998cf" style="margin-left:{{item.bigicon?'0':'20rpx'}};padding-right:{{item.bigicon?'40rpx':'0rpx'}}">{{item.text}}</view>
+                <view class="tip _4d998cf" wx:if="{{item.tip}}">{{item.tip}}</view>
+                <view class="gt _4d998cf">
+                    <view class="gtC _4d998cf"></view>
+                </view>
+            </view>
+            <button class="jump {{item.class}} _4d998cf" openType="contact" wx:if="{{item.type}}"></button>
+        </view>
+    </view>
+    <view class="group _4d998cf _cbe8d12" wx:else>
+        <view class="list _4d998cf" style="padding-left:{{item.bigicon?'0':'30rpx'}};width:{{item.bigicon?'720rpx':'690rpx'}};height:{{item.bigicon?'110rpx':'100rpx'}};" wx:for="{{$benefitlist1$list}}" wx:key="index">
+            <navigator class="jump {{item.class}} _4d998cf" url="{{item.url}}" wx:if="{{item.url}}"></navigator>
+            <view class="content _4d998cf">
+                <view class="bigicon _4d998cf" wx:if="{{item.bigicon}}">
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="icon _4d998cf" wx:else>
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="text _4d998cf" style="margin-left:{{item.bigicon?'0':'20rpx'}};padding-right:{{item.bigicon?'40rpx':'0rpx'}}">{{item.text}}</view>
+                <view class="tip _4d998cf" wx:if="{{item.tip}}">{{item.tip}}</view>
+                <view class="gt _4d998cf">
+                    <view class="gtC _4d998cf"></view>
+                </view>
+            </view>
+            <button class="jump {{item.class}} _4d998cf" openType="contact" wx:if="{{item.type}}"></button>
+        </view>
+    </view>
+    <view class="group _4d998cf _cbe8d12">
+        <view class="list _4d998cf" style="padding-left:{{item.bigicon?'0':'30rpx'}};width:{{item.bigicon?'720rpx':'690rpx'}};height:{{item.bigicon?'110rpx':'100rpx'}};" wx:for="{{$playlist$list}}" wx:key="index">
+            <navigator class="jump {{item.class}} _4d998cf" url="{{item.url}}" wx:if="{{item.url}}"></navigator>
+            <view class="content _4d998cf">
+                <view class="bigicon _4d998cf" wx:if="{{item.bigicon}}">
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="icon _4d998cf" wx:else>
+                    <image class="_4d998cf" src="{{item.icon}}"></image>
+                </view>
+                <view class="text _4d998cf" style="margin-left:{{item.bigicon?'0':'20rpx'}};padding-right:{{item.bigicon?'40rpx':'0rpx'}}">{{item.text}}</view>
+                <view class="tip _4d998cf" wx:if="{{item.tip}}">{{item.tip}}</view>
+                <view class="gt _4d998cf">
+                    <view class="gtC _4d998cf"></view>
+                </view>
+            </view>
+            <button class="jump {{item.class}} _4d998cf" openType="contact" wx:if="{{item.type}}"></button>
+        </view>
+    </view>
+    <view class="wrap _107135b _cbe8d12" wx:if="{{isAndroid&&isRecharge}}">
+        <view class="cardSize _107135b" wx:if="{{$recharge$type==1}}">
+            <view bindtap="$recharge$closeRechargeModel" class="close _107135b">X</view>
+            <view class="header _107135b">豆子充值</view>
+            <view class="body _107135b">
+                <view class="font _107135b">
+          进入客服回复
+          <text class="b _107135b">"1"</text>充值豆子
+        </view>
+                <view class="fontTwo _107135b">
+          回复
+          <text class="b _107135b">"2"</text>关注公众号领取礼包
+        </view>
+                <view class="groupbtn _107135b">
+                    <view class="btn _107135b">
+                        <button class="button _107135b" openType="contact"></button>
+                        <image class="_107135b" src="../images/index/btn1.png" style="width:210rpx;height:80rpx"></image>
+                        <view class="bigFontSize _107135b"> 关注公众号</view>
+                        <view class="smallFontSize _107135b">（回复2）</view>
+                    </view>
+                    <view class="btn btn2 _107135b">
+                        <button class="button button2 _107135b" openType="contact"></button>
+                        <image class="_107135b" src="../images/index/btn2.png" style="width:210rpx;height:80rpx"></image>
+                        <view class="bigFontSize _107135b"> 充值豆子</view>
+                        <view class="smallFontSize _107135b">（回复1）</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="cardSize _107135b" wx:if="{{$recharge$type==2}}">
+            <view class="header _107135b">提示</view>
+            <view class="body _107135b">
+                <view class="content,fontConent _107135b">
+          豆子不够用啦！
+        </view>
+                <view class="fontConent _107135b">
+          去泡泡游戏公众号领取吧
+        </view>
+                <view class="btnChild _107135b">
+                    <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                    <view bindtap="$recharge$closeRechargeModel" class="fontBtn _107135b" data-wpycloserechargemodel-a="2">确认</view>
+                </view>
+            </view>
+        </view>
+        <view class="cardSize _107135b" wx:if="{{$recharge$type==3}}">
+            <view bindtap="$recharge$closeRechargeModel" class="close _107135b" data-wpycloserechargemodel-a="3">X</view>
+            <view class="header _107135b">提示</view>
+            <view class="body _107135b">
+                <view class="fontb _107135b">
+          亲，您的实力已炉火纯青，就别在新手区虐菜啦！去参加高级场赚取更多豆子吧。
+        </view>
+                <view class="groupbtn _107135b">
+                    <view class="btn _107135b">
+                        <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn3.png" style="width:210rpx;height:63rpx"></image>
+                        <view bindtap="$recharge$closeRechargeModel" class="fontBtn _107135b" data-wpycloserechargemodel-a="3">考虑一下</view>
+                    </view>
+                    <view class="btn btn2 _107135b">
+                        <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn2.png" style="width:210rpx;height:63rpx"></image>
+                        <view bindtap="$recharge$goToSenior" class="fontBtn _107135b">去高级场</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4 _cbe8d12" wx:if="{{isLoading}}">
+        <view class="image _e6ed6a4">
+            <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+        </view>
+    </view>
+</view>

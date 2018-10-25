@@ -1,0 +1,503 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+.frame._7830bf8 {
+    position: relative;
+    margin-top: -710rpx;
+    width: 700rpx;
+    height: 620rpx;
+    margin-left: 25rpx;
+}
+
+.frame image._7830bf8 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.frame .redpGold._7830bf8 {
+    position: relative;
+    width: 596rpx;
+    height: 245rpx;
+    left: 52rpx;
+    top: 64rpx;
+}
+
+.frame .redpGold .box._7830bf8 {
+    width: 190rpx;
+    height: 245rpx;
+    background: #fff2df;
+    border-radius: 20rpx;
+    margin-right: 15rpx;
+    position: relative;
+}
+
+.frame .redpGold .box .image1._7830bf8 {
+    width: 190rpx;
+    height: 192rpx;
+}
+
+.frame .redpGold .box .redpgold._7830bf8 {
+    width: 72rpx;
+    height: 28rpx;
+    background: #ffedd5;
+    border-radius: 28rpx;
+    position: absolute;
+    top: 131rpx;
+    left: 59rpx;
+    font-size: 18rpx;
+    color: #b91708;
+    font-weight: 600;
+}
+
+.frame .redpGold .box .redpgold image._7830bf8 {
+    margin-left: 13rpx;
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 5rpx;
+    margin-top: 3rpx;
+}
+
+.frame .redpGold .box .redpgold text._7830bf8 {
+    margin-left: 35rpx;
+}
+
+.frame .redpGold .box .image2._7830bf8 {
+    width: 130rpx;
+    height: 43rpx;
+    position: absolute;
+    top: 182rpx;
+    left: 30rpx;
+}
+
+.frame .redpGold .box .image2 image._7830bf8 {
+    width: 100%;
+    height: 100%;
+}
+
+.frame .redpGold .box .image2 .font._7830bf8 {
+    font-size: 28rpx;
+    color: #b91708;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 46rpx;
+    text-align: center;
+}
+
+.frame .redpGold .box .image2 .font1._7830bf8 {
+    font-size: 28rpx;
+    color: #6e686b;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 46rpx;
+    text-align: center;
+}
+
+.frame .redpMoney._7830bf8 {
+    width: 310rpx;
+    height: 245rpx;
+    position: absolute;
+    top: 324rpx;
+    left: 190rpx;
+}
+
+.frame .redpMoney image._7830bf8 {
+    width: 310rpx;
+    height: 245rpx;
+}
+
+.redItem._7830bf8 {
+    display: inline-block;
+    width: 190rpx;
+    background: #fff2df;
+    margin-left: 13rpx;
+    text-align: center;
+    border-radius: 20rpx;
+    padding: 0;
+    padding-bottom: 16rpx;
+    line-height: 1.5;
+}
+
+.redItem._7830bf8:first-child {
+    margin: 0;
+}
+
+.redItem[data-status="2"] .itemBg._7830bf8 {
+    background-image: url('http://paopao.hi-hai.com/img/xcx/Hall/3.7/redGif.png');
+    background-size: 600%;
+    animation: cycle 1s steps(1,end) infinite;
+}
+
+.redItem[data-status="3"] .itemBg._7830bf8 {
+    background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/hadReceive.png');
+}
+
+.redItem[data-status="3"] .redBtn._7830bf8 {
+    background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/finish.png');
+    color: #6e686b;
+}
+
+.itemBg._7830bf8 {
+    width: 100%;
+    height: 170rpx;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/canReceive.png') no-repeat;
+    background-size: 100%;
+}
+
+.redAward._7830bf8 {
+    display: inline-block;
+    margin-top: 125rpx;
+    padding: 0 10rpx;
+    color: #dd3521;
+    background: #ffefd5;
+    font-size: 22rpx;
+    font-weight: bold;
+    border-radius: 15rpx;
+}
+
+.redAward._7830bf8:before {
+    display: inline-block;
+    width: 18rpx;
+    height: 20rpx;
+    margin-right: 5rpx;
+    background: url('https://res.xingqiu123.com/hall/redpacket/gold.png?imageView2/2/w/20') no-repeat;
+    background-size: 100%;
+    content: '';
+}
+
+.redBtn._7830bf8 {
+    display: inline-block;
+    width: 130rpx;
+    height: 43rpx;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/help.png') no-repeat;
+    background-size: 100%;
+    color: #b91708;
+    font-size: 26rpx;
+    font-weight: bold;
+}
+
+.redItem._7830bf8:last-child {
+    position: relative;
+    display: block;
+    width: 310rpx;
+    height: 245rpx;
+    margin: 15rpx auto;
+    padding: 0;
+}
+
+.redItem:last-child .itemBg._7830bf8 {
+    width: 100;
+    height: 100%;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/haveCashRedp.png') no-repeat;
+    background-size: 100%;
+}
+
+.redItem:last-child[data-status="2"] .itemBg._7830bf8 {
+    background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/bigRedGif.png');
+    background-size: 600%;
+    animation: bigCycle 1s steps(1,end) infinite;
+}
+
+.redItem:last-child[data-status="3"] .itemBg._7830bf8 {
+    background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/hadReceiveCashRedp.png');
+}
+
+.redItem._7830bf8:last-child:before {
+    display: block;
+    position: absolute;
+    width: 128rpx;
+    left: 92rpx;
+    bottom: 45rpx;
+    color: #d52c1d;
+    background: #fcde9b;
+    font-size: 26rpx;
+    font-weight: bold;
+    border-radius: 20rpx;
+}
+
+.redItem:last-child[data-status="1"]._7830bf8:before {
+    content: '现金大奖';
+}
+
+@-webkit-keyframes cycle {
+    0% {
+        background-position-x: 0;
+    }
+
+    16.66% {
+        background-position-x: -190rpx;
+    }
+
+    33.33% {
+        background-position-x: -380rpx;
+    }
+
+    50% {
+        background-position-x: -570rpx;
+    }
+
+    66.666% {
+        background-position-x: -760rpx;
+    }
+
+    83.333% {
+        background-position-x: -950rpx;
+    }
+
+    100% {
+        background-position-x: -1140rpx;
+    }
+}
+
+@keyframes cycle {
+    0% {
+        background-position-x: 0;
+    }
+
+    16.66% {
+        background-position-x: -190rpx;
+    }
+
+    33.33% {
+        background-position-x: -380rpx;
+    }
+
+    50% {
+        background-position-x: -570rpx;
+    }
+
+    66.666% {
+        background-position-x: -760rpx;
+    }
+
+    83.333% {
+        background-position-x: -950rpx;
+    }
+
+    100% {
+        background-position-x: -1140rpx;
+    }
+}
+
+@-webkit-keyframes bigCycle {
+    0% {
+        background-position-x: 0;
+    }
+
+    16.66% {
+        background-position-x: -310rpx;
+    }
+
+    33.33% {
+        background-position-x: -620rpx;
+    }
+
+    50% {
+        background-position-x: -930rpx;
+    }
+
+    66.666% {
+        background-position-x: -1240rpx;
+    }
+
+    83.333% {
+        background-position-x: -1550rpx;
+    }
+
+    100% {
+        background-position-x: -1860rpx;
+    }
+}
+
+@keyframes bigCycle {
+    0% {
+        background-position-x: 0;
+    }
+
+    16.66% {
+        background-position-x: -310rpx;
+    }
+
+    33.33% {
+        background-position-x: -620rpx;
+    }
+
+    50% {
+        background-position-x: -930rpx;
+    }
+
+    66.666% {
+        background-position-x: -1240rpx;
+    }
+
+    83.333% {
+        background-position-x: -1550rpx;
+    }
+
+    100% {
+        background-position-x: -1860rpx;
+    }
+}
+
+@import "../__wuBaseWxss__/4.wxss";
+
+@import "../__wuBaseWxss__/2.wxss";
+
+.pagewrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/bg1.png?20180919') no-repeat center top,-webkit-linear-gradient(45deg,#f14905,#f7980a);
+    background-size: contain;
+}
+
+.pagewrap .tip {
+    margin-top: 30rpx;
+    position: relative;
+    text-align: center;
+    font-size: 34rpx;
+    font-weight: 600;
+    color: #fff2df;
+}
+
+.pagewrap .invite {
+    height: 128rpx;
+    width: 702rpx;
+    background: #fff2df;
+    border-radius: 20rpx;
+    margin-top: 15rpx;
+    margin-left: 24rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.pagewrap .invite .friendHlep {
+    width: 80rpx;
+    height: 60rpx;
+    padding-top: 10rpx;
+    font-size: 24rpx;
+    color: #ef4714;
+    margin-right: 20rpx;
+    margin-top: 24rpx;
+    text-align: right;
+}
+
+.pagewrap .invite .friendimage {
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 10rpx;
+    margin-top: 24rpx;
+}
+
+.pagewrap .invite .friendimage image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+}
+
+.pagewrap .resettip {
+    text-align: center;
+    color: #f9ac75;
+    font-size: 26rpx;
+    margin-top: 12rpx;
+}
+
+.pagewrap {
+    background: linear-gradient(45deg,#f14905,#f7980a);
+}
+
+.header {
+    width: 750rpx;
+    height: 1126rpx;
+}
+
+.noFrd {
+    width: 216rpx;
+    height: 123rpx;
+    transform: scale(.8);
+}
+
+.inviteBox {
+    position: fixed;
+    top: 20vh;
+    left: 78rpx;
+    width: 594rpx;
+    height: 786rpx;
+    text-align: center;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/redBg.png') no-repeat;
+    background-size: 100%;
+}
+
+.inviteH {
+    display: block;
+    margin-top: 80rpx;
+    color: #fddf99;
+    font-weight: bold;
+    font-size: 38rpx;
+}
+
+.close {
+    display: inline-block;
+    position: absolute;
+    top: 5rpx;
+    right: 20rpx;
+    color: #d42b1d;
+    font-size: 60rpx;
+    line-height: 1;
+}
+
+.shareBtn {
+    position: absolute;
+    bottom: 90rpx;
+    left: 93rpx;
+    width: 418rpx;
+    height: 80rpx;
+    color: #b8180b;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffeec3),to(#ffdb75));
+    background: -webkit-linear-gradient(#ffeec3,#ffdb75);
+    background: linear-gradient(#ffeec3,#ffdb75);
+    box-shadow: 0 5rpx 10rpx #a60f08;
+    border-radius: 40rpx;
+    line-height: 80rpx;
+    font-size: 32rpx;
+}
+
+.shareText {
+    position: absolute;
+    bottom: 90rpx;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: #b8180b;
+}
+
+.inviteNum {
+    position: absolute;
+    width: 100%;
+    bottom: 218rpx;
+    font-size: 75rpx;
+    color: #fddf99;
+    font-weight: bold;
+}
+
+.loginBtn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: transparent;
+}

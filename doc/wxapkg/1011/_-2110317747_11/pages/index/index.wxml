@@ -1,0 +1,98 @@
+<notification id="notification"></notification>
+<shareCompleted id="shareDialog"></shareCompleted>
+<view class="container">
+    <view class="{{donghua}}" id="loading">
+        <view id="loading-center">
+            <view id="loading-center-absolute">
+                <view class="object" id="object_one"></view>
+                <view class="object" id="object_two"></view>
+                <view class="object" id="object_three"></view>
+            </view>
+        </view>
+    </view>
+    <view class="top_txt">
+        <view class="con" style="top:{{topHight}}px">
+            <view class="list" wx:for="{{topScorll}}" wx:key="index">
+        恭喜{{item[0]}}挑战成功，获得娃娃+{{item[1]}} [{{item[2]}}]
+      </view>
+        </view>
+    </view>
+    <view class="banner">
+        <image src="../../image/banner.png"></image>
+        <view bindtap="openRuleTk" class="rule" wx:if="{{!black_user}}">规则</view>
+    </view>
+    <view bindtap="goGift" class="center_txt">
+        <image src="{{black_user?index_middle_img_txt_hei:index_middle_txt}}"></image>
+    </view>
+    <navigator appId="{{index_other_appid}}" bindtap="navigateStatistics" class="start" data-appid="{{index_other_appid}}" data-path="{{index_other_path}}" data-toid="{{index_other_appid}}" hoverClass="hover-class" openType="navigate" path="{{index_other_path}}" target="miniProgram" wx:if="{{isNewNav&&isRedirect&&index_other_appid}}">
+        <image src="../../image/start_txt.png"></image>
+    </navigator>
+    <button bindgetuserinfo="getWxUserInfo" class="start" hoverClass="hover-class" openType="getUserInfo" wx:else>
+        <image src="../../image/start_txt.png"></image>
+    </button>
+    <view class="more_view">
+        <block wx:if="{{box.appid}}">
+            <navigator appId="{{box.appid}}" bindtap="navigateStatistics" class="more_btn other_btn" data-appid="{{box.appid}}" data-path="{{box.link_path}}" data-toid="{{box.app_id}}" hoverClass="hover-class" openType="navigate" path="{{box.link_path}}" target="miniProgram" wx:if="{{isNewNav}}">
+                <image class="more_img" src="../../image/more.png"></image>
+            </navigator>
+            <button bindtap="navigate2Mini" class="more_btn other_btn" data-appid="{{box.appid}}" data-path="{{box.link_path}}" data-toid="{{box.app_id}}" formType="submit" hoverClass="hover-class" wx:else>
+                <image class="more_img" src="../../image/more.png"></image>
+            </button>
+            <text class="more_txt">更多好玩</text>
+        </block>
+    </view>
+    <view class="center_ad clearfix">
+        <block wx:for="{{moreGames}}" wx:key="index">
+            <navigator appId="{{item.appid}}" bindtap="navigateStatistics" class="list" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" hoverClass="hover-class" openType="navigate" path="{{item.link_path}}" target="miniProgram" wx:if="{{isNewNav}}">
+                <image mode="widthFix" src="{{item.app_icon}}" style="width:100%;"></image>
+            </navigator>
+            <view bindtap="navigate2Mini" class="list" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" wx:else>
+                <image src="{{item.app_icon}}"></image>
+            </view>
+        </block>
+    </view>
+    <button class="share_btn other_btn" hoverClass="hover-class" id="notChance" openType="share" wx:if="{{!black_user}}">
+        <text class="sharetxt">分享</text>
+    </button>
+    <view class="banner-ad" wx:if="{{bannerAd.length>0}}" wx:for="{{bannerAd}}">
+        <block wx:if="{{item.open_ad==1}}">
+            <ad unitId="{{guangdiantong}}" wx:if="{{item.type==1}}"></ad>
+            <block wx:else>
+                <navigator appId="{{item.appid}}" bindtap="navigateStatistics" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" hoverClass="hover-class" openType="navigate" path="{{item.link_path}}" target="miniProgram" wx:if="{{isNewNav}}">
+                    <image mode="widthFix" src="{{item.app_icon}}" style="width:100%;"></image>
+                </navigator>
+                <image bindtap="navigate2Mini" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" mode="widthFix" src="{{item.app_icon}}" style="width:100%;" wx:else></image>
+            </block>
+        </block>
+    </view>
+    <view class="float_ad" wx:if="{{floatAd.length>0}}" wx:for="{{floatAd}}">
+        <block wx:if="{{item.open_ad==1}}">
+            <navigator appId="{{item.appid}}" bindtap="navigateStatistics" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" hoverClass="hover-class" openType="navigate" path="{{item.link_path}}" target="miniProgram" wx:if="{{isNewNav}}">
+                <image src="{{item.app_icon}}"></image>
+            </navigator>
+            <view bindtap="navigate2Mini" data-appid="{{item.appid}}" data-path="{{item.link_path}}" data-toid="{{item.app_id}}" wx:else>
+                <image src="{{item.app_icon}}"></image>
+            </view>
+        </block>
+    </view>
+    <view class="ruleBox {{ruleTk}}">
+        <view class="bg">
+            <view>
+                <view class="list" wx:for="{{ruleList}}" wx:key="index">
+                    <view class="num">{{index+1}}</view>
+                    <view class="txt">{{item}}</view>
+                </view>
+            </view>
+            <view bindtap="closeRuleTk" class="close">
+                <image src="../../image/close.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="shareBox {{tkShow}}">
+        <view class="bg">
+            <button class="btn_one" openType="share">{{index_share_qun_text}}</button>
+            <image bindtap="closeTk" class="close" src="../../image/close.png"></image>
+        </view>
+    </view>
+</view>
+<wxs module="utility" src="../../utils/utility.wxs" />

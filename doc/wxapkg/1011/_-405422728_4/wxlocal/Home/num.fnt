@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<font>
+  <info face="GROBOLD" size="90" bold="0" italic="0" charset="" unicode="1" stretchH="100" smooth="1" aa="2" padding="8,8,8,8" spacing="8,8" outline="0"/>
+  <common lineHeight="90" base="75" scaleW="512" scaleH="512" pages="1" packed="0" alphaChnl="1" redChnl="0" greenChnl="0" blueChnl="0"/>
+  <pages>
+    <page id="0" file="3_0.png" />
+  </pages>
+  <chars count="12">
+    <char id="-1" x="270" y="88" width="16" height="17" xoffset="-8" yoffset="81" xadvance="0" page="0" chnl="15" />
+    <char id="43" x="195" y="89" width="67" height="67" xoffset="-5" yoffset="11" xadvance="58" page="0" chnl="15" />
+    <char id="48" x="289" y="0" width="67" height="80" xoffset="-8" yoffset="5" xadvance="50" page="0" chnl="15" />
+    <char id="49" x="0" y="90" width="52" height="80" xoffset="-8" yoffset="4" xadvance="39" page="0" chnl="15" />
+    <char id="50" x="213" y="0" width="68" height="80" xoffset="-9" yoffset="3" xadvance="50" page="0" chnl="15" />
+    <char id="51" x="70" y="0" width="65" height="81" xoffset="-8" yoffset="3" xadvance="48" page="0" chnl="15" />
+    <char id="52" x="364" y="0" width="63" height="80" xoffset="-8" yoffset="3" xadvance="45" page="0" chnl="15" />
+    <char id="53" x="128" y="89" width="59" height="77" xoffset="-8" yoffset="6" xadvance="43" page="0" chnl="15" />
+    <char id="54" x="0" y="0" width="62" height="82" xoffset="-9" yoffset="2" xadvance="42" page="0" chnl="15" />
+    <char id="55" x="60" y="90" width="60" height="79" xoffset="-9" yoffset="4" xadvance="40" page="0" chnl="15" />
+    <char id="56" x="435" y="0" width="62" height="80" xoffset="-9" yoffset="4" xadvance="45" page="0" chnl="15" />
+    <char id="57" x="143" y="0" width="62" height="81" xoffset="-9" yoffset="4" xadvance="42" page="0" chnl="15" />
+  </chars>
+</font>

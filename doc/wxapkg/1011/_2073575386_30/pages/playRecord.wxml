@@ -1,0 +1,36 @@
+<view>
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="body" data-length="{{record.length?1:0}}" style="margin-top:{{mTop}}rpx">
+        <view class="recordItem" wx:for="{{record}}" wx:key="record">
+            <view class="h2" data-type="{{item.status}}">{{item.gameName}}</view>
+            <view class="userData">
+                <view class="userItem">
+                    <view class="userD">
+                        <image class="portrait" mode="aspectFill" src="{{item.userIcon}}"></image>
+                        <text class="userNick overlips">{{item.userName}}</text>
+                    </view>
+                </view>
+                <view class="userItem other">
+                    <view class="userD">
+                        <image class="portrait" mode="aspectFill" src="{{item.otherIcon}}"></image>
+                        <text class="userNick overlips">{{item.otherName}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="recordT">{{item.day}}</view>
+        </view>
+        <view class="no_list" wx:if="{{!record.length}}">
+            <image mode="aspectFill" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/record/no_list.png"></image>
+        </view>
+    </view>
+    <view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4" wx:if="{{isLoading}}">
+        <view class="image _e6ed6a4">
+            <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+        </view>
+    </view>
+</view>

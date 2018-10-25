@@ -1,0 +1,125 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+@import "../__wuBaseWxss__/2.wxss";
+
+.list {
+    position: relative;
+    padding-top: 22rpx;
+    height: 178rpx;
+    margin: 0 20rpx 20rpx;
+    border-radius: 25rpx;
+}
+
+.list[data-type='0'] {
+    background: -webkit-gradient(linear,left top,right top,from(#a19fff),to(#63b2ff));
+    background: -webkit-linear-gradient(left,#a19fff,#63b2ff);
+    background: linear-gradient(to right,#a19fff,#63b2ff);
+}
+
+.list[data-type='1'] {
+    background: -webkit-gradient(linear,left top,right top,from(#a69dff),to(#e489ff));
+    background: -webkit-linear-gradient(left,#a69dff,#e489ff);
+    background: linear-gradient(to right,#a69dff,#e489ff);
+}
+
+.list[data-type='3'] {
+    background: -webkit-gradient(linear,left top,right top,from(#63b0ff),to(#9fecff));
+    background: -webkit-linear-gradient(left,#63b0ff,#9fecff);
+    background: linear-gradient(to right,#63b0ff,#9fecff);
+}
+
+.list[data-type='2'] {
+    background: -webkit-gradient(linear,left top,right top,from(#9298ff),to(#92b5ff));
+    background: -webkit-linear-gradient(left,#9298ff,#92b5ff);
+    background: linear-gradient(to right,#9298ff,#92b5ff);
+}
+
+.gameIcon {
+    display: inline-block;
+    width: 150rpx;
+    height: 150rpx;
+    margin-left: 30rpx;
+    overflow: hidden;
+    border: 5rpx solid #fff;
+    border-radius: 15rpx;
+}
+
+.gameIcon image {
+    width: 100%;
+    height: 100%;
+}
+
+.gameC {
+    position: absolute;
+    left: 225rpx;
+    top: 30rpx;
+    width: 63%;
+    color: #fff;
+}
+
+.gameC p {
+    display: block;
+    font-size: 36rpx;
+    line-height: 1.8;
+}
+
+.winChip {
+    width: 100%;
+    margin-top: 12rpx;
+    font-size: 22rpx;
+}
+
+.winChipC {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+.winChipC li {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.winChipC li:last-child {
+    text-align: right;
+}
+
+.winChipC li span {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.winChip progress {
+    display: block;
+    border-radius: 20rpx;
+    border: 5rpx solid #fff;
+    overflow: hidden;
+}
+
+page {
+    background: #fcfcfc url('http://paopao.hi-hai.com/img/xcx/gameHall_2.0/bg.png') no-repeat;
+    background-size: 100%;
+    padding-top: 150rpx;
+}
+
+.shareBtn {
+    width: 407rpx;
+    height: 97rpx;
+    margin-top: 50rpx;
+    background: url('http://paopao.hi-hai.com/img/xcx/gameHall_2.0/home/shareButn.png') no-repeat;
+    background-size: 100%;
+    border-radius: 50rpx;
+    box-shadow: 0 0 30rpx #ce9606;
+}
+
+.noHonor {
+    width: 362rpx;
+    height: 325rpx;
+    margin: 20vh auto 0;
+}
+
+.noHonor image {
+    width: 100%;
+    height: 100%;
+}

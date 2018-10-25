@@ -1,0 +1,295 @@
+<view class="wrap _d03d892">
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee _d03d892">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="bigImg _d03d892" style="background-image:url('https://res.xingqiu123.com/hall/redpacket/bg.png');"></view>
+    <view class="withdrawdeposit _d03d892">
+        <view class="_d03d892">
+            <view class="imgBox">
+                <image class="imgOne" src="https://res.xingqiu123.com/hall/redpacket/db.png"></image>
+                <view class="jinE">
+                    <text class="jinEOne">余额 : </text>
+                    <text class="jinETwo">￥</text>
+                    <text class="jinEThree">{{$withdrawdeposit$rebB}}</text>
+                </view>
+                <navigator url="withdraw">
+                    <image class="imgTx" src="https://res.xingqiu123.com/hall/redpacket/btn1.png"></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="exchange _d03d892">
+        <view class="toggle _d03d892">
+            <image class="_d03d892" src="https://res.xingqiu123.com/hall/redpacket/xllq.png" wx:if="{{isExchange}}"></image>
+            <image class="_d03d892" src="https://res.xingqiu123.com/hall/redpacket/xycj.png" wx:if="{{isTurnTable}}"></image>
+            <view bindtap="isExchange" class="isExchange _d03d892"></view>
+            <view bindtap="isTurnTable" class="isTurnTable _d03d892"></view>
+        </view>
+        <view class="body _d03d892">
+            <view class="boast _d03d892">
+                <view class="{{$boast$method}}">
+                    <view class="broadcastsize" wx:if="{{$boast$type!=3}}">
+                        <image mode="aspectFill" src="{{$boast$boastImg}}"></image>
+                    </view>
+                    <view class="carousel" wx:if="{{$boast$type==1||$boast$type==3||$boast$type==4}}">
+                        <view class="marquee" style="margin-left:{{$boast$marqueeMargin}}rpx;white-space: nowrap;overflow:hidden;">
+                            <view class="marqueeTitle" style="{{$boast$orientation}}:{{$boast$marqueeDistance}}rpx;font-size: {{$boast$size}}rpx ;animation: kf-marque-animation {{$boast$marquee_time}}s linear infinite;">
+                                <block wx:for="{{$boast$message}}" wx:key="index">
+                                    <block wx:if="{{item.type==8}}">
+                                        <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.award_type==1}}">恭喜
+                    <text class="name" style="color: #66ffdd;">{{item.name}}</text>成功抽中
+                    <text class="dark" style="color: #ffff66;">{{item.award}}个豆子</text>
+                                        </view>
+                                        <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.award_type==2}}">恭喜
+                    <text class="name" style="color: #66ffdd;">{{item.name}}</text>成功抽中
+                    <text class="dark" style="color: #ffff66;">{{item.award}}元红包</text>
+                                        </view>
+                                        <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.award_type==4}}">恭喜
+                    <text class="name" style="color: #66ffdd;">{{item.name}}</text>成功抽中
+                    <text class="dark" style="color: #ffff66;">iPhone X</text>
+                                        </view>
+                                    </block>
+                                    <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.type==7}}">恭喜
+                  <text class="name" style="color: #66ffdd;">{{item.name}}</text>用兑换券领取了
+                  <text class="dark" style="color: #ffff66;">{{item.award}}元红包</text>
+                                    </view>
+                                    <view class="distance" wx:if="{{item.type==5}}">
+                                        <text style="color: #66ffdd;">{{item.name}}</text>
+                  达到{{item.winField}}胜局,获得了
+                  <text style="color: #ffff66;">{{item.award}}元红包</text>
+                                    </view>
+                                    <view class="distance" wx:elif="{{item.type==4}}">
+                                        <text style="color: #66ffdd;">{{item.name}}</text>
+                  在
+                  <text style="color: #ffff66;">{{item.gameName}}</text>天梯赛获得了
+                  <text style="color: #ffff66;">{{item.award}}元奖励</text>
+                                    </view>
+                                    <view class="distance" wx:elif="{{item.type==2}}">
+                                        <text style="color: #66ffdd;">{{item.name}}</text>
+                  在{{item.gameName}}获得了
+                  <text style="color: #ffff66;">{{item.award}} 元奖励</text>
+                                    </view>
+                                    <view class="distance" wx:elif="{{item.type==1}}">
+                                        <text style="color: #66ffdd;">{{item.name}}</text>
+                  在红包赛获得了
+                  <text style="color: #ffff66;">{{item.award}}元奖励</text>
+                                    </view>
+                                    <view class="distance" data-id="{{item.type}}" wx:elif="{{item.type==-1}}">恭喜{{item.name}}<em>获得了{{item.award}}元奖金</em>
+                                    </view>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="carousel" wx:if="{{$boast$type==2}}">
+                        <swiper autoplay="{{$boast$autoplay}}" circular="{{$boast$circular}}" class="changeheight" duration="{{$boast$duration}}" indicatorDots="{{$boast$indicatorDots}}" interval="{{$boast$interval}}" vertical="{{$boast$vertical}}">
+                            <swiper-item wx:for="{{$boast$message}}" wx:key="index">
+                                <view class="message">
+                                    <text class="nameColor">{{item.sender.nickname}}</text>
+                                    <text class="colon">:</text>
+                                    <text>{{item.content.content}}</text>
+                                </view>
+                            </swiper-item>
+                        </swiper>
+                    </view>
+                    <view bindtap="$boast$jumpToChat" class="gotosquare" wx:if="{{$boast$isSquare}}">
+                        <image src="https://res.xingqiu123.com/hall/boast/gotosquare.png"></image>
+                        <view class="GoToS">进入广场</view>
+                    </view>
+                </view>
+            </view>
+            <view class="bodyC _d03d892">
+                <view class="_b437b80 _d03d892" wx:if="{{isExchange}}">
+                    <view class="goldRecord _b437b80">
+                        <view class="gold _b437b80">
+                            <image class="_b437b80" src="https://res.xingqiu123.com/hall/redpacket/gold.png"></image> {{$exchangelist$goldN}}
+      </view>
+                        <view bindtap="$exchangelist$getRecordList" class="record _b437b80">记录</view>
+                    </view>
+                    <view class="list _b437b80">
+                        <view class="item _b437b80" index="index" item="item" wx:for="{{$exchangelist$list}}" wx:key="index">
+                            <image class="_b437b80" src="../images/redpacket/redpacket.png"></image>
+                            <view class="needGold _b437b80">
+          {{item.gold}}豆子
+        </view>
+                            <view bindtap="$exchangelist$exchangeRedpacked" class="rmb _b437b80" data-wpyexchangeredpacked-a="{{item}}">
+          {{item.rmb}}元红包
+          <view class="surplus _b437b80">
+            剩余：{{item.number}}
+          </view>
+                            </view>
+                            <view bindtap="$exchangelist$hasZero" class="mask _b437b80" wx:if="{{item.number<1}}">
+                                <view class="_b437b80">告罄</view>
+                                <view class="_b437b80">明天再来</view>
+                            </view>
+                        </view>
+                        <view bindtap="$exchangelist$hasZero" class="item _b437b80" wx:if="{{$exchangelist$list.length>0}}">
+                            <image class="_b437b80" src="https://res.xingqiu123.com/hall/redpacket/headset.png"></image>
+                            <view class="needGold _b437b80">
+          9888豆子
+        </view>
+                        </view>
+                        <view bindtap="$exchangelist$hasZero" class="item _b437b80" wx:if="{{$exchangelist$list.length>0}}">
+                            <image class="_b437b80" src="https://res.xingqiu123.com/hall/redpacket/MilletScale.png"></image>
+                            <view class="needGold _b437b80">
+          16888豆子
+        </view>
+                        </view>
+                        <view bindtap="$exchangelist$hasZero" class="item _b437b80" wx:if="{{$exchangelist$list.length>0}}">
+                            <image class="_b437b80" src="https://res.xingqiu123.com/hall/redpacket/MilletSpeakers.png"></image>
+                            <view class="needGold _b437b80">
+          28888豆子
+        </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="luckWheel _d03d892" data-type="{{$luckWheel$statud}}" wx:if="{{!isExchange}}">
+                    <view bindtap="$luckWheel$_getRecordList" class="recordTap">记录</view>
+                    <view class="wheel" style="{{$luckWheel$style}}">
+                        <view class="wheelItem" data-type="{{index}}" wx:for="{{$luckWheel$wheelData}}" wx:key="index">
+                            <image class="itemC" mode="aspectFill" src="{{$luckWheel$wheelArr[item.type].image}}"></image>
+                            <view class="itemNote">{{item.num>0?item.num:''}}{{$luckWheel$wheelArr[item.type].text}}</view>
+                        </view>
+                    </view>
+                    <view bindtap="$luckWheel$_openAward" class="pointer"></view>
+                </view>
+                <view bindtap="$luckWheel$_hiddenReward" class="resModal" wx:if="{{$luckWheel$rewardToggle}}">
+                    <view class="Mask"></view>
+                    <view class="resModalC" data-type="{{$luckWheel$rewardModal.type}}">
+                        <view class="resModalD">
+                            <image mode="aspectFill" src="{{$luckWheel$rewardModal.img}}"></image>
+                            <text>{{$luckWheel$rewardModal.note}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="Mask" wx:if="{{$luckWheel$isModal}}">
+                    <view class="modal">
+                        <view class="modalT">{{$luckWheel$popUp$modalData.title}}</view>
+                        <view class="modalC" wx:if="{{$luckWheel$popUp$modalData.type==1}}">
+                            <view class="modalImg" wx:if="{{$luckWheel$popUp$modalData.image}}"></view>
+                            <view class="note" style="text-align:{{item.text_align}}" wx:for="{{$luckWheel$popUp$modalData.text}}" wx:key="text">{{item.note}}</view>
+                            <view class="subBtn">
+                                <button bindtap="$luckWheel$popUp$_submit" class="certainBtn btn">{{$luckWheel$popUp$modalData.btnText?$luckWheel$popUp$modalData.btnText:'确认'}}</button>
+                            </view>
+                            <view bindtap="$luckWheel$popUp$_checkToggle" class="checkBox" data-status="{{$luckWheel$popUp$modalData.Checkbox.status}}" wx:if="{{$luckWheel$popUp$modalData.Checkbox.disp}}">
+					{{$luckWheel$popUp$modalData.Checkbox.note}}
+				</view>
+                        </view>
+                        <view class="modalC" wx:if="{{$luckWheel$popUp$modalData.type==2}}">
+                            <view class="noteT2" style="text-align:{{item.text_align}}" wx:for="{{$luckWheel$popUp$modalData.text}}" wx:key="text">{{item.note}}</view>
+                            <view class="btnGroup">
+                                <view class="btnChild">
+                                    <image src="https://res.xingqiu123.com/hall/card/btn3.png"></image>
+                                    <view bindtap="$luckWheel$popUp$_submit" class="fontBtn">先不玩了</view>
+                                </view>
+                                <view class="btn2"></view>
+                                <view class="btnChild">
+                                    <navigator appId="wx17e66e26685ed5d0" bindtap="$luckWheel$popUp$goToPlayGame" target="miniProgram">
+                                        <image src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                                        <view class="fontBtn">去玩游戏 </view>
+                                    </navigator>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="noTouch" wx:if="{{!$luckWheel$isButtonTap}}"></view>
+            </view>
+        </view>
+        <view class="rule _d03d892" wx:if="{{!isExchange}}">
+            <span class="_d03d892">规则：</span>
+            <ul class="_d03d892">
+                <li class="_d03d892">1、100豆子可兑换1张抽奖券，抽奖券可在幸运转盘进行1次抽奖。</li>
+                <li class="_d03d892">2、抽中iphoneX的用户需联系客服并提供联系方式与地址。</li>
+                <li class="_d03d892">3、中奖概率详情请在微信公众号
+            <text class="_d03d892" style="font-weight:bold;">泡泡游戏</text>查看。</li>
+            </ul>
+        </view>
+    </view>
+    <view class="bottombg _d03d892">
+        <image class="_d03d892" src="https://res.xingqiu123.com/hall/redpacket/dbbg.png"></image>
+    </view>
+    <view class="wrap _66204d7 _d03d892" wx:if="{{isShowToast}}">
+        <view class="cardSize _66204d7">
+            <view class="header _66204d7">{{$exchange$content.title}}</view>
+            <view class="body _66204d7">
+                <view class="content _66204d7" wx:if="{{$exchange$content.type==1}}">
+          你将消耗价值
+          <text class="font _66204d7">{{$exchange$content.content.gold}}豆子</text>的
+          <text class="font _66204d7">兑换券</text>领取
+          <text class="font _66204d7">{{$exchange$content.content.rmb}}元红包。</text>
+                </view>
+                <view class="content _66204d7" wx:if="{{$exchange$content.type==2}}">
+          豆子不足，去玩把游戏试试运气吧。
+        </view>
+                <view class="content _66204d7" wx:if="{{$exchange$content.type==3}}">
+          恭喜领取成功，奖励已经发放。
+        </view>
+                <view class="btnGroup _66204d7" wx:if="{{$exchange$content.type==1}}">
+                    <view class="btnChild _66204d7">
+                        <image class="_66204d7" src="https://res.xingqiu123.com/hall/card/btn3.png"></image>
+                        <view bindtap="$exchange$cancel" class="fontBtn _66204d7">取消</view>
+                    </view>
+                    <view class="btn2 _66204d7"></view>
+                    <view class="btnChild _66204d7">
+                        <image class="_66204d7" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                        <view bindtap="$exchange$getRedp" class="fontBtn _66204d7" data-wpygetredp-a="{{$exchange$content}}">领取 </view>
+                    </view>
+                </view>
+                <view class="btnGroup _66204d7" wx:if="{{$exchange$content.type==2}}">
+                    <view class="btnChild _66204d7">
+                        <image class="_66204d7" src="https://res.xingqiu123.com/hall/card/btn3.png"></image>
+                        <view bindtap="$exchange$cancel" class="fontBtn _66204d7">先等等</view>
+                    </view>
+                    <view class="btn2 _66204d7"></view>
+                    <view class="btnChild _66204d7">
+                        <navigator appId="wx17e66e26685ed5d0" bindtap="$exchange$goToPlayGame" class="_66204d7" target="miniProgram">
+                            <image class="_66204d7" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                            <view class="fontBtn _66204d7">去玩游戏 </view>
+                        </navigator>
+                    </view>
+                </view>
+                <view class="btnGroup _66204d7" wx:if="{{$exchange$content.type==3}}">
+                    <view class="btnChild _66204d7">
+                        <image class="_66204d7" src="https://res.xingqiu123.com/hall/card/btn3.png"></image>
+                        <view bindtap="$exchange$cancel" class="fontBtn _66204d7">继续领奖</view>
+                    </view>
+                    <view class="btn2 _66204d7"></view>
+                    <view class="btnChild _66204d7">
+                        <navigator appId="wx17e66e26685ed5d0" bindtap="$exchange$goToPlayGame" class="_66204d7" target="miniProgram">
+                            <image class="_66204d7" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                            <view class="fontBtn _66204d7">去赚豆子 </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="wrap _6771e82 _d03d892" wx:if="{{isShowHistoryList}}">
+        <view class="cardSize _6771e82">
+            <view catchtap="$historylist$historyListClose" class="chahao _6771e82">×</view>
+            <view class="header _6771e82">领取记录</view>
+            <view class="body _6771e82">
+                <scroll-view scrollY bindscrolltolower="$historylist$lower" class="listheight _6771e82" style="max-height:1000rpx" wx:if="{{$historylist$list.length>0}}">
+                    <view class="li _6771e82" index="index" item="item" key="index" wx:for="{{$historylist$list}}">
+                        <view class="index _6771e82">{{index+1}}</view>
+                        <view class="date _6771e82">{{item.newDate}}</view>
+                        <view class="rmb _6771e82" wx:if="{{item.awardType==2||item.type==7}}">{{item.rmb}}元</view>
+                        <view class="rmb _6771e82" wx:if="{{item.awardType==1}}">{{item.gold}}豆子</view>
+                        <view class="rmb _6771e82" wx:if="{{item.awardType==4}}">iPhone X</view>
+                    </view>
+                </scroll-view>
+                <view class="noList _6771e82" wx:if="{{$historylist$list.length<=0}}">
+          暂无记录
+        </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4 _d03d892" wx:if="{{isLoading}}">
+        <view class="image _e6ed6a4">
+            <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,28 @@
+<view class="list" wx:for="{{withdraw_list}}" wx:key="index">
+    <view class="clearfix">
+        <view class="fl">
+            <view class="orderNo">
+        订单号{{item.trade_no}}
+      </view>
+            <view class="time">
+        提现金额 {{item.amount}}
+      </view>
+            <view class="time">{{item.create_time}}</view>
+        </view>
+        <view class="fr status completed" wx:if="{{item.status==1}}">已完成</view>
+        <view bindtap="add2Clipboard" class="fr status copy" data-value="{{item.trade_no}}" wx:else>复制单号</view>
+    </view>
+</view>
+<view class="noRecord" wx:if="{{!withdraw_list.length}}">
+    <image src="https://txcdn.ylll111.xyz/hzttk/nodata-bg.png"></image>
+    <view class="txt">还没有提现记录哦</view>
+</view>
+<view class="success_tk" wx:if="{{goto}}">
+    <view class="goto-kf">
+        <text>{{shareOptions.fuzhi_danhao}}</text>
+        <button class="contact" openType="contact" sessionFrom="weapp">
+            <text>联系客服</text>
+        </button>
+        <image bindtap="closeTk" class="close" src="https://txcdn.ylll111.xyz/hzttk/tixian_close.png"></image>
+    </view>
+</view>

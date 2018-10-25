@@ -1,0 +1,36 @@
+<notification id="notification"></notification>
+<view class="bottom_img">
+    <image src="../../image/bottom_bg.png"></image>
+</view>
+<view class="swiper-tab">
+    <view bindtap="clickTab" class="tab-list {{currentTab==0?'on':''}}" data-current="0">挑战成功</view>
+    <view bindtap="clickTab" class="tab-list {{currentTab==1?'on':''}}" data-current="1">孜孜不倦</view>
+</view>
+<swiper bindchange="swiperTab" class="swiper-box" current="{{currentTab}}" duration="300">
+    <swiper-item>
+        <scroll-view class="swiper-container" scrollY="true">
+            <view class="rank-list">
+                <view class="rank-item" wx:for="{{wealth_list}}" wx:key="index">
+                    <view class="num">{{index+1}}</view>
+                    <image class="avatar" src="{{utility.isEmptyOrNull(item.avatar)?imgLogo:item.avatar}}"></image>
+                    <view class="name">{{utility.isEmptyOrNull(item.nickname)?'蒙面人':item.nickname}}</view>
+                    <view class="gift">￥{{item.amount_total}}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+        <scroll-view class="swiper-container" scrollY="true">
+            <view class="rank-list">
+                <view class="rank-item" wx:for="{{will_list}}" wx:key="index">
+                    <view class="num">{{index+1}}</view>
+                    <image class="avatar" src="{{utility.isEmptyOrNull(item.avatar)?imgLogo:item.avatar}}"></image>
+                    <view class="name">{{utility.isEmptyOrNull(item.nickname)?'蒙面人':item.nickname}}</view>
+                    <view class="gift">
+                        <text>{{item.challenge_num}}</text>次</view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>
+<wxs module="utility" src="../../utils/utility.wxs" />

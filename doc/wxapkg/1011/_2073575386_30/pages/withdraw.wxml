@@ -1,0 +1,68 @@
+<view class="page">
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view>
+        <form bindsubmit="formSubmit">
+            <view class="bigBox">
+                <view class="imgBox">
+                    <image class="boxImg" src="https://res.xingqiu123.com/hall/card/qb.png"></image>
+                </view>
+                <view class="modalSbox">￥{{member_rmb}}</view>
+                <view class="modal-withdraw">(账户余额)</view>
+            </view>
+            <view class="interval"></view>
+            <view class="withdrawBox">
+                <view class="withBoxOne active">提现金额　</view>
+                <input bindblur="blurInputEvent" bindfocus="focusInputEvent" bindinput="handleInputChange" class="{{iswithDraw?'withCut':'withBoxTwo'}}" hasfocus="{{isFocus}}" id="money" name="money" type="number" value="{{value}}"></input>
+            </view>
+            <view class="BigBox">
+                <view class="tips" wx:if="{{allbalance&&!canWithDraw}}">
+                    <text class="TipsOne">{{withdrawTips}}</text>
+                </view>
+                <view class="tips" wx:if="{{!allbalance||canWithDraw}}">
+                    <text class="tipsLeft">金额将提现至微信零钱</text>
+                    <text bindtap="allwithdraw" class="tipsRight">全部提现</text>
+                </view>
+            </view>
+            <button class="{{canWithDraw?'subBtn':'subBtn_bg'}}" formType="submit">立即提现</button>
+        </form>
+    </view>
+    <view class="drowPoput" wx:if="{{modalBox}}">
+        <view class="modalBox">
+            <view class="Modal">
+                <view class="modalT">提现成功</view>
+                <view class="modalX">
+                提现成功， 提现金额会在5分钟内到账。不妨告诉朋友一起来赚钱吧~
+            </view>
+                <view class="modalD">
+                    <view bindtap="$withdrawtishi$back" class="modalOne">
+                        <button>继续赚钱</button>
+                        <image class="image" src="https://res.xingqiu123.com/hall/card/btn.png"></image>
+                    </view>
+                    <view class="modalTwo">
+                        <button data-X="{{$withdrawtishi$value}}" data-sharetype="11" openType="share">炫耀一下</button>
+                        <image class="image" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="wrap _2fdd952" wx:if="{{isShowWithDrawdepositFail}}">
+        <view class="cardSize _2fdd952">
+            <view class="header _2fdd952">提现失败</view>
+            <view class="body _2fdd952">
+                <view class="content _2fdd952">
+          今日提现已达上限
+        </view>
+                <view class="btnChild _2fdd952">
+                    <image class="_2fdd952" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                    <view bindtap="$fail$closefail" class="fontBtn _2fdd952" data-wpyclosefail-a="">确认</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

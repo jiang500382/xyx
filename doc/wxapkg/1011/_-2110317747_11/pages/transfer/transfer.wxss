@@ -1,0 +1,251 @@
+page {
+    background: #f1f0f5;
+    padding-top: 30rpx;
+}
+
+page::after {
+    background: none;
+}
+
+.mingxi {
+    font-size: 24rpx;
+    text-align: center;
+    border: 2rpx solid #999;
+    color: #999;
+    width: 140rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    border-radius: 40rpx;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+    float: right;
+}
+
+.toptxt {
+    text-align: center;
+    font-size: 26rpx;
+    color: #999;
+    margin-bottom: 40rpx;
+}
+
+.money {
+    text-align: center;
+    color: #333;
+    font-size: 60rpx;
+    margin-bottom: 30rpx;
+}
+
+.numbox {
+    background-color: #fff;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0rpx 30rpx;
+    box-sizing: border-box;
+}
+
+.txt-l {
+    float: left;
+    font-size: 50rpx;
+    width: 60rpx;
+}
+
+.txt-r {
+    float: right;
+    font-size: 30rpx;
+    text-align: right;
+    width: 150rpx;
+    color: #406b91;
+}
+
+.inputClass {
+    max-width: calc(100% - 210rpx);
+    float: left;
+    height: 100%;
+    font-size: 30rpx;
+}
+
+.tixianBtn {
+    margin: 40rpx auto 30rpx;
+    width: 600rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 10rpx;
+    background-color: #57b837;
+}
+
+.gameBtn {
+    margin: 0 auto 40rpx;
+    width: 600rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #666;
+    background-color: #f0f1f2;
+    border-radius: 10rpx;
+    border: 2rpx solid #ccc;
+    box-sizing: border-box;
+}
+
+.tips {
+    width: 600rpx;
+    margin: 0 auto;
+}
+
+.tips .tips-txt {
+    font-size: 24rpx;
+    color: #666;
+    line-height: 44rpx;
+}
+
+.success_tk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+.success_tk .bg {
+    width: 540rpx;
+    min-height: 600rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.success_tk .title {
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-bottom: 36rpx;
+}
+
+.success_tk .title image {
+    width: 46rpx;
+    height: 46rpx;
+    margin-right: 6rpx;
+    vertical-align: top;
+}
+
+.success_tk .txt {
+    font-size: 30rpx;
+    color: #666;
+    width: 450rpx;
+    margin: 0 auto 30rpx;
+    line-height: 48rpx;
+}
+
+.success_tk .txt text {
+    display: block;
+    text-align: left;
+}
+
+.success_tk .no1 .tit {
+    font-size: 24rpx;
+    color: #666;
+    margin-bottom: 10rpx;
+}
+
+.success_tk .no1 .con {
+    position: relative;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #ffebcc;
+    font-size: 32rpx;
+    color: #666;
+    margin-bottom: 30rpx;
+}
+
+.success_tk .no1 .con text {
+    font-size: 24rpx;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 34rpx;
+}
+
+.success_tk .no2 .con {
+    background-color: #d3eed7;
+}
+
+.success_tk .bg .close {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+}
+
+.bg .logo {
+    width: 128rpx;
+    height: 128rpx;
+    position: relative;
+    top: -50rpx;
+    border: 8rpx solid #fff;
+    border-radius: 50%;
+}
+
+.add2Clipboard {
+    width: 50%;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 44rpx;
+    border: 1rpx solid rgba(0,0,0,0.6);
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+}
+
+.no1 {
+    margin-bottom: 20rpx;
+}
+
+.goto-kf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600rpx;
+    background-color: #fff;
+    font-size: 28rpx;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 320rpx;
+    padding: 50rpx 0;
+    transform: translate(-50%,-50%);
+}
+
+.goto-kf .contact {
+    width: 50%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 10rpx;
+    background-color: #57b837;
+}
+
+.success_tk .goto-kf .close {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+}

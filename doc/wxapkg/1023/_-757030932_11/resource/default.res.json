@@ -1,0 +1,144 @@
+{
+	"groups": [
+		{
+			"keys": "mainBg,rewardbg,baozha_json,baozha_png,hongbao1,shoot_atlas",
+			"name": "ui"
+		},
+		{
+			"keys": "hitprop,hitprotector,hitprotectorprop,mandie1,shoot,womandie1,beattacked,beattacked2,hitground1,hitground2,mandie2,pullbow,dodge,highscore,click2,click1,money",
+			"name": "sound"
+		},
+		{
+			"keys": "map1,map2",
+			"name": "ui2"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/sound/hitprop.mp3",
+			"type": "sound",
+			"name": "hitprop"
+		},
+		{
+			"url": "assets/sound/hitprotector.mp3",
+			"type": "sound",
+			"name": "hitprotector"
+		},
+		{
+			"url": "assets/sound/hitprotectorprop.mp3",
+			"type": "sound",
+			"name": "hitprotectorprop"
+		},
+		{
+			"url": "assets/sound/mandie1.mp3",
+			"type": "sound",
+			"name": "mandie1"
+		},
+		{
+			"url": "assets/sound/shoot.mp3",
+			"type": "sound",
+			"name": "shoot"
+		},
+		{
+			"url": "assets/sound/womandie1.mp3",
+			"type": "sound",
+			"name": "womandie1"
+		},
+		{
+			"url": "assets/sound/beattacked.mp3",
+			"type": "sound",
+			"name": "beattacked"
+		},
+		{
+			"url": "assets/sound/beattacked2.mp3",
+			"type": "sound",
+			"name": "beattacked2"
+		},
+		{
+			"url": "assets/sound/hitground1.mp3",
+			"type": "sound",
+			"name": "hitground1"
+		},
+		{
+			"url": "assets/sound/hitground2.mp3",
+			"type": "sound",
+			"name": "hitground2"
+		},
+		{
+			"url": "assets/sound/mandie2.mp3",
+			"type": "sound",
+			"name": "mandie2"
+		},
+		{
+			"url": "assets/sound/pullbow.mp3",
+			"type": "sound",
+			"name": "pullbow"
+		},
+		{
+			"url": "assets/sound/dodge.mp3",
+			"type": "sound",
+			"name": "dodge"
+		},
+		{
+			"url": "assets/sound/highscore.mp3",
+			"type": "sound",
+			"name": "highscore"
+		},
+		{
+			"url": "assets/map1.jpg",
+			"type": "image",
+			"name": "map1"
+		},
+		{
+			"url": "assets/mainBg.jpg",
+			"type": "image",
+			"name": "mainBg"
+		},
+		{
+			"url": "assets/shoot_atlas.json",
+			"type": "sheet",
+			"name": "shoot_atlas",
+			"subkeys": "a_jiangbei,a_none1,a_star,arrow1,arrow10,arrow11,arrow12,arrow2,arrow3,arrow4,arrow5,arrow6,arrow7,arrow8,arrow9,bg1,bg2,bg3,bg4,bg5,bg6,bot-sheet0,bow_attack1,bow_attack10,bow_attack11,bow_attack12,bow_attack2,bow_attack3,bow_attack4,bow_attack5,bow_attack6,bow_attack7,bow_attack8,bow_attack9,bow_stand1,bow_stand10,bow_stand11,bow_stand12,bow_stand2,bow_stand3,bow_stand4,bow_stand5,bow_stand6,bow_stand7,bow_stand8,bow_stand9,btn1,btn2,btn3,btn4,btn5,btn6,buffBg,chatbg,close,df,dian,die,faguang,fanhui,fqtz,gouxuan,guanka,guankabg,guide_circle,guide_hand,guide_line,headBg,hongbao,hongbao2,hongbao3,hongbao4,hongbao5,hongbao6,hpBg,hpImg1,hpImg2,levelbg1,levelbg2,levelbg3,line2,line3,lqfhk,monster_arm1,monster_attack1,monster_stand1,monster_stand2,monster_stand3,moreBtn1,moreBtn2,new1,new2,pk,prop5,protector,rank1,rank2,rank3,role_arm1,role_arm2,role_arm3,role_attack1,role_attack2,role_attack3,role_stand1,role_stand2,role_stand3,sharebtnbg1,smallProp1,smallProp2,smallProp3_1,smallProp3_2,smallProp4,smallProp5,smallProp6,sound_close,sound_open,stone,throw1,throw2,title,ui_btn1,ui_btn2,ui_getRelive,ui_play,ui_store,video1,zgdf,zwyc"
+		},
+		{
+			"url": "assets/rewardbg.png",
+			"type": "image",
+			"name": "rewardbg"
+		},
+		{
+			"url": "assets/baozha.json",
+			"type": "json",
+			"name": "baozha_json"
+		},
+		{
+			"url": "assets/baozha.png",
+			"type": "image",
+			"name": "baozha_png"
+		},
+		{
+			"url": "assets/sound/click1.mp3",
+			"type": "sound",
+			"name": "click1"
+		},
+		{
+			"url": "assets/sound/click2.mp3",
+			"type": "sound",
+			"name": "click2"
+		},
+		{
+			"url": "assets/map2.png",
+			"type": "image",
+			"name": "map2"
+		},
+		{
+			"url": "assets/hongbao1.png",
+			"type": "image",
+			"name": "hongbao1"
+		},
+		{
+			"url": "assets/sound/money.mp3",
+			"type": "sound",
+			"name": "money"
+		}
+	]
+}

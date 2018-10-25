@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "我的奖品",
+    "disableScroll": true,
+    "usingComponents": {
+        "notification": "/components/notification/index"
+    }
+}

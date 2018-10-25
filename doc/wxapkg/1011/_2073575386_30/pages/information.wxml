@@ -1,0 +1,42 @@
+<view>
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="top">
+        <view class="portrait">
+            <image mode="aspectFill" src="{{userInfo.avstar}}"></image>
+        </view>
+        <text>{{userInfo.nickname}}</text>
+        <p>ID:{{userInfo.id}}</p>
+    </view>
+    <view class="group">
+        <view class="go" data-type="2">
+            <picker bindchange="bindDateChange" data-wpybinddatechange-a="" end="2017-12-31" mode="date" start="1960-01-01" url="" value="2000-01-01">
+                <text>年龄</text>
+                <view class="goItem" data-item="1">
+                    <view class="picker">{{hallInfo.age>0?hallInfo.age:'请选择年龄'}}</view>
+                </view>
+            </picker>
+        </view>
+        <view class="go" data-type="5">
+            <view>
+                <text>性别</text>
+                <view class="goItem">{{userInfo.gender}}</view>
+            </view>
+        </view>
+        <view class="go" data-type="3">
+            <view>
+                <text>所在地</text>
+                <view class="goItem">{{userInfo.member_province?userInfo.member_province:'其他'}}</view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4" wx:if="{{isLoading}}">
+        <view class="image _e6ed6a4">
+            <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+        </view>
+    </view>
+</view>

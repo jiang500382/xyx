@@ -1,0 +1,10 @@
+<view class="imgBox">
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <image class="imgOne" mode="widthFix" src="https://res.xingqiu123.com/hall/card/bg.png"></image>
+    <image class="imgTwo" src="https://res.xingqiu123.com/hall/card/bg1.png"></image>
+</view>

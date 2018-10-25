@@ -1,0 +1,137 @@
+page {
+    background: #efeff4;
+    padding-top: 20rpx;
+}
+
+page::after {
+    background: none;
+}
+
+.list {
+    border-bottom: 2rpx solid #eee;
+    background-color: #fff;
+    padding: 20rpx 30rpx;
+    box-sizing: border-box;
+}
+
+.list .clearfix {
+    vertical-align: middle;
+}
+
+.list .status {
+    font-size: 22rpx!important;
+    width: 150rpx;
+    text-align: center;
+    border-radius: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    vertical-align: middle;
+}
+
+.list .amount {
+    color: rgba(255,255,255,255,0.7);
+    font-size: 30rpx;
+}
+
+.list .copy {
+    color: #000;
+    border: 1rpx solid #000;
+}
+
+.list .completed {
+    color: #03bc01;
+    border: 1rpx solid #03bc01;
+}
+
+.list .fail {
+    color: #ff3030;
+    border: 1rpx solid #ff3030;
+}
+
+.list .orderNo {
+    color: #333;
+    font-size: 30rpx;
+}
+
+.list .orderNo text {
+    margin-left: 20rpx;
+    font-size: 26rpx;
+    color: #999;
+    border: 2rpx solid #ccc;
+    padding: 0rpx 6rpx;
+    border-radius: 6rpx;
+}
+
+.list .time {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.list .fr {
+    margin-top: 10rpx;
+    font-size: 40rpx;
+}
+
+.noRecord {
+    padding-top: 300rpx;
+    text-align: center;
+}
+
+.noRecord image {
+    width: 240rpx;
+    height: 274rpx;
+}
+
+.noRecord .txt {
+    text-align: center;
+    color: #acacac;
+    font-size: 30rpx;
+    margin-top: 10rpx;
+}
+
+.success_tk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 100;
+}
+
+.goto-kf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600rpx;
+    background-color: #fff;
+    font-size: 28rpx;
+    border-radius: 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 320rpx;
+    padding: 50rpx 0;
+    transform: translate(-50%,-50%);
+}
+
+.goto-kf .contact {
+    width: 50%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #fff;
+    border-radius: 10rpx;
+    background-color: #57b837;
+}
+
+.success_tk .goto-kf .close {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+}

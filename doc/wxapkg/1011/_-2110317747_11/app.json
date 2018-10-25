@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/user/user",
+        "pages/rank/rank",
+        "pages/gift/gift",
+        "pages/game/game",
+        "pages/tousu/tousu",
+        "pages/packet/index",
+        "pages/transfer/transfer",
+        "pages/transfer/recordList"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ede7e0",
+        "navigationBarTitleText": "答对5题赢红包",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#666666",
+        "selectedColor": "#cd4e3d",
+        "backgroundColor": "#ede6e0",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "我要挑战",
+                "iconPath": "image/tab_index.png",
+                "selectedIconPath": "image/tab_index_on.png"
+            },
+            {
+                "pagePath": "pages/rank/rank",
+                "text": "排行榜",
+                "iconPath": "image/tab_rank.png",
+                "selectedIconPath": "image/tab_rank_on.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "个人中心",
+                "iconPath": "image/tab_user.png",
+                "selectedIconPath": "image/tab_user_on.png"
+            }
+        ]
+    }
+}

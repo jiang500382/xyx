@@ -1,0 +1,103 @@
+{
+"groups": [
+  {
+   "name": "gp_preloadcreat",
+   "keys": "createrole_bg0_jpg,createrole_json"
+  }
+],
+"resources": [
+{
+  "url": "wxloading/wxloading_txt.png",
+  "type": "image",
+  "name": "wxloading_txt_png"
+ },
+{
+  "url": "wxloading/wxloading_logo.png",
+  "type": "image",
+  "name": "wxloading_logo_png"
+ },
+{
+  "url": "wxloading/wxloading_barbg.png",
+  "type": "image",
+  "name": "wxloading_barbg_png"
+ },
+ {
+  "url": "wxloading/wxloading_bareff.png",
+  "type": "image",
+  "name": "wxloading_bareff_png"
+ },
+ {
+  "url": "wxloading/wxloading_barline.png",
+  "type": "image",
+  "name": "wxloading_barline_png"
+ },
+ {
+  "url": "wxloading/wxloading_loadbg.jpg",
+  "type": "image",
+  "name": "wxloading_loadbg_jpg"
+ },
+  {
+   "name": "serverchoose_json",
+   "url": "skins/serverchoose/serverchoose.json",
+   "type": "sheet",
+   "subkeys": "serverchoose_bg0,serverchoose_bg1,serverchoose_btn0_up,serverchoose_btn1,serverchoose_btn2,serverchoose_btn2_down,serverchoose_btn2_up,serverchoose_btn3,serverchoose_light0,serverchoose_light1,serverchoose_light2,serverchoose_light3"
+  },
+ {
+  "url": "skins/serverchoose/one/serverchoose_bg0.jpg",
+  "type": "image",
+  "name": "serverchoose_bg0_jpg"
+ },
+ {
+  "url": "skins/serverchoose/one/serverchoose_bg2.png",
+  "type": "image",
+  "name": "serverchoose_bg2_png"
+ },
+ {
+  "url": "skins/serverchoose/one/serverchoose_bg3.png",
+  "type": "image",
+  "name": "serverchoose_bg3_png"
+ },
+ {
+  "url": "skins/serverchoose/one/serverchoose_bg4.png",
+  "type": "image",
+  "name": "serverchoose_bg4_png"
+ },
+  {
+  "url": "skins/serverchoose/one/serverchoose_bg5.png",
+  "type": "image",
+  "name": "serverchoose_bg5_png"
+ },
+  {
+  "url": "skins/serverchoose/one/serverchoose_bg6.png",
+  "type": "image",
+  "name": "serverchoose_bg6_png"
+ },
+ {
+  "url": "skins/serverchoose/scroll.json",
+  "type": "sheet",
+  "subkeys": "bag_15,bag_16,bag_17,bag_18",
+  "name": "scroll_json"
+ },
+ {
+  "url": "skins/createrole/createrole.json",
+  "type": "sheet",
+  "name": "createrole_json",
+  "subkeys": "createrole_bg1,createrole_btn1_down,createrole_btn1_up,createrole_btn2,createrole_btn2_down,createrole_btn2_up,createrole_btn3,createrole_leaf0,createrole_leaf1,createrole_leaf2,createrole_leaf3,createrole_leaf4,createrole_leaf5,createrole_title0,createrole_txt1"
+ },
+ {
+  "url": "skins/createrole/createrole_bg0.jpg",
+  "type": "image",
+  "name": "createrole_bg0_jpg"
+ },
+ {
+  "url": "skins/createrole/createrole_role0.png",
+  "type": "image",
+  "name": "createrole_role0_png"
+ },
+ {
+  "url": "skins/createrole/createrole_role1.png",
+  "type": "image",
+  "name": "createrole_role1_png"
+ }
+]
+}

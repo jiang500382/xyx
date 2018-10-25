@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="head"></view>
+    <view class="logo-container">
+        <image class="logo" src="../../image/app-plgy.png"></image>
+    </view>
+    <view class="body">
+        <view class="tip">恭喜发财,大吉大利</view>
+        <view class="money">{{money}}</view>
+    </view>
+    <view class="buttons">
+        <navigator class="button" openType="reLaunch" url="/pages/index/index">继续游戏</navigator>
+        <view bindtap="bind2Profile" class="button ">查看我的奖励</view>
+    </view>
+</view>

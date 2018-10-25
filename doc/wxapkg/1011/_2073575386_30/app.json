@@ -1,0 +1,45 @@
+{
+    "pages": [
+        "pages/index",
+        "pages/strategy",
+        "pages/strategy_detail",
+        "pages/information",
+        "pages/redpacket",
+        "pages/rank",
+        "pages/gameglory",
+        "pages/moneystrategy",
+        "pages/withdraw",
+        "pages/personalDetail",
+        "pages/scene",
+        "pages/playRecord",
+        "pages/invited",
+        "pages/dailyRedPacket"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "泡泡游乐园",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "tabBar": {
+        "color": "#323232",
+        "selectedColor": "#a171eb",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index",
+                "text": "游戏",
+                "iconPath": "images/game.png",
+                "selectedIconPath": "images/game_active.png"
+            },
+            {
+                "pagePath": "pages/personalDetail",
+                "text": "个人",
+                "iconPath": "images/friend.png",
+                "selectedIconPath": "images/friend_active.png"
+            }
+        ]
+    }
+}

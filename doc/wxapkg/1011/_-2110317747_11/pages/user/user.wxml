@@ -1,0 +1,72 @@
+<notification id="notification"></notification>
+<view class="container">
+    <view class="bottom_img">
+        <image src="../../image/bottom_bg.png"></image>
+    </view>
+    <view style="height:80rpx;"></view>
+    <view class="userInfo">
+        <button bindgetuserinfo="getWxUserInfo" class="logo" openType="getUserInfo">
+            <image src="{{avatarUrl?avatarUrl:'../../image/user_logo.jpg'}}"></image>
+        </button>
+        <view class="userNum clearfix">
+            <view class="list fl" wx:if="{{!black_user}}">挑战机会
+        <view class="num line1">
+                    <text>{{chance_num}}</text>次</view>
+            </view>
+            <view class="list fl {{black_user?'list-black':''}}">
+                <image src="https://txcdn.ylll111.xyz/hzttk/jinbi-icon.png"></image>累计奖金
+        <view class="num line1">
+                    <text>{{amount}}</text>元</view>
+            </view>
+            <view class="list fl {{black_user?'list-black':''}}">通关次数
+        <view class="num line1">
+                    <text>{{success_num}}</text>次</view>
+            </view>
+        </view>
+        <view class="clearfix">
+            <view bindtap="bindWithdraw" class="tixian">提现</view>
+            <button class="kfbtn" openType="contact" sessionFrom="weapp">
+                <image class="icon" src="../../image/kf_icon.png"></image>
+                <text>客服微信</text>
+            </button>
+        </view>
+    </view>
+    <view class="record">
+        <view class="title">领奖记录</view>
+        <view class="norecord" wx:if="{{!recordList.length}}">
+            <image src="https://txcdn.ylll111.xyz/hzttk/nodata-bg.png"></image>
+            <view class="txt">还没有领奖记录</view>
+        </view>
+        <view class="listBox" wx:if="{{recordList.length}}">
+            <view class="title clearfix">
+                <view class="fl">奖金</view>
+                <view class="fr">领取时间</view>
+            </view>
+            <view class="con">
+                <view class="list clearfix" wx:for="{{recordList}}" wx:key="index">
+                    <view class="fl">￥{{item.amount}}</view>
+                    <view class="fr">{{item.create_time}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="moreGame" wx:if="{{moreGames.length>0}}">
+        <view bindtap="navigate2Mini" class="game clearfix" data-appid="{{item.appid}}" data-id="{{item.app_id}}" data-path="{{item.link_path}}" wx:for="{{moreGames}}" wx:key="index">
+            <view class="logo">
+                <image src="{{item.app_icon}}"></image>
+            </view>
+            <view class="con">
+                <view class="tit line1">{{item.app_title}}</view>
+                <view class="txt line1">{{item.app_desc}}</view>
+            </view>
+            <view class="go">{{item.link_text}}</view>
+        </view>
+    </view>
+    <view class="complaint">
+        <button bindtap="tousu" openType="complaint">
+            <image class="icon" src="../../image/icon-complaint.png"></image>
+            <text>投诉</text>
+        </button>
+    </view>
+    <view style="height:30rpx;"></view>
+</view>

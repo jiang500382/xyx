@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "余额提现",
+    "disableScroll": true,
+    "usingComponents": {
+        "notification": "/components/notification/index"
+    }
+}

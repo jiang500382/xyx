@@ -1,0 +1,55 @@
+@import "../__wuBaseWxss__/2.wxss";
+
+page {
+    padding-top: 130rpx;
+    background: #fcfcfc url('http://paopao.hi-hai.com/img/xcx/gameHall_2.0/bg.png') no-repeat;
+    background-size: 100%;
+}
+
+.wrap {
+    padding: 15rpx;
+    box-sizing: border-box;
+}
+
+.game-list {
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 10rpx 25rpx;
+    box-sizing: border-box;
+}
+
+.game-item {
+    position: relative;
+    height: 132rpx;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+}
+
+.game-item .txt {
+    margin-left: 131rpx;
+    font-size: 40rpx;
+    padding: 30rpx;
+}
+
+.game-item image {
+    width: 110rpx;
+    height: 110rpx;
+    position: absolute;
+    left: 0;
+    border-radius: 20rpx;
+}
+
+.game-item:after {
+    position: absolute;
+    top: 50%;
+    right: 15rpx;
+    width: 20rpx;
+    height: 20rpx;
+    font-size: 16rpx;
+    border-width: 5rpx 5rpx 0 0;
+    border-color: #ddd;
+    border-style: solid;
+    transform: rotate(45deg) translateY(-50%);
+    content: '';
+}

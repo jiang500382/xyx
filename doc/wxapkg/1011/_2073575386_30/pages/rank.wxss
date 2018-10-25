@@ -1,0 +1,346 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+.bonusItem {
+    box-sizing: border-box;
+    border-bottom: 1px solid #999;
+    height: 100rpx;
+    position: relative;
+}
+
+.bonusItem .itemRanking {
+    position: absolute;
+    top: 50%;
+    font-size: 28rpx;
+    color: #757575;
+    transform: translateY(-50%);
+}
+
+.bonusItem .itemAvator {
+    position: absolute;
+    width: 76rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100rpx;
+}
+
+.bonusItem .itemAvator .headImg {
+    width: 76rpx;
+    height: 76rpx;
+    border-radius: 50%;
+}
+
+.bonusItem .itemName {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 200rpx;
+    font-size: 28rpx;
+    color: #757575;
+}
+
+.bonusItem .itemMoney {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28rpx;
+    color: #403f3f;
+}
+
+.topThree {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.topThree .rankAvator {
+    width: 98rpx;
+    position: absolute;
+    top: 105rpx;
+}
+
+.topThree .rankAvator .name,.topThree .rankAvator .money {
+    position: absolute;
+    bottom: -50rpx;
+    left: -40rpx;
+    color: #000;
+    width: 180rpx;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 28rpx;
+    color: #403f3f;
+}
+
+.topThree .rankAvator .money {
+    bottom: -90rpx;
+    text-align: center;
+}
+
+.topThree .avatorImg {
+    width: 96rpx;
+    height: 96rpx;
+    position: absolute;
+    top: 23rpx;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.topThree .avatorImg image {
+    width: 100%;
+    height: 100%;
+}
+
+.topThree .avatorImgOne {
+    width: 112rpx;
+    height: 112rpx;
+    position: absolute;
+    top: 23rpx;
+    left: 0;
+    right: 0;
+}
+
+.topThree .avatorImgOne image {
+    width: 100%;
+    height: 100%;
+}
+
+.topThree .avatorImg image,.topThree .avatorImgOne image {
+    border-radius: 50%;
+}
+
+.topThree .rankAvator.first {
+    left: 99rpx;
+}
+
+.topThree .rankAvator.second {
+    width: 112rpx;
+    left: 50%;
+    top: 40rpx;
+    transform: translateX(-50%);
+}
+
+.topThree .rankAvator.third {
+    right: 99rpx;
+}
+
+.topThree .second .imgOneOne {
+    position: absolute;
+    left: -5rpx;
+    top: -10rpx;
+    width: 123rpx;
+    height: 151rpx;
+    z-index: -1;
+}
+
+.topThree .imgOneTwo {
+    position: absolute;
+    left: -8rpx;
+    top: 110rpx;
+    width: 126rpx;
+    height: 37rpx;
+}
+
+.topThree .imgTwoTwo {
+    position: absolute;
+    left: -17rpx;
+    top: 105rpx;
+    width: 126rpx;
+    height: 37rpx;
+    z-index: 1;
+}
+
+.topThree .nameBox {
+    position: absolute;
+    left: 5rpx;
+    top: 160rpx;
+}
+
+.topThree .imgTwoOneThree {
+    position: absolute;
+    left: -6rpx;
+    top: -8rpx;
+    width: 107rpx;
+    height: 132rpx;
+}
+
+.topThree .nameBoxOne {
+    left: -2rpx;
+    top: 152rpx;
+}
+
+.nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #8f52f5;
+    padding: 28rpx 0;
+}
+
+.navTab {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 420rpx;
+    height: 80rpx;
+    margin: 0 auto;
+    line-height: 80rpx;
+    background: #ac80f7;
+    font-size: 30rpx;
+    font-weight: bold;
+    border-radius: 80rpx;
+    overflow: hidden;
+    text-align: center;
+}
+
+.red {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.red.active {
+    background: #522ca7;
+}
+
+.tabNav {
+    position: relative;
+    height: 70rpx;
+    background: #f6f1fd;
+    font-size: 26rpx;
+}
+
+.tabItem {
+    position: absolute;
+    top: 10rpx;
+    padding: 8rpx 20rpx;
+    border-radius: 25rpx;
+    background: #fff;
+}
+
+.listName {
+    color: #ad69fc;
+    left: 42rpx;
+}
+
+.honor {
+    right: 42rpx;
+    color: #888;
+}
+
+.listName::after {
+    display: inline-block;
+    width: 12rpx;
+    height: 12rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+    vertical-align: top;
+    border: 4rpx solid;
+    border-left-width: 0;
+    border-top-width: 0;
+    transform: rotate(45deg);
+    content: '';
+}
+
+.meItem {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: 123rpx;
+    color: #000;
+    background: #fff;
+    box-shadow: 0 -4px 4px 0 rgba(0,0,0,0.15);
+    border: 0;
+}
+
+.meItem .meItemRanking {
+    position: absolute;
+    top: 45rpx;
+    left: 62rpx;
+    font-size: 30rpx;
+    color: #444544;
+}
+
+.meItem .meItemAvator {
+    position: absolute;
+    left: 189rpx;
+    width: 90rpx;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.meItem .meItemAvator .headImg {
+    border-radius: 50%;
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.meItem .meItemName {
+    position: absolute;
+    top: 50%;
+    left: 310rpx;
+    font-size: 32rpx;
+    color: #444544;
+    transform: translateY(-50%);
+}
+
+.meItem .meItemMoney {
+    position: absolute;
+    right: 79rpx;
+    font-size: 30rpx;
+    top: 50%;
+    color: #444544;
+    transform: translateY(-50%);
+}
+
+@import "../__wuBaseWxss__/2.wxss";
+
+page {
+    color: #fff;
+    padding-top: 128rpx;
+    overflow: hidden;
+}
+
+.body {
+    position: relative;
+}
+
+.scrollWrap {
+    position: fixed;
+    top: 358rpx;
+    bottom: 123rpx;
+}
+
+.bonusBox {
+    width: 706rpx;
+    height: 100%;
+    margin-left: 22rpx;
+    color: #000;
+    overflow: hidden;
+}
+
+.sBgImg {
+    position: absolute;
+    top: 1rpx;
+    left: 1rpx;
+    width: 706rpx;
+}
+
+.rankItem {
+    position: absolute;
+    top: 390rpx;
+    left: 8rpx;
+    width: 98%;
+    box-sizing: border-box;
+    padding: 0 50rpx;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}

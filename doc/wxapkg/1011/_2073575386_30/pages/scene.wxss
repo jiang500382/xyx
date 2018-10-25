@@ -1,0 +1,632 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+.wrap._733a170 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+}
+
+.wrap .cardSize._733a170 {
+    width: 590rpx;
+    border-radius: 20rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 350rpx auto;
+    z-index: 99;
+}
+
+.wrap .cardSize .header._733a170 {
+    background-color: #2d9dfb;
+    border-top-left-radius: 30rpx;
+    border-top-right-radius: 30rpx;
+    width: 100%;
+    height: 80rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80rpx;
+    color: white;
+}
+
+.wrap .cardSize .body._733a170 {
+    background: #fff;
+    overflow-y: scroll;
+    border-bottom-left-radius: 30rpx;
+    border-bottom-right-radius: 30rpx;
+    position: relative;
+    padding-top: 80rpx;
+}
+
+.wrap .cardSize .body .font._733a170 {
+    color: #cccccc;
+    text-align: center;
+    font-size: 36rpx;
+}
+
+.wrap .cardSize .body .know._733a170 {
+    width: 278rpx;
+    height: 96rpx;
+    margin: 60rpx 156rpx;
+    position: relative;
+}
+
+.wrap .cardSize .body .know image._733a170 {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap .cardSize .body .abknow._733a170 {
+    position: absolute;
+    width: 278rpx;
+    height: 96rpx;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    line-height: 96rpx;
+}
+
+@import "../__wuBaseWxss__/1.wxss";
+
+@import "../__wuBaseWxss__/4.wxss";
+
+.ladder {
+    width: 650rpx;
+    height: 650rpx;
+    left: 50rpx;
+    background: #7953fd;
+    box-shadow: 0 0 16rpx 6rpx rgba(255,255,255,.2) inset;
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 26rpx;
+    border: 2rpx solid #c7a2ff;
+    overflow: scroll;
+}
+
+.ladderItem {
+    position: relative;
+    width: 100%;
+    height: 130rpx;
+    border: 1rpx solid;
+    border-color: #74aced transparent #a2bcfc;
+}
+
+.ladderItem:first-child {
+    border-top: 0;
+}
+
+.ladderItem:last-child {
+    border-bottom: 0;
+}
+
+.ladderItem[data-status='0']:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 10;
+    content: '';
+}
+
+.ladderItem[data-status='-1']:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,.35);
+    z-index: 10;
+    content: '';
+}
+
+.ladderItem:after {
+    position: absolute;
+    width: 81rpx;
+    height: 100%;
+    top: 0;
+    right: 30rpx;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/go.png') center no-repeat;
+    background-size: 100%;
+    content: '';
+}
+
+.portrait {
+    width: 110rpx;
+    height: 110rpx;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+}
+
+.ladderC,.ladderNote {
+    position: absolute;
+    top: 32rpx;
+}
+
+.ladderC {
+    left: 140rpx;
+}
+
+.ladderNote {
+    right: 170rpx;
+    text-align: right;
+}
+
+.ladderC p,.ladderNote p {
+    display: block;
+    font-weight: bold;
+}
+
+.bean {
+    font-size: 20rpx;
+}
+
+.bean:after {
+    display: inline-block;
+    width: 26rpx;
+    height: 30rpx;
+    margin-left: 5rpx;
+    vertical-align: middle;
+    background: url('https://res.xingqiu123.com/hall/redpacket/gold.png?imageView2/2/w/60') no-repeat;
+    background-size: 100%;
+    content: '';
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.passWrap._f0f255d {
+    position: absolute;
+    top: 92rpx;
+}
+
+.passWrap .passConnect._f0f255d {
+    position: absolute;
+    top: 580rpx;
+    width: 330rpx;
+    height: 170rpx;
+    left: 210rpx;
+}
+
+.passWrap .passScene._f0f255d {
+    position: absolute;
+    top: 0;
+    width: 724rpx;
+    height: 644rpx;
+    left: 13rpx;
+}
+
+.passWrap .passBriefInfo._f0f255d {
+    position: absolute;
+    top: 297rpx;
+    width: 556rpx;
+    height: 211rpx;
+    left: 97rpx;
+}
+
+.passWrap .passGoStartBtn._f0f255d {
+    position: absolute;
+    top: 750rpx;
+    width: 540rpx;
+    height: 159rpx;
+    left: 105rpx;
+}
+
+.passWrap .wenan._f0f255d {
+    position: absolute;
+    top: 750rpx;
+    line-height: 159rpx;
+    width: 750rpx;
+    height: 159rpx;
+    text-align: center;
+    color: #d883f3;
+    font-size: 48rpx;
+    font-weight: 600;
+}
+
+.logo._776765c {
+    position: absolute;
+    top: 50rpx;
+    left: 50rpx;
+    width: 155rpx;
+    height: 78rpx;
+}
+
+.logo image._776765c {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.info1._776765c {
+    width: 130rpx;
+    padding: 0 15rpx;
+    height: 45rpx;
+    border-radius: 45rpx;
+    background: #a350b8;
+    border: 2rpx solid #e4c2ff;
+    box-shadow: 5rpx 5rpx 5rpx 5rpx #9444a5 inset;
+    position: absolute;
+    bottom: 50rpx;
+    left: 50rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight: 600;
+    font-size: 30rpx;
+}
+
+.info1 .winBeans._776765c {
+    width: 45rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+}
+
+.info1 .winBeans image._776765c {
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 8rpx;
+    margin-left: 15rpx;
+}
+
+.info2._776765c {
+    width: 130rpx;
+    padding: 0 15rpx;
+    height: 45rpx;
+    border-radius: 45rpx;
+    background: #f6555d;
+    border: 2rpx solid #fdcca9;
+    box-shadow: 5rpx 5rpx 5rpx 5rpx #e33d45 inset;
+    position: absolute;
+    bottom: 50rpx;
+    left: 50rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight: 600;
+    font-size: 30rpx;
+}
+
+.info2 .winBeans._776765c {
+    width: 45rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+}
+
+.info2 .winBeans image._776765c {
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 8rpx;
+    margin-left: 15rpx;
+}
+
+.info3._776765c {
+    width: 130rpx;
+    padding: 0 15rpx;
+    height: 45rpx;
+    border-radius: 45rpx;
+    background: #cf7300;
+    border: 2rpx solid #fffbc2;
+    box-shadow: 5rpx 5rpx 5rpx 5rpx #a35e08 inset;
+    position: absolute;
+    bottom: 50rpx;
+    left: 50rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight: 600;
+    font-size: 30rpx;
+}
+
+.info3 .winBeans._776765c {
+    width: 45rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+}
+
+.info3 .winBeans image._776765c {
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 8rpx;
+    margin-left: 15rpx;
+}
+
+.rules._776765c {
+    width: 380rpx;
+    height: 60rpx;
+    position: absolute;
+    bottom: 20rpx;
+    right: 60rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rules .person._776765c {
+    font-size: 24rpx;
+    color: #c391fd;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.rules .person image._776765c {
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 15rpx;
+    margin-right: 10rpx;
+}
+
+.rules .person view._776765c {
+    line-height: 60rpx;
+}
+
+.S1._776765c {
+    width: 641rpx;
+    height: 228rpx;
+    position: absolute;
+    left: 55rpx;
+    top: 0;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/novice_1.png') no-repeat;
+    background-size: cover;
+}
+
+.S2._776765c {
+    width: 641rpx;
+    height: 228rpx;
+    position: absolute;
+    left: 55rpx;
+    top: 268rpx;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/primary_1.png') no-repeat;
+    background-size: cover;
+}
+
+.S3._776765c {
+    width: 641rpx;
+    height: 228rpx;
+    position: absolute;
+    left: 55rpx;
+    top: 536rpx;
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/middle_1.png') no-repeat;
+    background-size: cover;
+}
+
+.threshold._776765c {
+    margin-right: 20rpx;
+}
+
+@import "../__wuBaseWxss__/2.wxss";
+
+.body._c79a72c {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/bg.png?new") no-repeat center top,-webkit-gradient(linear,left top,left bottom,from(#7e41ff),to(#5971f9));
+    background: url("https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/bg.png?new") no-repeat center top,-webkit-linear-gradient(#7e41ff,#5971f9);
+    background: url("https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/bg.png?new") no-repeat center top,linear-gradient(#7e41ff,#5971f9);
+    background-size: cover;
+}
+
+.body .mainVertical._c79a72c {
+    position: relative;
+}
+
+.body .mainVertical .myBeans._c79a72c {
+    width: 233rpx;
+    height: 64rpx;
+    padding-left: 54rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    text-align: left;
+    font-size: 32rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.body .mainVertical .myBeans image._c79a72c {
+    margin-top: 12rpx;
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 5rpx;
+}
+
+.body .mainVertical .myBeans .my._c79a72c {
+    line-height: 64rpx;
+}
+
+.body .mainVertical .myBeans .myBeansText._c79a72c {
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin-left: 10rpx;
+    line-height: 64rpx;
+    font-weight: 600;
+}
+
+.body .mainVertical .sceneTop._c79a72c {
+    position: relative;
+    top: 100rpx;
+    width: 750rpx;
+    height: 764rpx;
+}
+
+.body .mainVertical .animateC._c79a72c {
+    position: absolute;
+    top: 100rpx;
+    left: 0;
+    width: 750rpx;
+    height: 320rpx;
+    overflow: hidden;
+}
+
+.body .mainVertical .animateBtn._c79a72c {
+    width: 90rpx;
+    height: 180rpx;
+    position: absolute;
+    top: 456rpx;
+    left: 310rpx;
+    padding: 0 20rpx;
+}
+
+.body .mainVertical .animateBtn image._c79a72c {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.body .mainVertical .opacity._c79a72c {
+    opacity: 0;
+}
+
+.mask._c79a72c {
+    position: absolute;
+    width: 200rpx;
+    height: 289rpx;
+    top: 4rpx;
+    left: 6rpx;
+    border-radius: 46rpx;
+    background: rgba(0,0,0,0.3);
+}
+
+.playWithFriend._c79a72c {
+    width: 187rpx;
+    height: 62rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 28rpx;
+    font-weight: 600;
+}
+
+.playWithFriend image._c79a72c {
+    width: 187rpx;
+    height: 62rpx;
+}
+
+.playWithFriend .multi._c79a72c {
+    width: 147rpx;
+    height: 62rpx;
+    padding-left: 20rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 0 4rpx 2rpx #b11fb9;
+    line-height: 62rpx;
+}
+
+.playGame._c79a72c {
+    position: absolute;
+    top: 940rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 32rpx;
+    color: white;
+    font-weight: bold;
+    padding: 0 55rpx;
+}
+
+.playGame .some._c79a72c {
+    position: relative;
+    width: 224rpx;
+    height: 110rpx;
+}
+
+.playGame .some image._c79a72c {
+    width: 100%;
+    height: 100%;
+}
+
+.playGame .some .friend._c79a72c {
+    position: absolute;
+    left: 50rpx;
+    top: 36rpx;
+    text-shadow: 0 4rpx 2rpx #b11fb9;
+}
+
+.playGame .some .freeCanBeans._c79a72c {
+    width: 201rpx;
+    height: 30rpx;
+    position: absolute;
+    top: 0;
+    left: 12rpx;
+    color: #d71de3;
+    font-size: 20rpx;
+    text-align: center;
+    line-height: 30rpx;
+    z-index: 3;
+}
+
+.playGame .some .freeCanBeans image._c79a72c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 201rpx;
+    height: 30rpx;
+    z-index: 2;
+    opacity: .8;
+}
+
+.playGame .rondom._c79a72c {
+    position: relative;
+    width: 337rpx;
+    height: 110rpx;
+    font-size: 32rpx;
+    color: white;
+    margin-left: 80rpx;
+}
+
+.playGame .rondom image._c79a72c {
+    width: 337rpx;
+    height: 110rpx;
+}
+
+.playGame .rondom .fontB._c79a72c {
+    font-weight: bold;
+    width: 337rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 10rpx;
+    text-align: center;
+    line-height: 60rpx;
+    text-shadow: 0 4rpx 2rpx #e59e0c;
+}
+
+.playGame .rondom .fontA._c79a72c {
+    font-size: 24rpx;
+    width: 337rpx;
+    height: 30rpx;
+    position: absolute;
+    top: 60rpx;
+    text-align: center;
+    line-height: 30rpx;
+}
+
+.ladder._c79a72c {
+    position: relative;
+    top: 102rpx;
+}

@@ -1,0 +1,174 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+@import "../__wuBaseWxss__/2.wxss";
+
+page {
+    padding-top: 170rpx;
+    background: #fcfcfc url('http://paopao.hi-hai.com/img/xcx/gameHall_2.0/bg.png') no-repeat;
+    background-size: 100%;
+}
+
+image {
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    position: relative;
+    height: 204rpx;
+    text-align: center;
+    color: #666;
+}
+
+.top text {
+    font-weight: bold;
+}
+
+.top p {
+    display: block;
+    font-size: 20rpx;
+}
+
+.group {
+    margin-top: 40rpx;
+}
+
+.portrait {
+    width: 140rpx;
+    height: 140rpx;
+    margin: 0 auto 5rpx;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 20rpx;
+}
+
+.itemList {
+    position: relative;
+    margin: 20rpx 0;
+    height: 140rpx;
+    background: #fff;
+}
+
+.winChip {
+    position: absolute;
+    width: 64%;
+    top: 35rpx;
+    left: 20rpx;
+    font-size: 22rpx;
+}
+
+.winChipC {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+}
+
+.winChipC li {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+.winChipC li span {
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #ff389f;
+}
+
+.winChipC li:last-child {
+    text-align: right;
+}
+
+.winChipC li:last-child span {
+    color: #ffba00;
+}
+
+.winChip progress {
+    display: block;
+    border-radius: 20rpx;
+    border: 3rpx solid #7b39e2;
+    overflow: hidden;
+}
+
+.go {
+    position: relative;
+    background: #fff;
+    margin-top: 18rpx;
+    padding: 30rpx;
+    padding-left: 86rpx;
+}
+
+.go button {
+    line-height: 40rpx;
+    padding: 0;
+    background: transparent;
+    text-align: justify;
+    overflow: visible;
+}
+
+.go:before {
+    position: absolute;
+    display: inline-block;
+    width: 56rpx;
+    height: 56rpx;
+    top: 22rpx;
+    left: 20rpx;
+    background: #e8def9 url('http://paopao.hi-hai.com/img/xcx/gameHall/user/mini-icon.png') no-repeat;
+    background-size: 336rpx;
+    border-radius: 50%;
+    content: '';
+}
+
+.go[data-type='0']:before {
+    background-position-x: 0;
+}
+
+.go[data-type='1']:before {
+    background-position-x: -56rpx;
+}
+
+.go[data-type='2']:before {
+    background-position-x: -112rpx;
+}
+
+.go[data-type='3']:before {
+    background-position-x: -168rpx;
+}
+
+.go[data-type='4']:before {
+    background-position-x: -224rpx;
+}
+
+.go[data-type='5']:before {
+    background-position-x: -280rpx;
+}
+
+.go text {
+    font-size: 28rpx;
+    display: inline-block;
+}
+
+.goItem {
+    position: relative;
+    float: right;
+    display: inline-block;
+    color: #939393;
+}
+
+.goItem[data-item='1'] {
+    margin-right: 20rpx;
+}
+
+.goItem[data-item='1']:after {
+    position: absolute;
+    top: 16rpx;
+    right: -25rpx;
+    width: 20rpx;
+    height: 20rpx;
+    font-size: 16rpx;
+    border-width: 5rpx 5rpx 0 0;
+    border-color: currentColor;
+    border-style: solid;
+    transform: rotate(45deg);
+    content: '';
+}

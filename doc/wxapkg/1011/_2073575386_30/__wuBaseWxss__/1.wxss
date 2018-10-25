@@ -1,0 +1,211 @@
+.wrap._107135b {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+}
+
+.wrap .cardSize._107135b {
+    width: 590rpx;
+    border-radius: 20rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 400rpx auto;
+    max-height: 490rpx;
+    min-height: 386rpx;
+    z-index: 99;
+}
+
+.wrap .cardSize .header._107135b {
+    background-color: #a171eb;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    width: 100%;
+    height: 80rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80rpx;
+    color: white;
+}
+
+.wrap .cardSize .body._107135b {
+    background: #fff;
+    overflow-y: scroll;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+    position: relative;
+}
+
+.wrap .cardSize .body .font._107135b {
+    color: #a171eb;
+    padding: 70rpx 50rpx 10rpx;
+    font-size: 36rpx;
+}
+
+.wrap .cardSize .body .font .b._107135b {
+    font-weight: 700;
+}
+
+.wrap .cardSize .body .fontTwo._107135b {
+    color: #a171eb;
+    padding: 0 50rpx 64rpx;
+    font-size: 36rpx;
+}
+
+.wrap .cardSize .body .fontTwo .b._107135b {
+    font-weight: 700;
+}
+
+.wrap .cardSize .body .fontb._107135b {
+    color: #a171eb;
+    padding: 70rpx 50rpx 64rpx;
+    font-size: 36rpx;
+    text-align: center;
+}
+
+.wrap .cardSize .body .groupbtn._107135b {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 50rpx 38rpx 50rpx;
+}
+
+.wrap .cardSize .body .groupbtn .btn._107135b {
+    position: relative;
+    width: 210rpx;
+    height: 86rpx;
+}
+
+.wrap .cardSize .body .groupbtn .btn image._107135b {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.wrap .cardSize .body .groupbtn .btn .bigFontSize._107135b {
+    width: 210rpx;
+    height: 45rpx;
+    position: relative;
+    text-align: center;
+    line-height: 45rpx;
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 700;
+}
+
+.wrap .cardSize .body .groupbtn .btn .smallFontSize._107135b {
+    width: 210rpx;
+    height: 35rpx;
+    position: relative;
+    text-align: center;
+    line-height: 25rpx;
+    color: #fff;
+    font-size: 20rpx;
+}
+
+.wrap .cardSize .body .groupbtn .btn .cancelFontSize._107135b {
+    width: 210rpx;
+    height: 45rpx;
+    position: relative;
+    text-align: center;
+    line-height: 80rpx;
+    color: #fff;
+    font-size: 36rpx;
+    font-weight: 700;
+}
+
+.wrap .cardSize .body .groupbtn .btn .button._107135b {
+    position: absolute;
+    width: 210rpx;
+    height: 80rpx;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: transparent;
+}
+
+.wrap .cardSize .body .groupbtn .btn .button image._107135b {
+    width: 210rpx;
+    height: 80rpx;
+}
+
+.wrap .cardSize .body .groupbtn .btn2._107135b {
+    margin-left: 70rpx;
+}
+
+.close._107135b {
+    position: absolute;
+    top: 16rpx;
+    right: 16rpx;
+    color: #874fdf;
+    width: 48rpx;
+    height: 48rpx;
+    font-size: 48rpx;
+    line-height: 48rpx;
+    text-align: center;
+}
+
+.consider._107135b {
+    color: #cccccc;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+.fontBtn._107135b {
+    width: 210rpx;
+    height: 63rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 63rpx;
+    font-weight: 700;
+    color: white;
+}
+
+.content._107135b {
+    padding: 66rpx 50rpx 0;
+}
+
+.content .font._107135b {
+    font-weight: bolder;
+}
+
+.btnChild._107135b {
+    position: relative;
+    width: 190rpx;
+    height: 63rpx;
+    margin-left: 200rpx;
+    padding-top: 60rpx;
+    padding-bottom: 80rpx;
+}
+
+.btnChild image._107135b {
+    width: 190rpx;
+    height: 63rpx;
+}
+
+.btnChild .fontBtn._107135b {
+    width: 190rpx;
+    height: 63rpx;
+    position: absolute;
+    top: 60rpx;
+    left: 0;
+    text-align: center;
+    line-height: 63rpx;
+    font-weight: 700;
+    color: white;
+}
+
+.fontConent._107135b {
+    text-align: center;
+    color: #a171eb;
+    font-size: 36rpx;
+}

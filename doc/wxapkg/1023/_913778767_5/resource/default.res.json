@@ -1,0 +1,935 @@
+{
+	"groups": [
+		{
+			"keys": "Center_bg_jpg,Center_btn_png,Center_title_png,Cash_bg_jpg,Cash_btn1_png,Cash_btn10_png,Cash_btn2_png,Cash_btn3_png,Cash_btn4_png,Cash_btn5_png,Cash_btn6_png,Cash_btn7_png,Cash_btn8_png,Cash_btn9_png,Cash_rect_png,Cars_clock1_png,Cars_clock10_png,Cars_clock11_png,Cars_clock12_png,Cars_clock13_png,Cars_clock14_png,Cars_clock15_png,Cars_clock16_png,Cars_clock17_png,Cars_clock18_png,Cars_clock19_png,Cars_clock2_png,Cars_clock20_png,Cars_clock21_png,Cars_clock22_png,Cars_clock23_png,Cars_clock24_png,Cars_clock25_png,Cars_clock26_png,Cars_clock27_png,Cars_clock28_png,Cars_clock29_png,Cars_clock3_png,Cars_clock30_png,Cars_clock31_png,Cars_clock4_png,Cars_clock5_png,Cars_clock6_png,Cars_clock7_png,Cars_clock8_png,Cars_clock9_png,Cars_move1_png,Cars_move10_png,Cars_move11_png,Cars_move12_png,Cars_move13_png,Cars_move14_png,Cars_move15_png,Cars_move16_png,Cars_move17_png,Cars_move18_png,Cars_move19_png,Cars_move2_png,Cars_move20_png,Cars_move21_png,Cars_move22_png,Cars_move23_png,Cars_move24_png,Cars_move25_png,Cars_move26_png,Cars_move27_png,Cars_move28_png,Cars_move29_png,Cars_move3_png,Cars_move30_png,Cars_move31_png,Cars_move4_png,Cars_move5_png,Cars_move6_png,Cars_move7_png,Cars_move8_png,Cars_move9_png,Cars_rest1_png,Cars_rest10_png,Cars_rest11_png,Cars_rest12_png,Cars_rest13_png,Cars_rest14_png,Cars_rest15_png,Cars_rest16_png,Cars_rest17_png,Cars_rest18_png,Cars_rest19_png,Cars_rest2_png,Cars_rest20_png,Cars_rest21_png,Cars_rest22_png,Cars_rest23_png,Cars_rest24_png,Cars_rest25_png,Cars_rest26_png,Cars_rest27_png,Cars_rest28_png,Cars_rest29_png,Cars_rest3_png,Cars_rest30_png,Cars_rest31_png,Cars_rest4_png,Cars_rest5_png,Cars_rest6_png,Cars_rest7_png,Cars_rest8_png,Cars_rest9_png,Comeback_pic_png,Comeback_title_png,Free_btn_png,Free_pic_png,Free_title_png,Details_base_png,Details_bg_jpg,Game_base1_png,Game_bg_jpg,Game_board_png,Game_free_png,Game_guide_png,Game_help_png,Game_home_png,Game_icon_png,Game_invite_png,Game_kill_png,Game_move1_png,Game_rest1_png,Game_road_png,Game_shop_png,Game_shop1_png,Game_sign_png,Game_site1_png,Game_site2_png,Game_speedup_png,Game_speedup1_png,nums_fnt,nums_png,tips_jpg,Invite_btn_png,Invite_btn1_png,Invite_rect_jpg,Help_btn_png,Help_rect_jpg,Mymoney_bg_jpg,Mymoney_btn_png,Mymoney_btn1_png,Mymoney_btn2_png,Mymoney_btn3_png,Mymoney_head_png,Mymoney_rect_png,Mymoney_words_png,Sign_btn_png,Sign_btn1_png,Sign_rect_jpg,Shop_base_png,Shop_bg_png,Shop_blue_png,Shop_btn_png,Shop_btn1_png,Shop_car_png,Shop_coin_png,Shop_gray_png,Shop_rect_jpg,Unlock_avm_png,Unlock_btn_png,Unlock_guide_jpg,Unlock_light_png,Unlock_title_png,Game_sign1_png,Free_btn1_png,Shop_btn2_png,Redbag_btn_png,Redbag_btn1_png,Redbag_pic_png,Getbag_bg_jpg,Getbag_btn1_png,Getbag_btn2_png,Getbag_btn3_png,Cars_clock0_png,Mymoney_btn4_png,Game_board1_png,Shop_tips_png,Shop_btn3_png,Shop_btn4_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/Game/Game_base1.png",
+			"type": "image",
+			"name": "Game_base1_png"
+		},
+		{
+			"url": "assets/Game/Game_bg.jpg",
+			"type": "image",
+			"name": "Game_bg_jpg"
+		},
+		{
+			"url": "assets/Game/Game_board.png",
+			"type": "image",
+			"name": "Game_board_png"
+		},
+		{
+			"url": "assets/Game/Game_free.png",
+			"type": "image",
+			"name": "Game_free_png"
+		},
+		{
+			"url": "assets/Game/Game_guide.png",
+			"type": "image",
+			"name": "Game_guide_png"
+		},
+		{
+			"url": "assets/Game/Game_help.png",
+			"type": "image",
+			"name": "Game_help_png"
+		},
+		{
+			"url": "assets/Game/Game_home.png",
+			"type": "image",
+			"name": "Game_home_png"
+		},
+		{
+			"url": "assets/Game/Game_icon.png",
+			"type": "image",
+			"name": "Game_icon_png"
+		},
+		{
+			"url": "assets/Game/Game_invite.png",
+			"type": "image",
+			"name": "Game_invite_png"
+		},
+		{
+			"url": "assets/Game/Game_kill.png",
+			"type": "image",
+			"name": "Game_kill_png"
+		},
+		{
+			"url": "assets/Game/Game_move1.png",
+			"type": "image",
+			"name": "Game_move1_png"
+		},
+		{
+			"url": "assets/Game/Game_rest1.png",
+			"type": "image",
+			"name": "Game_rest1_png"
+		},
+		{
+			"url": "assets/Game/Game_road.png",
+			"type": "image",
+			"name": "Game_road_png"
+		},
+		{
+			"url": "assets/Game/Game_shop.png",
+			"type": "image",
+			"name": "Game_shop_png"
+		},
+		{
+			"url": "assets/Game/Game_sign.png",
+			"type": "image",
+			"name": "Game_sign_png"
+		},
+		{
+			"url": "assets/Game/Game_site1.png",
+			"type": "image",
+			"name": "Game_site1_png"
+		},
+		{
+			"url": "assets/Game/Game_site2.png",
+			"type": "image",
+			"name": "Game_site2_png"
+		},
+		{
+			"url": "assets/Game/Game_speedup.png",
+			"type": "image",
+			"name": "Game_speedup_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move1.png",
+			"type": "image",
+			"name": "Cars_move1_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move10.png",
+			"type": "image",
+			"name": "Cars_move10_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move11.png",
+			"type": "image",
+			"name": "Cars_move11_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move12.png",
+			"type": "image",
+			"name": "Cars_move12_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move13.png",
+			"type": "image",
+			"name": "Cars_move13_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move14.png",
+			"type": "image",
+			"name": "Cars_move14_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move15.png",
+			"type": "image",
+			"name": "Cars_move15_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move16.png",
+			"type": "image",
+			"name": "Cars_move16_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move17.png",
+			"type": "image",
+			"name": "Cars_move17_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move18.png",
+			"type": "image",
+			"name": "Cars_move18_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move19.png",
+			"type": "image",
+			"name": "Cars_move19_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move2.png",
+			"type": "image",
+			"name": "Cars_move2_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move20.png",
+			"type": "image",
+			"name": "Cars_move20_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move21.png",
+			"type": "image",
+			"name": "Cars_move21_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move22.png",
+			"type": "image",
+			"name": "Cars_move22_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move23.png",
+			"type": "image",
+			"name": "Cars_move23_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move24.png",
+			"type": "image",
+			"name": "Cars_move24_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move25.png",
+			"type": "image",
+			"name": "Cars_move25_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move26.png",
+			"type": "image",
+			"name": "Cars_move26_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move27.png",
+			"type": "image",
+			"name": "Cars_move27_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move28.png",
+			"type": "image",
+			"name": "Cars_move28_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move29.png",
+			"type": "image",
+			"name": "Cars_move29_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move3.png",
+			"type": "image",
+			"name": "Cars_move3_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move30.png",
+			"type": "image",
+			"name": "Cars_move30_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move31.png",
+			"type": "image",
+			"name": "Cars_move31_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move4.png",
+			"type": "image",
+			"name": "Cars_move4_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move5.png",
+			"type": "image",
+			"name": "Cars_move5_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move6.png",
+			"type": "image",
+			"name": "Cars_move6_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move7.png",
+			"type": "image",
+			"name": "Cars_move7_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move8.png",
+			"type": "image",
+			"name": "Cars_move8_png"
+		},
+		{
+			"url": "assets/Cars/Cars_move9.png",
+			"type": "image",
+			"name": "Cars_move9_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest1.png",
+			"type": "image",
+			"name": "Cars_rest1_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest10.png",
+			"type": "image",
+			"name": "Cars_rest10_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest11.png",
+			"type": "image",
+			"name": "Cars_rest11_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest12.png",
+			"type": "image",
+			"name": "Cars_rest12_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest13.png",
+			"type": "image",
+			"name": "Cars_rest13_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest14.png",
+			"type": "image",
+			"name": "Cars_rest14_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest15.png",
+			"type": "image",
+			"name": "Cars_rest15_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest16.png",
+			"type": "image",
+			"name": "Cars_rest16_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest17.png",
+			"type": "image",
+			"name": "Cars_rest17_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest18.png",
+			"type": "image",
+			"name": "Cars_rest18_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest19.png",
+			"type": "image",
+			"name": "Cars_rest19_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest2.png",
+			"type": "image",
+			"name": "Cars_rest2_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest20.png",
+			"type": "image",
+			"name": "Cars_rest20_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest21.png",
+			"type": "image",
+			"name": "Cars_rest21_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest22.png",
+			"type": "image",
+			"name": "Cars_rest22_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest23.png",
+			"type": "image",
+			"name": "Cars_rest23_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest24.png",
+			"type": "image",
+			"name": "Cars_rest24_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest25.png",
+			"type": "image",
+			"name": "Cars_rest25_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest26.png",
+			"type": "image",
+			"name": "Cars_rest26_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest27.png",
+			"type": "image",
+			"name": "Cars_rest27_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest28.png",
+			"type": "image",
+			"name": "Cars_rest28_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest29.png",
+			"type": "image",
+			"name": "Cars_rest29_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest3.png",
+			"type": "image",
+			"name": "Cars_rest3_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest30.png",
+			"type": "image",
+			"name": "Cars_rest30_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest31.png",
+			"type": "image",
+			"name": "Cars_rest31_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest4.png",
+			"type": "image",
+			"name": "Cars_rest4_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest5.png",
+			"type": "image",
+			"name": "Cars_rest5_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest6.png",
+			"type": "image",
+			"name": "Cars_rest6_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest7.png",
+			"type": "image",
+			"name": "Cars_rest7_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest8.png",
+			"type": "image",
+			"name": "Cars_rest8_png"
+		},
+		{
+			"url": "assets/Cars/Cars_rest9.png",
+			"type": "image",
+			"name": "Cars_rest9_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock1.png",
+			"type": "image",
+			"name": "Cars_clock1_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock2.png",
+			"type": "image",
+			"name": "Cars_clock2_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock3.png",
+			"type": "image",
+			"name": "Cars_clock3_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock4.png",
+			"type": "image",
+			"name": "Cars_clock4_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock5.png",
+			"type": "image",
+			"name": "Cars_clock5_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock6.png",
+			"type": "image",
+			"name": "Cars_clock6_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock7.png",
+			"type": "image",
+			"name": "Cars_clock7_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock8.png",
+			"type": "image",
+			"name": "Cars_clock8_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock9.png",
+			"type": "image",
+			"name": "Cars_clock9_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock10.png",
+			"type": "image",
+			"name": "Cars_clock10_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock11.png",
+			"type": "image",
+			"name": "Cars_clock11_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock12.png",
+			"type": "image",
+			"name": "Cars_clock12_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock13.png",
+			"type": "image",
+			"name": "Cars_clock13_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock14.png",
+			"type": "image",
+			"name": "Cars_clock14_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock15.png",
+			"type": "image",
+			"name": "Cars_clock15_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock16.png",
+			"type": "image",
+			"name": "Cars_clock16_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock17.png",
+			"type": "image",
+			"name": "Cars_clock17_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock18.png",
+			"type": "image",
+			"name": "Cars_clock18_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock19.png",
+			"type": "image",
+			"name": "Cars_clock19_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock20.png",
+			"type": "image",
+			"name": "Cars_clock20_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock21.png",
+			"type": "image",
+			"name": "Cars_clock21_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock22.png",
+			"type": "image",
+			"name": "Cars_clock22_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock23.png",
+			"type": "image",
+			"name": "Cars_clock23_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock24.png",
+			"type": "image",
+			"name": "Cars_clock24_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock25.png",
+			"type": "image",
+			"name": "Cars_clock25_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock26.png",
+			"type": "image",
+			"name": "Cars_clock26_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock27.png",
+			"type": "image",
+			"name": "Cars_clock27_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock28.png",
+			"type": "image",
+			"name": "Cars_clock28_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock29.png",
+			"type": "image",
+			"name": "Cars_clock29_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock30.png",
+			"type": "image",
+			"name": "Cars_clock30_png"
+		},
+		{
+			"url": "assets/Cars/Cars_clock31.png",
+			"type": "image",
+			"name": "Cars_clock31_png"
+		},
+		{
+			"url": "assets/Shop/Shop_base.png",
+			"type": "image",
+			"name": "Shop_base_png"
+		},
+		{
+			"url": "assets/Shop/Shop_bg.png",
+			"type": "image",
+			"name": "Shop_bg_png"
+		},
+		{
+			"url": "assets/Shop/Shop_blue.png",
+			"type": "image",
+			"name": "Shop_blue_png"
+		},
+		{
+			"url": "assets/Shop/Shop_btn.png",
+			"type": "image",
+			"name": "Shop_btn_png"
+		},
+		{
+			"url": "assets/Shop/Shop_btn1.png",
+			"type": "image",
+			"name": "Shop_btn1_png"
+		},
+		{
+			"url": "assets/Shop/Shop_car.png",
+			"type": "image",
+			"name": "Shop_car_png"
+		},
+		{
+			"url": "assets/Shop/Shop_coin.png",
+			"type": "image",
+			"name": "Shop_coin_png"
+		},
+		{
+			"url": "assets/Shop/Shop_gray.png",
+			"type": "image",
+			"name": "Shop_gray_png"
+		},
+		{
+			"url": "assets/Shop/Shop_rect.jpg",
+			"type": "image",
+			"name": "Shop_rect_jpg"
+		},
+		{
+			"url": "assets/Sign/Sign_btn.png",
+			"type": "image",
+			"name": "Sign_btn_png"
+		},
+		{
+			"url": "assets/Sign/Sign_btn1.png",
+			"type": "image",
+			"name": "Sign_btn1_png"
+		},
+		{
+			"url": "assets/Sign/Sign_rect.jpg",
+			"type": "image",
+			"name": "Sign_rect_jpg"
+		},
+		{
+			"url": "assets/Game/Game_shop1.png",
+			"type": "image",
+			"name": "Game_shop1_png"
+		},
+		{
+			"url": "assets/Unlock/Unlock_avm.png",
+			"type": "image",
+			"name": "Unlock_avm_png"
+		},
+		{
+			"url": "assets/Unlock/Unlock_btn.png",
+			"type": "image",
+			"name": "Unlock_btn_png"
+		},
+		{
+			"url": "assets/Unlock/Unlock_light.png",
+			"type": "image",
+			"name": "Unlock_light_png"
+		},
+		{
+			"url": "assets/Unlock/Unlock_title.png",
+			"type": "image",
+			"name": "Unlock_title_png"
+		},
+		{
+			"url": "assets/Unlock/Unlock_guide.jpg",
+			"type": "image",
+			"name": "Unlock_guide_jpg"
+		},
+		{
+			"url": "assets/Help/Help_btn.png",
+			"type": "image",
+			"name": "Help_btn_png"
+		},
+		{
+			"url": "assets/Help/Help_rect.jpg",
+			"type": "image",
+			"name": "Help_rect_jpg"
+		},
+		{
+			"url": "assets/Free/Free_btn.png",
+			"type": "image",
+			"name": "Free_btn_png"
+		},
+		{
+			"url": "assets/Free/Free_pic.png",
+			"type": "image",
+			"name": "Free_pic_png"
+		},
+		{
+			"url": "assets/Free/Free_title.png",
+			"type": "image",
+			"name": "Free_title_png"
+		},
+		{
+			"url": "assets/Comeback/Comeback_pic.png",
+			"type": "image",
+			"name": "Comeback_pic_png"
+		},
+		{
+			"url": "assets/Comeback/Comeback_title.png",
+			"type": "image",
+			"name": "Comeback_title_png"
+		},
+		{
+			"url": "assets/Invite/Invite_btn.png",
+			"type": "image",
+			"name": "Invite_btn_png"
+		},
+		{
+			"url": "assets/Invite/Invite_btn1.png",
+			"type": "image",
+			"name": "Invite_btn1_png"
+		},
+		{
+			"url": "assets/Invite/Invite_rect.jpg",
+			"type": "image",
+			"name": "Invite_rect_jpg"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_bg.jpg",
+			"type": "image",
+			"name": "Mymoney_bg_jpg"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_btn.png",
+			"type": "image",
+			"name": "Mymoney_btn_png"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_btn1.png",
+			"type": "image",
+			"name": "Mymoney_btn1_png"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_btn2.png",
+			"type": "image",
+			"name": "Mymoney_btn2_png"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_btn3.png",
+			"type": "image",
+			"name": "Mymoney_btn3_png"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_head.png",
+			"type": "image",
+			"name": "Mymoney_head_png"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_rect.png",
+			"type": "image",
+			"name": "Mymoney_rect_png"
+		},
+		{
+			"url": "assets/Mymoney/Mymoney_words.png",
+			"type": "image",
+			"name": "Mymoney_words_png"
+		},
+		{
+			"url": "assets/Cash/Cash_bg.jpg",
+			"type": "image",
+			"name": "Cash_bg_jpg"
+		},
+		{
+			"url": "assets/Cash/Cash_btn1.png",
+			"type": "image",
+			"name": "Cash_btn1_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn10.png",
+			"type": "image",
+			"name": "Cash_btn10_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn2.png",
+			"type": "image",
+			"name": "Cash_btn2_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn3.png",
+			"type": "image",
+			"name": "Cash_btn3_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn4.png",
+			"type": "image",
+			"name": "Cash_btn4_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn5.png",
+			"type": "image",
+			"name": "Cash_btn5_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn6.png",
+			"type": "image",
+			"name": "Cash_btn6_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn7.png",
+			"type": "image",
+			"name": "Cash_btn7_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn8.png",
+			"type": "image",
+			"name": "Cash_btn8_png"
+		},
+		{
+			"url": "assets/Cash/Cash_btn9.png",
+			"type": "image",
+			"name": "Cash_btn9_png"
+		},
+		{
+			"url": "assets/Cash/Cash_rect.png",
+			"type": "image",
+			"name": "Cash_rect_png"
+		},
+		{
+			"url": "assets/Details/Details_base.png",
+			"type": "image",
+			"name": "Details_base_png"
+		},
+		{
+			"url": "assets/Details/Details_bg.jpg",
+			"type": "image",
+			"name": "Details_bg_jpg"
+		},
+		{
+			"url": "assets/Game/Game_speedup1.png",
+			"type": "image",
+			"name": "Game_speedup1_png"
+		},
+		{
+			"url": "assets/Game/nums.fnt",
+			"type": "font",
+			"name": "nums_fnt"
+		},
+		{
+			"url": "assets/Game/nums.png",
+			"type": "image",
+			"name": "nums_png"
+		},
+		{
+			"url": "assets/Game/tips.jpg",
+			"type": "image",
+			"name": "tips_jpg"
+		},
+		{
+			"url": "assets/Center/Center_bg.jpg",
+			"type": "image",
+			"name": "Center_bg_jpg"
+		},
+		{
+			"url": "assets/Center/Center_btn.png",
+			"type": "image",
+			"name": "Center_btn_png"
+		},
+		{
+			"url": "assets/Center/Center_title.png",
+			"type": "image",
+			"name": "Center_title_png"
+		},
+		{
+			"name": "Game_sign1_png",
+			"type": "image",
+			"url": "assets/Game/Game_sign1.png"
+		},
+		{
+			"name": "Free_btn1_png",
+			"type": "image",
+			"url": "assets/Free/Free_btn1.png"
+		},
+		{
+			"name": "Shop_btn2_png",
+			"type": "image",
+			"url": "assets/Shop/Shop_btn2.png"
+		},
+		{
+			"name": "Redbag_btn_png",
+			"type": "image",
+			"url": "assets/Redbag/Redbag_btn.png"
+		},
+		{
+			"name": "Redbag_btn1_png",
+			"type": "image",
+			"url": "assets/Redbag/Redbag_btn1.png"
+		},
+		{
+			"name": "Redbag_pic_png",
+			"type": "image",
+			"url": "assets/Redbag/Redbag_pic.png"
+		},
+		{
+			"name": "Getbag_bg_jpg",
+			"type": "image",
+			"url": "assets/Getbag/Getbag_bg.jpg"
+		},
+		{
+			"name": "Getbag_btn1_png",
+			"type": "image",
+			"url": "assets/Getbag/Getbag_btn1.png"
+		},
+		{
+			"name": "Getbag_btn2_png",
+			"type": "image",
+			"url": "assets/Getbag/Getbag_btn2.png"
+		},
+		{
+			"name": "Getbag_btn3_png",
+			"type": "image",
+			"url": "assets/Getbag/Getbag_btn3.png"
+		},
+		{
+			"name": "Cars_clock0_png",
+			"type": "image",
+			"url": "assets/Cars/Cars_clock0.png"
+		},
+		{
+			"name": "Mymoney_btn4_png",
+			"type": "image",
+			"url": "assets/Mymoney/Mymoney_btn4.png"
+		},
+		{
+			"name": "Game_board1_png",
+			"type": "image",
+			"url": "assets/Game/Game_board1.png"
+		},
+		{
+			"name": "Shop_tips_png",
+			"type": "image",
+			"url": "assets/Shop/Shop_tips.png"
+		},
+		{
+			"name": "Shop_btn3_png",
+			"type": "image",
+			"url": "assets/Shop/Shop_btn3.png"
+		},
+		{
+			"name": "Shop_btn4_png",
+			"type": "image",
+			"url": "assets/Shop/Shop_btn4.png"
+		}
+	]
+}

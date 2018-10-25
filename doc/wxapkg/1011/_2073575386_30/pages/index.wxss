@@ -1,0 +1,801 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+.page._4fdf24c {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 201;
+}
+
+.wrap._4fdf24c {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+}
+
+.wrap .imageSize._4fdf24c {
+    padding-left: 35rpx;
+    margin-top: 168rpx;
+    position: relative;
+}
+
+.wrap .imageSize .closeGuide._4fdf24c {
+    width: 64rpx;
+    height: 64rpx;
+    text-align: center;
+    line-height: 64rpx;
+    position: absolute;
+    color: white;
+    opacity: .7;
+    font-size: 64rpx;
+    top: 5rpx;
+    right: 80rpx;
+}
+
+.wrap .imageSize .closeGuide .getUserr._4fdf24c {
+    width: 64rpx;
+    height: 64rpx;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+}
+
+.wrap .imageSize .goToIndex._4fdf24c {
+    position: absolute;
+    width: 680rpx;
+    height: 1061rpx;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.gameItem {
+    position: relative;
+    display: inline-block;
+    width: 328rpx;
+    margin-bottom: 20rpx;
+    border-radius: 15rpx;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 10rpx 20rpx rgba(169,169,169,0.3);
+}
+
+.gameItem:nth-of-type(odd) {
+    margin-right: 18rpx;
+}
+
+.gameIcon {
+    width: 100%;
+    height: 217rpx;
+}
+
+.gameNote {
+    font-size: 30rpx;
+    padding: 5rpx 0;
+}
+
+.gameNote p {
+    display: block;
+    color: #a171eb;
+    font-size: 22rpx;
+}
+
+.gameTag {
+    position: absolute;
+    top: 15rpx;
+    right: -65rpx;
+    width: 200rpx;
+    line-height: 35rpx;
+    background: #ffea15;
+    font-size: 20rpx;
+    color: #f37427;
+    transform: rotate(45deg);
+    box-shadow: 0 5rpx 15rpx #a9a9a9;
+    text-align: center;
+}
+
+@import "../__wuBaseWxss__/0.wxss";
+
+.subscribe .cardSize._84ec00c {
+    width: 590rpx;
+    position: absolute;
+    left: 80rpx;
+    border-radius: 20rpx;
+    z-index: 99;
+    top: 50%;
+    margin-top: -300rpx;
+}
+
+.subscribe .cardSize .header._84ec00c {
+    background-color: #a171eb;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    width: 100%;
+    height: 80rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80rpx;
+    color: white;
+}
+
+.subscribe .cardSize .body._84ec00c {
+    background: white;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+}
+
+.subscribe .cardSize .body .title._84ec00c {
+    color: #a171eb;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70rpx;
+    font-size: 36rpx;
+}
+
+.subscribe .cardSize .body .content._84ec00c {
+    padding: 26rpx 50rpx;
+    text-align: center;
+    color: #a171eb;
+    font-size: 36rpx;
+}
+
+.subscribe .cardSize .body .btnGroup._84ec00c {
+    padding: 50rpx 50rpx 60rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.subscribe .cardSize .body .btnGroup .modal-form._84ec00c {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.subscribe .cardSize .body .btnGroup .modal-form .btnChild._84ec00c {
+    position: relative;
+    width: 190rpx;
+    margin: 0 15rpx;
+    height: 63rpx;
+    float: left;
+}
+
+.subscribe .cardSize .body .btnGroup .modal-form .btnChild button._84ec00c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background-color: transparent;
+    border-radius: 50rpx;
+}
+
+.subscribe .cardSize .body .btnGroup .modal-form .btn2._84ec00c {
+    margin-left: 10rpx;
+    width: 190rpx;
+    float: right;
+}
+
+.gift {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 520rpx;
+    height: 710rpx;
+}
+
+.gift image {
+    width: 520rpx;
+    height: 710rpx;
+}
+
+.collect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 680rpx;
+    height: 1057rpx;
+}
+
+.collect image {
+    width: 680rpx;
+    height: 1057rpx;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+}
+
+.guideCollect {
+    position: absolute;
+    bottom: 50rpx;
+    left: 110rpx;
+    width: 280rpx;
+    height: 60rpx;
+}
+
+.share {
+    position: absolute;
+    bottom: 10rpx;
+    width: 100%;
+    text-align: center;
+    height: 30rpx;
+    line-height: 30rpx;
+    color: #cccccc;
+    font-size: 20rpx;
+}
+
+.shareButton {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.bingWhere {
+    position: absolute;
+    bottom: 150rpx;
+    left: 110rpx;
+    width: 280rpx;
+    height: 60rpx;
+    color: #ffffff;
+    font-size: 48rpx;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #8157f4;
+    text-align: center;
+}
+
+image {
+    width: 100%;
+    height: 100%;
+}
+
+text.note {
+    display: block;
+    text-align: center;
+    font-size: 20rpx;
+}
+
+.closeGuide {
+    position: absolute;
+    width: 64rpx;
+    height: 64rpx;
+    top: 112rpx;
+    right: 0;
+    color: #2b73de;
+    text-align: center;
+    line-height: 64rpx;
+    font-size: 48rpx;
+}
+
+.loginBox1 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+}
+
+.getUser {
+    position: absolute;
+    width: 750rpx;
+    height: 1334rpx;
+    left: 50%;
+    top: 50%;
+    margin-top: -667rpx;
+    margin-left: -375rpx;
+    background-color: transparent;
+    display: block;
+}
+
+.loginPic {
+    position: absolute;
+    width: 641rpx;
+    height: 840rpx;
+    left: 50%;
+    top: 50%;
+    margin-top: -420rpx;
+    margin-left: -320rpx;
+}
+
+.loginPicBottom {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+}
+
+.brokenBox {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    color: #a83e05;
+}
+
+.brokenBox .mask {
+    z-index: 3;
+}
+
+.brokenC {
+    position: relative;
+    left: 115rpx;
+    top: 20vh;
+    width: 520rpx;
+    height: 710rpx;
+    background: url("http://paopao.hi-hai.com/img/xcx/Hall/index/broken.png") no-repeat;
+    background-size: 100%;
+    z-index: 5;
+}
+
+.brokenC button {
+    position: absolute;
+    bottom: 50rpx;
+    width: 273rpx;
+    height: 57rpx;
+    left: 123rpx;
+    padding: 0;
+    background: url("http://paopao.hi-hai.com/img/xcx/Hall/index/button_yellow.png") no-repeat;
+    background-size: 100%;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+checkbox .wx-checkbox-input {
+    border-radius: 2rpx;
+    height: 20rpx;
+    width: 20rpx;
+    color: #cccccc;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    background-color: #fff;
+    height: 20rpx;
+    width: 20rpx;
+    color: #cccccc;
+    font-size: 20rpx;
+}
+
+page {
+    padding-top: 10vh;
+    background: #fcfcfc url("http://paopao.hi-hai.com/img/xcx/gameHall_2.0/bg.png") no-repeat;
+    background-size: 100%;
+}
+
+.indexHeader {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7.5vh;
+    padding-bottom: 2vh;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    background: #fcfcfc url("http://paopao.hi-hai.com/img/xcx/gameHall_2.0/bg.png") no-repeat;
+    background-size: 100%;
+    z-index: 50;
+}
+
+.indexHeader.tall {
+    height: 10vh;
+}
+
+.topImg {
+    position: relative;
+    width: 202rpx;
+    height: 37rpx;
+    margin: 0 auto;
+}
+
+.boast {
+    padding-left: 18rpx;
+    padding-right: 38rpx;
+    background: rgba(163,115,252,0.4);
+    color: #fff;
+    font-size: 24rpx;
+}
+
+.subMenu {
+    margin: 20rpx 38rpx;
+}
+
+.recharge,.userList {
+    display: inline-block;
+    height: 175rpx;
+    border-radius: 20rpx;
+    box-shadow: 0 10rpx 20rpx rgba(169,169,169,0.3);
+}
+
+.recharge {
+    width: 407rpx;
+}
+
+.userList {
+    width: 250rpx;
+    margin-left: 18rpx;
+}
+
+.gameList {
+    margin: 0 38rpx;
+    font-size: 26rpx;
+}
+
+.index_port {
+    position: fixed;
+    left: 0;
+    top: 52vh;
+    width: 181rpx;
+    height: 224rpx;
+    animation: slides 8s linear infinite;
+}
+
+.portC {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: frame1 1s steps(1,end) infinite;
+}
+
+@-webkit-keyframes slides {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        left: 60rpx;
+        top: 60vh;
+    }
+
+    50% {
+        left: 0;
+        top: 68vh;
+    }
+
+    75% {
+        left: 60rpx;
+        top: 60vh;
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes slides {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        left: 60rpx;
+        top: 60vh;
+    }
+
+    50% {
+        left: 0;
+        top: 68vh;
+    }
+
+    75% {
+        left: 60rpx;
+        top: 60vh;
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@-webkit-keyframes frame {
+    0% {
+        background-position-x: 0;
+    }
+
+    6.25% {
+        background-position-x: -181rpx;
+    }
+
+    12.5% {
+        background-position-x: -362rpx;
+    }
+
+    18.75% {
+        background-position-x: -543rpx;
+    }
+
+    25% {
+        background-position-x: -724rpx;
+    }
+
+    31.25% {
+        background-position-x: -905rpx;
+    }
+
+    37.5% {
+        background-position-x: -1086rpx;
+    }
+
+    43.75% {
+        background-position-x: -1267rpx;
+    }
+
+    50% {
+        background-position-x: -1448rpx;
+    }
+
+    56.25% {
+        background-position-x: -1629rpx;
+    }
+
+    62.5% {
+        background-position-x: -1810rpx;
+    }
+
+    68.75% {
+        background-position-x: -1991rpx;
+    }
+
+    75% {
+        background-position-x: -2172rpx;
+    }
+
+    81.25% {
+        background-position-x: -2353rpx;
+    }
+
+    87.5% {
+        background-position-x: -2534rpx;
+    }
+
+    93.75% {
+        background-position-x: -2715rpx;
+    }
+
+    100% {
+        background-position-x: -2896rpx;
+    }
+}
+
+@keyframes frame {
+    0% {
+        background-position-x: 0;
+    }
+
+    6.25% {
+        background-position-x: -181rpx;
+    }
+
+    12.5% {
+        background-position-x: -362rpx;
+    }
+
+    18.75% {
+        background-position-x: -543rpx;
+    }
+
+    25% {
+        background-position-x: -724rpx;
+    }
+
+    31.25% {
+        background-position-x: -905rpx;
+    }
+
+    37.5% {
+        background-position-x: -1086rpx;
+    }
+
+    43.75% {
+        background-position-x: -1267rpx;
+    }
+
+    50% {
+        background-position-x: -1448rpx;
+    }
+
+    56.25% {
+        background-position-x: -1629rpx;
+    }
+
+    62.5% {
+        background-position-x: -1810rpx;
+    }
+
+    68.75% {
+        background-position-x: -1991rpx;
+    }
+
+    75% {
+        background-position-x: -2172rpx;
+    }
+
+    81.25% {
+        background-position-x: -2353rpx;
+    }
+
+    87.5% {
+        background-position-x: -2534rpx;
+    }
+
+    93.75% {
+        background-position-x: -2715rpx;
+    }
+
+    100% {
+        background-position-x: -2896rpx;
+    }
+}
+
+@-webkit-keyframes frame1 {
+    0% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_0.png');
+    }
+
+    6.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_2.png');
+    }
+
+    12.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_4.png');
+    }
+
+    18.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_6.png');
+    }
+
+    25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_8.png');
+    }
+
+    31.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_10.png');
+    }
+
+    37.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_12.png');
+    }
+
+    43.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_14.png');
+    }
+
+    50% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_16.png');
+    }
+
+    56.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_18.png');
+    }
+
+    62.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_20.png');
+    }
+
+    68.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_22.png');
+    }
+
+    75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_24.png');
+    }
+
+    81.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_26.png');
+    }
+
+    87.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_28.png');
+    }
+
+    93.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_30.png');
+    }
+
+    100% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_0.png');
+    }
+}
+
+@keyframes frame1 {
+    0% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_0.png');
+    }
+
+    6.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_2.png');
+    }
+
+    12.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_4.png');
+    }
+
+    18.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_6.png');
+    }
+
+    25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_8.png');
+    }
+
+    31.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_10.png');
+    }
+
+    37.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_12.png');
+    }
+
+    43.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_14.png');
+    }
+
+    50% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_16.png');
+    }
+
+    56.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_18.png');
+    }
+
+    62.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_20.png');
+    }
+
+    68.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_22.png');
+    }
+
+    75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_24.png');
+    }
+
+    81.25% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_26.png');
+    }
+
+    87.5% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_28.png');
+    }
+
+    93.75% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_30.png');
+    }
+
+    100% {
+        background-image: url('https://res.xingqiu123.com/img/xcx/Hall/3.7/index/port_0.png');
+    }
+}
+
+.canNotClilk {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0);
+    z-index: 200;
+}

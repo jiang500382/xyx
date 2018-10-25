@@ -1,0 +1,21 @@
+<view class="wx_toast_container" wx:if="{{!isHide}}">
+    <view class="wx-mask"></view>
+    <view class="toast_content_box">
+        <view class="toast_content">
+            <view class="toast_content_text">
+        {{content}}
+      </view>
+        </view>
+    </view>
+</view>
+<view class="wx_dialog_container" wx:if="{{isShowDialog}}">
+    <view class="wx-mask"></view>
+    <view class="wx-dialog">
+        <view class="wx-dialog-title">{{title}}</view>
+        <view class="wx-dialog-content">{{content}}</view>
+        <view class="wx-dialog-footer">
+            <view catchtap="_cancelEvent" class="wx-dialog-btn" wx:if="{{showCancel}}">{{cancelText}}</view>
+            <view catchtap="_confirmEvent" class="wx-dialog-btn confirm">{{confirmText}}</view>
+        </view>
+    </view>
+</view>

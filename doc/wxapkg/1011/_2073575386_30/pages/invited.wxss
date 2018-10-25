@@ -1,0 +1,196 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+@import "../__wuBaseWxss__/4.wxss";
+
+@import "../__wuBaseWxss__/5.wxss";
+
+@import "../__wuBaseWxss__/0.wxss";
+
+@import "../__wuBaseWxss__/2.wxss";
+
+page {
+    background: #fae0a1;
+    padding-top: 9vh;
+    font-size: 28rpx;
+}
+
+image {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 346rpx;
+    margin-bottom: -40rpx;
+}
+
+.detail {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    width: 56rpx;
+    height: 56rpx;
+}
+
+.boxBag,.shareInfo {
+    margin: 0rpx 40rpx;
+}
+
+.boxBag li {
+    position: relative;
+    display: inline-block;
+    width: 210rpx;
+    background: #e2a1fa;
+    margin-right: 20rpx;
+    border-radius: 20rpx;
+}
+
+.boxBag li:last-child {
+    margin-right: 0;
+}
+
+.boxBag li:after {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 55rpx;
+    left: 0;
+    top: 290rpx;
+    color: #b109ef;
+    text-align: center;
+    content: attr(data-text);
+}
+
+.boxIcon {
+    margin: 16rpx auto;
+    width: 197rpx;
+    height: 206rpx;
+    background: url('http://paopao.hi-hai.com/img/xcx/gameHall/activity/invited/red_packet.png') no-repeat;
+    background-size: 394rpx;
+}
+
+li[data-id='0'] .boxIcon {
+    background-position-y: 0;
+}
+
+li[data-id='1'] .boxIcon {
+    background-position-y: -206rpx;
+}
+
+li[data-id='2'] .boxIcon {
+    background-position-y: -412rpx;
+}
+
+li[data-type='2'] .boxIcon {
+    background-position-x: 0;
+}
+
+li[data-type='1'] .boxIcon {
+    background-position-x: 0;
+}
+
+li[data-type='0'] .boxIcon {
+    background-position-x: -197rpx;
+}
+
+li[data-type='2']:before {
+    position: absolute;
+    width: 100%;
+    height: 238rpx;
+    background: rgba(0,0,0,.5) url('http://paopao.hi-hai.com/img/xcx/gameHall/activity/lock.png') center center no-repeat;
+    background-size: 68rpx;
+    content: '';
+    border-radius: 20rpx 20rpx 0 0;
+}
+
+.boxNote {
+    border-radius: 0 0 20rpx 20rpx;
+    color: #fff;
+    line-height: 55rpx;
+    text-align: center;
+    background: #b109ef;
+}
+
+.boxNote em {
+    color: #f8d33e;
+}
+
+.shareInfo {
+    margin-top: 80rpx;
+    background: #fffff3;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.shareInfo p {
+    display: block;
+    font-size: 30rpx;
+    text-align: center;
+    margin: 28rpx auto;
+    color: #b109ef;
+    font-weight: bold;
+}
+
+.slideBox {
+    position: relative;
+    width: 520rpx;
+    margin: 0 auto;
+}
+
+.slideBox:before,.slideBox:after {
+    position: absolute;
+    top: 40rpx;
+    width: 15rpx;
+    height: 15rpx;
+    border: solid #b109ef;
+    border-width: 0 0 6rpx 6rpx;
+    content: '';
+}
+
+.slideBox:before {
+    left: -20rpx;
+    transform: rotate(45deg);
+}
+
+.slideBox:after {
+    right: -20rpx;
+    transform: rotate(-135deg);
+}
+
+.slideBox .userIcon {
+    display: inline-block;
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 7rpx;
+}
+
+.invited {
+    width: 527rpx;
+    height: 100rpx;
+    margin: 30rpx auto;
+    background: url('http://paopao.hi-hai.com/img/xcx/gameHall/activity/invited/btn_yellow.png') no-repeat;
+    background-size: 100%;
+    color: #975b02;
+    font-weight: bold;
+    line-height: 90rpx;
+    font-size: 38rpx;
+}
+
+.noFriend {
+    width: 216rpx;
+    height: 123rpx;
+    margin: 0 auto;
+}
+
+.boast {
+    height: 70rpx;
+    background: #f7e5fd;
+    font-size: 22rpx;
+    color: #333;
+    line-height: 70rpx;
+    text-align: left;
+}

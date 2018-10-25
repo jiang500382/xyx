@@ -1,0 +1,73 @@
+<notification id="notification"></notification>
+<view class="bottom_img">
+    <image src="../../image/bottom_bg.png"></image>
+</view>
+<view class="swiper-tab">
+    <view bindtap="clickTab" class="tab-list {{currentTab==0?'on':''}}" data-current="0">挑战领奖</view>
+    <view bindtap="clickTab" class="tab-list {{currentTab==1?'on':''}}" data-current="1">领奖记录</view>
+</view>
+<swiper bindchange="swiperTab" class="swiper-box" current="{{currentTab}}" duration="300">
+    <swiper-item>
+        <scroll-view class="swiper-container" scrollY="true">
+            <view class="gift-list">
+                <view class="gift-item" wx:for="{{gift_list_slice}}" wx:key="index">
+                    <image class="item-image" src="{{item.img}}"></image>
+                    <view class="item-info">
+                        <text class="item-title">{{item.name}}</text>
+                        <button bindtap="linqu_click" class="item-button" data-id="{{item.prize_id}}">领取</button>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+        <scroll-view class="swiper-container" scrollY="true">
+            <view class="receive-list">
+                <view class="receive-item" wx:for="{{linqu_list}}" wx:key="index">
+                    <image class="item-image" src="{{item.img}}"></image>
+                    <view class="item-info">
+                        <text class="item-title">{{item.name}}</text>
+                        <button class="item-button">已领取</button>
+                    </view>
+                    <view class="item-time">领取时间：{{item.time}}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+</swiper>
+<view class="wx_dialog_container" wx:if="{{write_addres}}">
+    <view class="wx-mask"></view>
+    <form bindsubmit="formSubmit" reportSubmit="true">
+        <view class="wx-dialog">
+            <view class="wx-dialog-title">请确认收货地址</view>
+            <view class="wx-dialog-content">
+                <form bindsubmit="formSubmit" reportSubmit="true">
+                    <view class="form">
+                        <view class="form-item">
+                            <label class="label">收货地址</label>
+                            <view class="value">
+                                <input name="address"></input>
+                            </view>
+                        </view>
+                        <view class="form-item">
+                            <label class="label">收货人姓名</label>
+                            <view class="value">
+                                <input name="true_name"></input>
+                            </view>
+                        </view>
+                        <view class="form-item">
+                            <label class="label">收货人电话</label>
+                            <view class="value">
+                                <input name="phone_num" type="number"></input>
+                            </view>
+                        </view>
+                    </view>
+                </form>
+            </view>
+            <view class="wx-dialog-footer">
+                <button catchtap="cancel" class="wx-dialog-btn">取消</button>
+                <button class="wx-dialog-btn" formType="submit">领取</button>
+            </view>
+        </view>
+    </form>
+</view>

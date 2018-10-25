@@ -1,0 +1,224 @@
+@import "../__wuBaseWxss__/3.wxss";
+
+@import "../__wuBaseWxss__/1.wxss";
+
+.group._4d998cf {
+    margin-top: 20rpx;
+}
+
+.group .list._4d998cf {
+    background: #fff;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-bottom: 20rpx;
+    position: relative;
+    padding-right: 30rpx;
+    overflow: hidden;
+}
+
+.group .list .content._4d998cf {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.group .list .content .icon._4d998cf {
+    width: 56rpx;
+    height: 56rpx;
+    margin-top: 22rpx;
+}
+
+.group .list .content .icon image._4d998cf {
+    width: 100%;
+    height: 100%;
+}
+
+.group .list .content .text._4d998cf {
+    -webkit-box-flex: 1;
+    flex: 1;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    margin-top: 45rpx;
+}
+
+.group .list .content .tip._4d998cf {
+    color: #666;
+    font-size: 22rpx;
+    height: 34rpx;
+    width: 140rpx;
+    background: #ff5a27;
+    line-height: 34rpx;
+    border-radius: 4rpx;
+    color: white;
+    text-align: center;
+    margin-top: 33rpx;
+    margin-right: 30rpx;
+}
+
+.group .list .content .gt._4d998cf {
+    font-size: 30rpx;
+    color: #cccccc;
+    height: 30rpx;
+    width: 30rpx;
+    line-height: 30rpx;
+    margin-top: 33rpx;
+    position: relative;
+}
+
+.group .list .content .gt .gtC._4d998cf {
+    position: absolute;
+    right: 0;
+    bottom: 5rpx;
+    width: 15rpx;
+    height: 15rpx;
+    font-size: 16rpx;
+    border-width: 0 0 4rpx 4rpx;
+    border-color: #cccccc;
+    border-style: solid;
+    transform: rotate(-135deg);
+    z-index: 20;
+}
+
+.group .list .jump._4d998cf {
+    position: absolute;
+    height: 100rpx;
+    width: 100%;
+    z-index: 199;
+    opacity: 0;
+    top: 0;
+}
+
+.bigicon._4d998cf {
+    width: 100rpx;
+    height: 110rpx;
+}
+
+.bigicon image._4d998cf {
+    width: 100rpx;
+    height: 110rpx;
+}
+
+@import "../__wuBaseWxss__/2.wxss";
+
+p._cbe8d12 {
+    margin: 0;
+    padding: 0;
+}
+
+.page._cbe8d12 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: #f7f7f7;
+    overflow-y: scroll;
+}
+
+image._cbe8d12 {
+    width: 100%;
+    height: 100%;
+}
+
+.top._cbe8d12 {
+    padding-top: 150rpx;
+    height: 280rpx;
+    position: relative;
+    height: rpx;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    color: #666;
+}
+
+.top .portrait._cbe8d12 {
+    width: 140rpx;
+    height: 140rpx;
+    margin-left: 30rpx;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 140rpx;
+}
+
+.top .nickname._cbe8d12 {
+    color: white;
+    padding-left: 30rpx;
+    padding-top: 25rpx;
+    text-align: left;
+    -webkit-box-flex: 1;
+    flex: 1;
+    font-size: 28rpx;
+}
+
+.top .nickname view._cbe8d12:nth-of-type(1) {
+    font-weight: 600;
+}
+
+.top .nickname view._cbe8d12:nth-of-type(2) {
+    font-size: 26rpx;
+}
+
+.top .edit._cbe8d12 {
+    width: 36rpx;
+    height: 36rpx;
+    padding: 52rpx 60rpx;
+}
+
+.top .edit image._cbe8d12 {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.rgwrap._cbe8d12 {
+    background: #f7f7f7;
+    height: 130rpx;
+    width: 750rpx;
+    position: relative;
+}
+
+.rgwrap .rmbAndBeans._cbe8d12 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    text-align: center;
+    background: #fff;
+    width: 690rpx;
+    height: 190rpx;
+    padding: 20rpx 0;
+    position: absolute;
+    left: 30rpx;
+    top: -100rpx;
+    border-radius: 12rpx;
+    font-weight: 600;
+}
+
+.rgwrap .rmbAndBeans .rmb._cbe8d12 {
+    width: 375rpx;
+    padding-top: 35rpx;
+}
+
+.rgwrap .rmbAndBeans .rmb image._cbe8d12 {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.rgwrap .rmbAndBeans .beans._cbe8d12 {
+    width: 375rpx;
+    padding-top: 35rpx;
+}
+
+.rgwrap .rmbAndBeans .beans image._cbe8d12 {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.weight._cbe8d12 {
+    font-weight: 600;
+    font-weight: bold;
+}

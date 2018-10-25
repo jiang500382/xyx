@@ -1,0 +1,16 @@
+<view class="wrap">
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="game-list">
+        <navigator hoverClass="none" url="strategy_detail?id={{item.id}}&title={{item.name}}" wx:if="{{item.is_online}}" wx:for="{{gameList}}" wx:key="index">
+            <view catchtab="toDetail" class="game-item" data-id="item.id">
+                <image mode="aspectFill" src="http://paopao.hi-hai.com/img/xcx/gameHall_2.0/home/game_icon_{{item.id}}.png"></image>
+                <view class="txt">{{item.name}}</view>
+            </view>
+        </navigator>
+    </view>
+</view>

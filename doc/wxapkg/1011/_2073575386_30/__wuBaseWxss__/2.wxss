@@ -1,0 +1,135 @@
+.navigationBar._bdb7cee {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 130rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: end;
+    align-items: flex-end;
+    text-align: center;
+    color: #fff;
+    background: #f0e9fd url('http://paopao.hi-hai.com/img/xcx/gameHall_2.0/bg.png') no-repeat;
+    background-size: 100%;
+}
+
+.navigationBar.index._bdb7cee {
+    height: 148rpx;
+}
+
+.navigationBar.share._bdb7cee {
+    background: #ffd2ab;
+}
+
+.navigationBar.redpacket._bdb7cee {
+    background: #ff5b5c;
+}
+
+.wx-arrow_left._bdb7cee {
+    position: absolute;
+    left: 35rpx;
+    bottom: 20rpx;
+    width: 20rpx;
+    height: 20rpx;
+    font-size: 16rpx;
+    border-width: 5rpx 5rpx 0 0;
+    border-color: currentColor;
+    border-style: solid;
+    transform: rotate(-135deg);
+    z-index: 20;
+}
+
+.backFct._bdb7cee {
+    position: absolute;
+    width: 60rpx;
+    height: 60rpx;
+    top: -15rpx;
+    left: -15rpx;
+}
+
+.btn-active._bdb7cee {
+    background: none;
+}
+
+.navigationBarTitleText._bdb7cee {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 36rpx;
+    font-weight: bold;
+    line-height: 68rpx;
+}
+
+.rank._bdb7cee {
+    background: #8f52f5;
+}
+
+.record._bdb7cee {
+    background: -webkit-gradient(linear,left top,left bottom,from(#c9aefc),to(#a171eb));
+    background: -webkit-linear-gradient(#c9aefc,#a171eb);
+    background: linear-gradient(#c9aefc,#a171eb);
+}
+
+.withdraw._bdb7cee {
+    background: #fff;
+    height: 128rpx;
+    border-bottom: 1px solid #f5f5fa;
+    color: black;
+    font-style: normal;
+}
+
+.withdraw .white._bdb7cee {
+    color: white;
+    font-size: 36rpx;
+    font-weight: 100;
+    font-weight: 700;
+}
+
+.navigationBar.info._bdb7cee {
+    background-image: url('https://res.xingqiu123.com/image/userInfo/pngbgtop.png');
+    color: white;
+}
+
+.navigationBar.scene._bdb7cee {
+    background: url('https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/bg.png?new') no-repeat center top;
+    background-size: cover;
+    color: white;
+    height: 138rpx;
+}
+
+.navigationBar.purple._bdb7cee {
+    background: #a171eb;
+}
+
+.navigationBar.trans._bdb7cee {
+    background: transparent;
+}
+
+.information._bdb7cee {
+    color: #444444;
+}
+
+.littleTop._bdb7cee {
+    bottom: 30rpx;
+    line-height: 30rpx;
+}
+
+.tall._bdb7cee {
+    height: 148rpx;
+}
+
+.tallNav._bdb7cee {
+    bottom: 10rpx;
+}
+
+.dailyRedp._bdb7cee {
+    background: transparent;
+    color: white;
+}
+
+.tall.dailyRedp._bdb7cee {
+    height: 10vh;
+}

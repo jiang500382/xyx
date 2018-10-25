@@ -1,0 +1,224 @@
+.wx_dialog_container .wx-mask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+.wx-dialog {
+    position: fixed;
+    z-index: 5000;
+    width: 80%;
+    max-width: 600rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.wx-dialog-title {
+    font-size: 18px;
+    padding: 15px 15px 5px;
+}
+
+.wx-dialog-content {
+    padding: 15px 15px 5px;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: #999;
+}
+
+.wx-dialog-footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    line-height: 45px;
+    font-size: 17px;
+}
+
+.wx-dialog-footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #d5d5d6;
+    color: #d5d5d6;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+}
+
+.wx-dialog-btn {
+    display: block;
+    flex: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    position: relative;
+}
+
+.wx-dialog-footer .wx-dialog-btn:nth-of-type(1) {
+    color: #353535;
+}
+
+.wx-dialog-footer .wx-dialog-btn:nth-of-type(2) {
+    color: #3cc51f;
+}
+
+.wx-dialog-footer .wx-dialog-btn:nth-of-type(2):after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid #d5d5d6;
+    color: #d5d5d6;
+    transform-origin: 0 0;
+    transform: scaleX(0.5);
+}
+
+.wx-dialog-footer .wx-dialog-btn.confirm {
+    color: #3cc51f;
+}
+
+.wx_toast_container .wx-mask {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+}
+
+.toast_content_box {
+    position: fixed;
+    z-index: 10001;
+    width: 400rpx;
+    max-width: 400rpx;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.toast_content {
+    padding: 30rpx;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20rpx;
+}
+
+.toast_content_text {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 28rpx;
+    text-align: center;
+}
+
+confirm-modal.page-container {
+    padding-bottom: 120rpx;
+}
+
+.confirm-modal .modal-container .content {
+    position: relative;
+    width: 558rpx;
+    height: 284rpx;
+    background: #ff9200;
+    border-top-right-radius: 10rpx;
+    border-top-left-radius: 10rpx;
+}
+
+.confirm-modal .modal-container .content text {
+    display: block;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 32rpx;
+    color: #fcfeff;
+}
+
+.confirm-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 10000;
+}
+
+.confirm-modal .modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.confirm-modal .modal-container .content {
+    position: relative;
+    width: 558rpx;
+    height: 284rpx;
+    background: #ff9200;
+    border-top-right-radius: 30rpx;
+    border-top-left-radius: 30rpx;
+    text-align: center;
+}
+
+.confirm-modal .modal-container .content text {
+    display: block;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 32rpx;
+    color: #fcfeff;
+}
+
+.confirm-modal .modal-container .btn-close {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120rpx;
+    width: 64rpx;
+    height: 64rpx;
+}
+
+.confirm-modal .modal-container .weui-flex__item:first-child button {
+    border-bottom-left-radius: 30rpx;
+}
+
+.confirm-modal .modal-container .weui-flex__item:last-child button {
+    border-bottom-right-radius: 30rpx;
+}
+
+.confirm-modal .modal-container button.active {
+    border-left: 1px solid #ff9200;
+    color: #ff9200;
+}
+
+.confirm-modal .modal-container button {
+    background: #fff;
+    font-size: 28rpx;
+    line-height: 100rpx;
+    border-radius: 0;
+    color: #999;
+}
+
+.confirm-modal .modal-container button::after {
+    display: none;
+}

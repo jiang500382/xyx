@@ -1,0 +1,12 @@
+@import "../__wuBaseWxss__/2.wxss";
+
+page {
+    padding-top: 130rpx;
+    background: #fcfcfc url('http://paopao.hi-hai.com/img/xcx/gameHall_2.0/bg.png') no-repeat;
+    background-size: 100%;
+}
+
+.headimage {
+    width: 100%;
+    min-height: 100vh;
+}

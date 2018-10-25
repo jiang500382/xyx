@@ -1,0 +1,42 @@
+<notification id="notification"></notification>
+<navigator class="mingxi" url="/pages/transfer/recordList">提现记录</navigator>
+<view class="clearfix"></view>
+<view class="content">
+    <form bindsubmit="formSubmit" reportSubmit="true">
+        <view class="toptxt">我的余额</view>
+        <view class="money">￥{{user_amount}}</view>
+        <view class="numbox clearfix">
+            <view class="txt-l">￥</view>
+            <input class="inputClass" name="amount" placeholder="请输入要提现的金额" type="digit" value="{{withdraw}}"></input>
+            <view bindtap="bindWithdrawAll" class="txt-r">全部提现</view>
+        </view>
+        <button class="tixianBtn" formType="submit">提现</button>
+        <navigator class="gameBtn" openType="switchTab" url="/pages/index/index">继续游戏</navigator>
+    </form>
+    <view class="tips" wx:if="{{widthdrawTips.length}}">
+        <view class="tips-txt">温馨提示：</view>
+        <view class="tips-txt" wx:for="{{widthdrawTips}}" wx:key="index">{{item}}</view>
+    </view>
+</view>
+<view class="success_tk" wx:if="{{successfully}}">
+    <view class="bg" wx:if="{{bg}}">
+        <image class="logo" lazyLoad="true" src="/image/icon-success.png"></image>
+        <view class="title">提现申请已提交</view>
+        <view class="txt">
+            <text wx:for="{{shareOptions.withdraw_rule}}">{{item}}</text>
+        </view>
+        <view class="no1">
+            <view class="tit">交易单号</view>
+            <view class="con">{{trade_no}}</view>
+            <view bindtap="add2ClipboardandGoto" class="add2Clipboard" data-value="{{trade_no}}">复制单号</view>
+        </view>
+        <image bindtap="closeTk" class="close" src="https://txcdn.ylll111.xyz/hzttk/tixian_close.png"></image>
+    </view>
+    <view class="goto-kf" wx:if="{{goto}}">
+        <text>{{shareOptions.fuzhi_danhao}}</text>
+        <button class="contact" openType="contact" sessionFrom="weapp">
+            <text>联系客服</text>
+        </button>
+        <image bindtap="closeTk" class="close" src="https://txcdn.ylll111.xyz/hzttk/tixian_close.png"></image>
+    </view>
+</view>

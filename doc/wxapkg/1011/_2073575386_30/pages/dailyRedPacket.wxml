@@ -1,0 +1,67 @@
+<view class="Mask" wx:if="{{isModal}}">
+    <view class="modal">
+        <view class="modalT">{{$invitePop$modalData.title}}</view>
+        <view class="modalC">
+            <view class="modalP" style="text-align:{{$invitePop$modalData.introAlign}}">{{$invitePop$modalData.intro}}</view>
+            <view class="mmpd">
+                <view class="modalItem" wx:for="{{$invitePop$modalData.text}}" wx:key="text">
+                    <view style="width:{{$invitePop$modalData.imageConfig.width}}rpx;height:{{$invitePop$modalData.imageConfig.width}}rpx;margin:0 auto;background-image:url('{{$invitePop$modalData.image}}');background-size:{{$invitePop$modalData.imageConfig.size}}%;background-position-x:{{item.position}}%"></view>
+                    <view class="note" style="text-align:{{item.text_align}}">{{item.note}}</view>
+                </view>
+            </view>
+            <view class="subBtn">
+                <button bindtap="$invitePop$_submit" class="certainBtn btn">{{$invitePop$modalData.btnText?$invitePop$modalData.btnText:'确认'}}</button>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="pagewrap" style="padding-top:{{mTop}}vh">
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="header">
+        <image mode="aspectFill" src="https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/bg1.png?20180919"></image>
+    </view>
+    <view class="frame _7830bf8">
+        <image class="_7830bf8" src="https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/frame.png"></image>
+        <view class="redpGold _7830bf8">
+            <button bindtap="$dailyred$_openBox" class="redItem _7830bf8" data-id="{{item.red_id}}" data-status="{{item.status}}" hoverClass="none" openType="{{item.status==1&&index<3?'share':''}}" wx:for="{{$dailyred$redList}}" wx:key="index">
+                <view class="itemBg _7830bf8">
+                    <view class="redAward _7830bf8" wx:if="{{index<3}}">×{{item.pao_gold}}</view>
+                </view>
+                <view class="redBtn _7830bf8" wx:if="{{index<3}}">{{item.status==1?'求帮助':item.status==2?'领取':'已领取'}}</view>
+            </button>
+        </view>
+    </view>
+    <view class="tip">开启3个红包，可额外获得现金大礼！</view>
+    <view class="invite">
+        <view class="friendHlep">
+            <view>助力</view>
+            <view>好友</view>
+        </view>
+        <block wx:if="{{frdList.length}}">
+            <view class="friendimage" wx:for="{{frdList}}" wx:key="frd">
+                <image mode="aspectFill" src="{{item.user_icon}}"></image>
+            </view>
+        </block>
+        <view class="noFrd" wx:else>
+            <image mode="aspectFill" src="https://res.xingqiu123.com/img/xcx/Hall/3.7/dailyredp/noFrd.png"></image>
+        </view>
+    </view>
+    <view class="resettip">
+      每日24：00重置
+    </view>
+</view>
+<view class="Mask" wx:if="{{isInvite}}">
+    <view class="inviteBox">
+        <view class="inviteH">你成功帮TA开启了红包</view>
+        <view class="inviteNum">×5元</view>
+        <view bindtap="_hideInvite" class="close" wx:if="{{isShow}}">×</view>
+        <button class="shareBtn" hoverClass="none" openType="share" wx:if="{{isShow}}">我也要领红包</button>
+        <text class="shareText" wx:else>您的红包已经拆完了喔</text>
+        <button bindgetuserinfo="_login" class="loginBtn" lang="zh_CN" openType="getUserInfo" wx:if="{{isLoginBox}}"></button>
+    </view>
+</view>

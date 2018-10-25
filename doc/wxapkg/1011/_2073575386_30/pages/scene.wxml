@@ -1,0 +1,264 @@
+<view class="body _c79a72c">
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee _c79a72c">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="mainVertical _c79a72c" style="margin-top:{{myBeansTop}}rpx">
+        <view class="myBeans _c79a72c" style="background:url(https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/beans_container.png) no-repeat;background-size:cover;line-height:54rpx;">
+            <view class="my _c79a72c">我的</view>
+            <image class="_c79a72c" src="https://res.xingqiu123.com/hall/redpacket/gold.png"></image>
+            <view class="myBeansText _c79a72c">{{myBeans}}</view>
+        </view>
+        <view class="playWithFriend _c79a72c">
+            <navigator appId="{{appId}}" bindtap="jumpToOrider" class="_c79a72c" extraData="{{multiParams}}" hoverClass="none" multi=")" target="miniProgram" url="" version="trial" wx:if="{{promotionCost&&canPlayp}}">
+                <image class="_c79a72c" src="../images/chamNew/playWithOthers.png"></image>
+                <view class="multi _c79a72c">多人对战</view>
+            </navigator>
+            <view bindtap="tip" class="_c79a72c" wx:if="{{promotionCost&&!canPlayp}}">
+                <image class="_c79a72c" src="../images/chamNew/playWithOthers.png"></image>
+                <view class="multi _c79a72c">多人对战</view>
+            </view>
+        </view>
+        <view class="sceneTop _c79a72c" wx:if="{{ordinaryList}}">
+            <view class="_776765c _c79a72c" wx:if="{{$scene$info&&$scene$online}}" wx:for="{{$scene$info}}" wx:key="index">
+                <view bindtap="$scene$judgeJump" class="{{$scene$sceneClass[index]}} _776765c" data-wpyjudgejump-a="{{item}}">
+                    <view class="logo _776765c">
+                        <image class="_776765c" src="{{$scene$url}}"></image>
+                    </view>
+                    <view class="{{$scene$bgcolor[index]}} _776765c">
+                        <view class="winBeans _776765c">赢</view>
+                        <view class="winBeans _776765c">{{item.cost}}</view>
+                        <view class="winBeans _776765c">
+                            <image class="_776765c" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/beand_white.png"></image>
+                        </view>
+                    </view>
+                    <view class="rules _776765c">
+                        <view class="person _776765c">
+                            <image class="_776765c" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/person.png"></image>
+                            <view class="_776765c">{{$scene$online[index].count}}</view>
+                        </view>
+                        <view class="person _776765c">
+                            <view class="threshold _776765c">门槛:</view>
+                            <image class="_776765c" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/scene/beans_purple.png"></image>
+                            <view class="_776765c">{{item.limit}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="playGame _c79a72c">
+            <view class="_c79a72c" wx:if="{{isShare}}">
+                <navigator appId="{{appId}}" bindtap="jumpToOrider" class="some _c79a72c" extraData="{{friendParams}}" friend=")" hoverClass="none" target="miniProgram" url="" version="trial">
+                    <image class="_c79a72c" src="../images/chamNew/playWithFriend.png"></image>
+                    <view class="freeCanBeans _c79a72c">
+                        <image class="_c79a72c" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/pass/translucentbg.png"></image>
+                免费赚豆子</view>
+                    <view class="friend _c79a72c">好友对战</view>
+                </navigator>
+            </view>
+            <navigator appId="{{appId}}" bindtap="jumpToOrider" class="_c79a72c" extraData="{{ordinaryParams}}" hoverClass="none" rondom=")" target="miniProgram" url="" version="trial" wx:if="{{eligible&&isQuick}}">
+                <view class="rondom _c79a72c">
+                    <image class="_c79a72c" src="../images/chamNew/playQuickly.png"></image>
+                    <view class="fontB _c79a72c">快速开始</view>
+                    <view class="fontA _c79a72c">{{currentScene}}</view>
+                </view>
+            </navigator>
+            <view bindtap="tip" class="rondom _c79a72c" wx:if="{{!eligible&&isQuick}}">
+                <image class="_c79a72c" src="../images/chamNew/playQuickly.png"></image>
+                <view class="fontB _c79a72c">快速开始</view>
+                <view class="fontA _c79a72c">{{currentScene}}</view>
+            </view>
+        </view>
+        <view class="passWrap _f0f255d _c79a72c" wx:if="{{isPass}}">
+            <image class="passConnect _f0f255d" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/pass/connect.png"></image>
+            <image class="passScene _f0f255d" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/pass/scene.png"></image>
+            <image class="passBriefInfo _f0f255d" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/pass/briefInfo.png"></image>
+            <view bindtap="$pass$goStart" class="_f0f255d">
+                <image class="passGoStartBtn _f0f255d" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/pass/goStartBtn.png"></image>
+                <view class="wenan _f0f255d">{{$pass$wenan}}</view>
+            </view>
+        </view>
+        <view class="ladder {{$ladder$ladderClass}} _c79a72c" wx:if="{{isLadder}}">
+            <view bindtap="$ladder$_checkItem" class="ladderItem" data-id="{{item.id}}" data-index="{{index}}" data-status="{{item.class}}" wx:for="{{$ladder$list}}" wx:key="ladder">
+                <image class="portrait" mode="aspectFill" src="{{item.icon}}?imageView2/2/w/130"></image>
+                <view class="ladderC">
+                    <p>{{item.name}}</p>
+                    <text class="bean">消耗{{item.match_cost}}</text>
+                </view>
+                <view class="ladderNote">
+                    <p>奖金</p>
+                    <text class="bean">{{item.bunko_cost?item.bunko_cost:0}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="Mask" wx:if="{{$ladder$isModal}}">
+            <view class="modal">
+                <view class="modalT">{{$ladder$invitePop$modalData.title}}</view>
+                <view class="modalC">
+                    <view class="modalP" style="text-align:{{$ladder$invitePop$modalData.introAlign}}">{{$ladder$invitePop$modalData.intro}}</view>
+                    <view class="mmpd">
+                        <view class="modalItem" wx:for="{{$ladder$invitePop$modalData.text}}" wx:key="text">
+                            <view style="width:{{$ladder$invitePop$modalData.imageConfig.width}}rpx;height:{{$ladder$invitePop$modalData.imageConfig.width}}rpx;margin:0 auto;background-image:url('{{$ladder$invitePop$modalData.image}}');background-size:{{$ladder$invitePop$modalData.imageConfig.size}}%;background-position-x:{{item.position}}%"></view>
+                            <view class="note" style="text-align:{{item.text_align}}">{{item.note}}</view>
+                        </view>
+                    </view>
+                    <view class="subBtn">
+                        <button bindtap="$ladder$invitePop$_submit" class="certainBtn btn">{{$ladder$invitePop$modalData.btnText?$ladder$invitePop$modalData.btnText:'确认'}}</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="wrap _107135b _c79a72c" wx:if="{{isNeedRecharge}}">
+        <view class="cardSize _107135b" wx:if="{{$recharge1$type==1}}">
+            <view bindtap="$recharge1$closeRechargeModel" class="close _107135b">X</view>
+            <view class="header _107135b">豆子充值</view>
+            <view class="body _107135b">
+                <view class="font _107135b">
+          进入客服回复
+          <text class="b _107135b">"1"</text>充值豆子
+        </view>
+                <view class="fontTwo _107135b">
+          回复
+          <text class="b _107135b">"2"</text>关注公众号领取礼包
+        </view>
+                <view class="groupbtn _107135b">
+                    <view class="btn _107135b">
+                        <button class="button _107135b" openType="contact"></button>
+                        <image class="_107135b" src="../images/index/btn1.png" style="width:210rpx;height:80rpx"></image>
+                        <view class="bigFontSize _107135b"> 关注公众号</view>
+                        <view class="smallFontSize _107135b">（回复2）</view>
+                    </view>
+                    <view class="btn btn2 _107135b">
+                        <button class="button button2 _107135b" openType="contact"></button>
+                        <image class="_107135b" src="../images/index/btn2.png" style="width:210rpx;height:80rpx"></image>
+                        <view class="bigFontSize _107135b"> 充值豆子</view>
+                        <view class="smallFontSize _107135b">（回复1）</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="cardSize _107135b" wx:if="{{$recharge1$type==2}}">
+            <view class="header _107135b">提示</view>
+            <view class="body _107135b">
+                <view class="content,fontConent _107135b">
+          豆子不够用啦！
+        </view>
+                <view class="fontConent _107135b">
+          去泡泡游戏公众号领取吧
+        </view>
+                <view class="btnChild _107135b">
+                    <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                    <view bindtap="$recharge1$closeRechargeModel" class="fontBtn _107135b" data-wpycloserechargemodel-a="2">确认</view>
+                </view>
+            </view>
+        </view>
+        <view class="cardSize _107135b" wx:if="{{$recharge1$type==3}}">
+            <view bindtap="$recharge1$closeRechargeModel" class="close _107135b" data-wpycloserechargemodel-a="3">X</view>
+            <view class="header _107135b">提示</view>
+            <view class="body _107135b">
+                <view class="fontb _107135b">
+          亲，您的实力已炉火纯青，就别在新手区虐菜啦！去参加高级场赚取更多豆子吧。
+        </view>
+                <view class="groupbtn _107135b">
+                    <view class="btn _107135b">
+                        <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn3.png" style="width:210rpx;height:63rpx"></image>
+                        <view bindtap="$recharge1$closeRechargeModel" class="fontBtn _107135b" data-wpycloserechargemodel-a="3">考虑一下</view>
+                    </view>
+                    <view class="btn btn2 _107135b">
+                        <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn2.png" style="width:210rpx;height:63rpx"></image>
+                        <view bindtap="$recharge1$goToSenior" class="fontBtn _107135b">去高级场</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="wrap _107135b _c79a72c" wx:if="{{isTooMuch}}">
+        <view class="cardSize _107135b" wx:if="{{$recharge2$type==1}}">
+            <view bindtap="$recharge2$closeRechargeModel" class="close _107135b">X</view>
+            <view class="header _107135b">豆子充值</view>
+            <view class="body _107135b">
+                <view class="font _107135b">
+          进入客服回复
+          <text class="b _107135b">"1"</text>充值豆子
+        </view>
+                <view class="fontTwo _107135b">
+          回复
+          <text class="b _107135b">"2"</text>关注公众号领取礼包
+        </view>
+                <view class="groupbtn _107135b">
+                    <view class="btn _107135b">
+                        <button class="button _107135b" openType="contact"></button>
+                        <image class="_107135b" src="../images/index/btn1.png" style="width:210rpx;height:80rpx"></image>
+                        <view class="bigFontSize _107135b"> 关注公众号</view>
+                        <view class="smallFontSize _107135b">（回复2）</view>
+                    </view>
+                    <view class="btn btn2 _107135b">
+                        <button class="button button2 _107135b" openType="contact"></button>
+                        <image class="_107135b" src="../images/index/btn2.png" style="width:210rpx;height:80rpx"></image>
+                        <view class="bigFontSize _107135b"> 充值豆子</view>
+                        <view class="smallFontSize _107135b">（回复1）</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="cardSize _107135b" wx:if="{{$recharge2$type==2}}">
+            <view class="header _107135b">提示</view>
+            <view class="body _107135b">
+                <view class="content,fontConent _107135b">
+          豆子不够用啦！
+        </view>
+                <view class="fontConent _107135b">
+          去泡泡游戏公众号领取吧
+        </view>
+                <view class="btnChild _107135b">
+                    <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                    <view bindtap="$recharge2$closeRechargeModel" class="fontBtn _107135b" data-wpycloserechargemodel-a="2">确认</view>
+                </view>
+            </view>
+        </view>
+        <view class="cardSize _107135b" wx:if="{{$recharge2$type==3}}">
+            <view bindtap="$recharge2$closeRechargeModel" class="close _107135b" data-wpycloserechargemodel-a="3">X</view>
+            <view class="header _107135b">提示</view>
+            <view class="body _107135b">
+                <view class="fontb _107135b">
+          亲，您的实力已炉火纯青，就别在新手区虐菜啦！去参加高级场赚取更多豆子吧。
+        </view>
+                <view class="groupbtn _107135b">
+                    <view class="btn _107135b">
+                        <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn3.png" style="width:210rpx;height:63rpx"></image>
+                        <view bindtap="$recharge2$closeRechargeModel" class="fontBtn _107135b" data-wpycloserechargemodel-a="3">考虑一下</view>
+                    </view>
+                    <view class="btn btn2 _107135b">
+                        <image class="_107135b" src="https://res.xingqiu123.com/hall/card/btn2.png" style="width:210rpx;height:63rpx"></image>
+                        <view bindtap="$recharge2$goToSenior" class="fontBtn _107135b">去高级场</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="wrap _733a170 _c79a72c" wx:if="{{isPlaying}}">
+        <view class="cardSize _733a170">
+            <view class="header _733a170">温馨提示</view>
+            <view class="body _733a170">
+                <view class="font _733a170">
+                    当前正在游戏中，请本局游戏
+                </view>
+                <view class="font _733a170">
+                    结束后继续闯关
+                </view>
+                <view bindtap="$playinggame$closePlaying" class="know _733a170">
+                    <image class="_733a170" src="https://res.xingqiu123.com/img/xcx/Hall/3.5/pass/know.png"></image>
+                    <view class="abknow _733a170">知道了</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4 _c79a72c" wx:if="{{isLoading}}">
+        <view class="image _e6ed6a4">
+            <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+        </view>
+    </view>
+</view>

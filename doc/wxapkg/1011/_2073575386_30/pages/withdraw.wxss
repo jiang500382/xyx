@@ -1,0 +1,379 @@
+.wrap._2fdd952 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+}
+
+.wrap .cardSize._2fdd952 {
+    width: 590rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 590rpx;
+    margin: auto;
+    border-radius: 20rpx;
+    z-index: 99;
+}
+
+.wrap .cardSize .header._2fdd952 {
+    background-color: #a171eb;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    width: 100%;
+    height: 80rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80rpx;
+    color: white;
+}
+
+.wrap .cardSize .body._2fdd952 {
+    padding-top: 80rpx;
+    background: white;
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+}
+
+.wrap .cardSize .body .content._2fdd952 {
+    padding: 26rpx 50rpx;
+    text-align: center;
+    color: #a171eb;
+    font-size: 36rpx;
+}
+
+.wrap .cardSize .body .content .font._2fdd952 {
+    font-weight: bolder;
+}
+
+.wrap .cardSize .body .btnChild._2fdd952 {
+    position: relative;
+    width: 190rpx;
+    height: 63rpx;
+    margin-left: 200rpx;
+    padding-top: 60rpx;
+    padding-bottom: 80rpx;
+}
+
+.wrap .cardSize .body .btnChild image._2fdd952 {
+    width: 190rpx;
+    height: 63rpx;
+}
+
+.wrap .cardSize .body .btnChild .fontBtn._2fdd952 {
+    width: 190rpx;
+    height: 63rpx;
+    position: absolute;
+    top: 60rpx;
+    left: 0;
+    text-align: center;
+    line-height: 63rpx;
+    font-weight: 700;
+    color: white;
+}
+
+@import "../__wuBaseWxss__/2.wxss";
+
+.modalBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    transform: translate(-50%,-50%);
+    line-height: 50rpx;
+    width: 590rpx;
+    height: 430rpx;
+    color: #666;
+    background: rgba(255,255,255,0.9);
+}
+
+.modalX {
+    font-size: 38rpx;
+    padding: 40rpx;
+    color: #a171eb;
+}
+
+.modalT {
+    height: 80rpx;
+    background: #a171eb;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 80rpx;
+    font-size: 40rpx;
+    border-radius: 20rpx 20rpx 0 0;
+}
+
+.modalD {
+    height: 65rpx;
+    width: 100%;
+}
+
+.modalD .modalOne {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.modalD .modalOne image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%);
+    width: 230rpx;
+    height: 63rpx;
+}
+
+.modalD .modalOne button,.modalD .modalTwo button {
+    width: 210rpx;
+    height: 90%;
+    text-align: center;
+    line-height: 58rpx;
+    background: none;
+    color: #fff;
+    z-index: 1;
+    font-size: 30rpx;
+    font-weight: bold;
+    border: 0;
+    border-radius: 40rpx;
+}
+
+.modalD .modalTwo {
+    position: relative;
+    box-sizing: border-box;
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+.modalD .modalTwo image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 210rpx;
+    height: 63rpx;
+}
+
+page {
+    padding-top: 150rpx;
+}
+
+.bigBox {
+    height: 430rpx;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 40rpx;
+    background-color: #fff;
+}
+
+.imgBox {
+    height: 210rpx;
+    width: 100%;
+}
+
+.BigBox {
+    box-sizing: border-box;
+    width: 100%;
+    height: 60rpx;
+    margin-top: 15rpx;
+}
+
+.boxImg {
+    display: inline-block;
+    width: 210rpx;
+    height: 210rpx;
+}
+
+.modalSbox {
+    font-size: 70rpx;
+    font-weight: bold;
+    color: #a171eb;
+}
+
+.interval {
+    width: 100%;
+    height: 20rpx;
+    background-color: #f5f5fa;
+}
+
+.withdrawBox {
+    height: 100rpx;
+    background-color: #fff;
+}
+
+.withBoxOne {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 42%;
+    height: 100%;
+    padding-left: 40rpx;
+    line-height: 100rpx;
+    font-size: 40rpx;
+    color: #666666;
+}
+
+.modal-withdraw {
+    color: #999;
+    font-size: 28rpx;
+}
+
+.active::before {
+    position: absolute;
+    font-size: 50rpx;
+    left: 265rpx;
+    top: 0;
+}
+
+.withBoxTwo {
+    float: right;
+    width: 58%;
+    height: 100%;
+    font-size: 65rpx;
+    font-weight: bold;
+    color: #a171eb;
+}
+
+.withCut {
+    float: right;
+    width: 58%;
+    height: 100%;
+    font-size: 36rpx;
+    color: #cccccc;
+}
+
+.tips {
+    box-sizing: border-box;
+    height: 50rpx;
+    padding-left: 40rpx;
+    line-height: 50rpx;
+    width: 100%;
+}
+
+.tipsLeft {
+    box-sizing: border-box;
+    width: 43%;
+    float: left;
+    font-size: 28rpx;
+    color: #c1c1c5;
+}
+
+.TipsOne {
+    box-sizing: border-box;
+    color: red;
+    font-size: 28rpx;
+}
+
+.tipsRight {
+    width: 24%;
+    float: left;
+    padding-left: 40rpx;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 28rpx;
+    color: #a171eb;
+}
+
+.subBtn {
+    width: 440rpx;
+    height: 80rpx;
+    margin-top: 70rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #a171eb;
+    border-radius: 40rpx;
+}
+
+.subBtn_bg {
+    width: 440rpx;
+    height: 80rpx;
+    margin-top: 70rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: #999;
+    border-radius: 40rpx;
+}
+
+.Modal {
+    top: 340rpx;
+}
+
+.modalT {
+    font-size: 40rpx;
+}
+
+.modalC {
+    font-size: 38rpx;
+    padding: 60rpx 45rpx;
+    color: #a171eb;
+}
+
+.modalD {
+    height: 65rpx;
+    width: 100%;
+    margin-bottom: 50rpx;
+}
+
+.modalOne {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.modalOne image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%);
+    width: 210rpx;
+}
+
+.modalOne button,.modalTwo button {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 58rpx;
+    background: none;
+    color: #fff;
+    z-index: 1;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.modalTwo {
+    position: relative;
+    box-sizing: border-box;
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+.modalTwo image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 210rpx;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #f5f5fa;
+}

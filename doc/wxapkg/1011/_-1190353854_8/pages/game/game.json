@@ -1,0 +1,6 @@
+{
+    "disableScroll": true,
+    "usingComponents": {
+        "notification": "/components/notification/index"
+    }
+}

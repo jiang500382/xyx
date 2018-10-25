@@ -1,0 +1,35 @@
+<view>
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view bindtap="$glorylist$nvgCmpt" class="list" data-com-index="{{index}}" data-id="{{item.gameId}}" data-type="{{index%4}}" wx:for="{{gameList}}" wx:key="key">
+        <view class="gameIcon">
+            <image mode="aspectFill" src="http://paopao.hi-hai.com/img/xcx/gameHall_2.0/home/game_icon_{{item.gameId}}.png"></image>
+        </view>
+        <view class="gameC">
+            <p>{{item.gameName}}</p>
+            <view class="winChip">
+                <ul class="winChipC">
+                    <li>胜率：
+                            <span>{{item.win}}%</span>
+                    </li>
+                    <li>游戏总场数：
+                            <span>{{item.gameNumber}}</span>
+                    </li>
+                </ul>
+                <progress activeColor="#{{$glorylist$color[index%4]}}" backgroundColor="#fff" percent="{{item.win}}" strokeWidth="7"></progress>
+            </view>
+        </view>
+    </view>
+    <view class="noHonor" wx:if="{{gameList.length<=0}}">
+        <image mode="aspectFit" src="http://paopao.hi-hai.com/img/xcx/gameHall_2.0/home/no_honor.png"></image>
+    </view>
+    <view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4" wx:if="{{isLoading}}">
+        <view class="image _e6ed6a4">
+            <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+        </view>
+    </view>
+</view>

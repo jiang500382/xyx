@@ -1,0 +1,90 @@
+module.exports = ({
+    base64_Decode: (function(input) {
+        _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\x3d";
+        var output = "";
+        var chr1;
+        var chr2;
+        var chr3;
+        var enc1;
+        var enc2;
+        var enc3;
+        var enc4;
+        var i = 0;
+        var reg = getRegExp("/[^A-Za-z0-9\x5c+\x5c/\x5c\x3d]", "g");
+        input = input.replace(reg, "");
+        while (i < input.length) {
+            enc1 = _keyStr.indexOf(input.charAt(i++));
+            enc2 = _keyStr.indexOf(input.charAt(i++));
+            enc3 = _keyStr.indexOf(input.charAt(i++));
+            enc4 = _keyStr.indexOf(input.charAt(i++));
+            chr1 = (enc1 << 2) | (enc2 >> 4);
+            chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+            chr3 = ((enc3 & 3) << 6) | enc4;
+            output = output + String.fromCharCode(chr1);
+            if (enc3 != 64) {
+                output = output + String.fromCharCode(chr2)
+            };
+            if (enc4 != 64) {
+                output = output + String.fromCharCode(chr3)
+            }
+        };
+        output = _utf8_decode(output);
+        return (output)
+    }),
+    newArray: (function(length) {
+        length = undefined === length ? 1 : length;
+        return (new);
+        Array(length)
+    }),
+    formatSecond: (function(mss) {
+        var days = parseInt(mss / (1000 * 60 * 60 * 24));
+        var hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = parseInt((mss % (1000 * 60)) / 1000);
+        return (hours + ":" + minutes + ":" + seconds)
+    }),
+    formatSecondToStr: (function(second) {
+        var secondTime = parseInt(second);
+        var minuteTime = 0;
+        var hourTime = 0;
+        if (secondTime > 60) {
+            minuteTime = parseInt(secondTime / 60);
+            secondTime = parseInt(secondTime % 60);
+            if (minuteTime > 60) {
+                hourTime = parseInt(minuteTime / 60);
+                minuteTime = parseInt(minuteTime % 60)
+            }
+        };
+        var str = "";
+        if (hourTime > 0) str += parseInt(hourTime) + "时";;
+        if (minuteTime > 0) str += parseInt(minuteTime) + "分";;
+        str += parseInt(secondTime) + "秒";
+        return (str)
+    }),
+    formatNumeric: (function(numeric, fixedNum) {
+        if (numeric != null) {
+            if (fixedNum == 0) return (Math.round(numeric));;
+            return (parseFloat(numeric).toFixed(fixedNum))
+        }
+    }),
+    parseMoney: (function(numeric) {
+        return (parseFloat(numeric).toFixed(2))
+    }),
+    split: (function(source, splitchar) {
+        if (typeof source == "string") return (source.split(splitchar));
+        else return ([])
+    }),
+    isEmptyOrNull: (function(str) {
+        if (typeof(str) == "undefined" || str == null || str == '' || str == 'undefined') return (true);;
+        return (false)
+    }),
+    replaceNull: (function(val, replaceVal) {
+        replaceVal = undefined === replaceVal ? "暂无" : replaceVal;
+        if (val) return (val);;
+        return (replaceVal)
+    }),
+    displaySecond: (function(second) {
+        var itemDate = getDate(second * 1000);
+        return (itemDate.getFullYear() + "-" + (itemDate.getMonth() + 1) + "-" + itemDate.getDate())
+    }),
+});

@@ -1,0 +1,91 @@
+.indexbroadcast,.chatbroadcast,.temp,.invite {
+    position: relative;
+}
+
+.indexbroadcast {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.broadcastsize {
+    position: absolute;
+    width: 49rpx;
+    height: 37rpx;
+    top: 6rpx;
+    left: 20rpx;
+}
+
+.carousel {
+    padding-left: 70rpx;
+    line-height: 50rpx;
+    font-size: 24rpx;
+}
+
+.marquee {
+    position: relative;
+    width: 100%;
+    height: 50rpx;
+    margin-left: 2px;
+}
+
+.marqueeTitle {
+    position: absolute;
+    top: 10rpx;
+    line-height: 1;
+}
+
+.invite .marqueeTitle {
+    top: 20rpx;
+}
+
+.distance {
+    display: inline-block;
+    margin: 0 40rpx;
+    line-height: 30rpx;
+}
+
+.distance[data-id='3'] .dark {
+    color: #a83e05!important;
+}
+
+.distance[data-id='3'] .name {
+    color: #eb6807!important;
+}
+
+.distance[data-id='-1'] em {
+    color: #b109ef;
+}
+
+@-webkit-keyframes kf-marque-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes kf-marque-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.temp {
+    margin: 0 auto;
+    color: #eb6807;
+    background: transparent;
+    overflow: hidden;
+}
+
+.chatbroadcast {
+    margin: 0 30rpx;
+    color: white;
+    border-radius: 10rpx;
+}

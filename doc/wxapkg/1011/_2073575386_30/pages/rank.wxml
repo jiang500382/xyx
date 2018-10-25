@@ -1,0 +1,84 @@
+<view>
+    <view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+        <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+            <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+        </view>
+        <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+    </view>
+    <view class="meItem">
+        <text class="meItemRanking" wx:if="{{$myrank$user.rank>0}}">NO.{{$myrank$user.rank}}</text>
+        <text class="meItemRanking" wx:else>未上榜</text>
+        <view class="meItemAvator">
+            <image class="headImg" mode="aspectFill" src="{{$myrank$user.icon}}"></image>
+        </view>
+        <text class="meItemName">{{$myrank$user.name}}</text>
+        <text class="meItemMoney">{{$myrank$user.score}}{{$myrank$selected?'元':'局'}}</text>
+    </view>
+    <view class="body">
+        <view class="nav">
+            <view class="navTab">
+                <view bindtap="$tabcut$_typeTab" class="red {{$tabcut$time?'active':''}}" data-wpy_typetab-a="0">周榜</view>
+                <view bindtap="$tabcut$_typeTab" class="red {{!$tabcut$time?'active':''}}" data-wpy_typetab-a="1">总榜</view>
+            </view>
+        </view>
+        <view class="tabNav">
+            <view bindtap="$tabcut$selected" class="tabItem listName">{{$tabcut$nowCfg.name}}</view>
+            <view bindtap="$tabcut$nvgPage" class="tabItem honor" data-wpynvgpage-a="{{$tabcut$nowCfg.id}}">{{$tabcut$nowCfg.item}}</view>
+        </view>
+        <view class="scrollWrap" touchmove="prevent">
+            <scroll-view class="bonusBox" scrollY="true">
+                <image class="sBgImg" mode="widthFix" src="https://res.xingqiu123.com/hall/rank/phbbg.png"></image>
+                <view class="topThree">
+                    <view class="rankAvator first">
+                        <view class="avatorImg">
+                            <image src="{{$topthree$bouTwo.avstar}}"></image>
+                        </view>
+                        <image class="imgTwoOneThree" src="https://res.xingqiu123.com/hall/rank/32.png"></image>
+                        <image class="imgTwoTwo" src="https://res.xingqiu123.com/hall/rank/35.png"></image>
+                        <span class="nameBox nameBoxOne">
+                            <text class="name">{{$topthree$bouTwo.nickname}}</text>
+                            <text class="money">{{$topthree$bouTwo.rank_score}}{{$topthree$selected?'元':'局'}}</text>
+                        </span>
+                    </view>
+                    <view class="rankAvator second">
+                        <view class="avatorImgOne">
+                            <image src="{{$topthree$bouOne.avstar}}"></image>
+                        </view>
+                        <image class="imgOneOne" src="https://res.xingqiu123.com/hall/rank/31.png"></image>
+                        <image class="imgOneTwo" src="https://res.xingqiu123.com/hall/rank/34.png"></image>
+                        <span class="nameBox">
+                            <text class="name">{{$topthree$bouOne.nickname}}</text>
+                            <text class="money" style="color:#fb7f2e">{{$topthree$bouOne.rank_score}}{{$topthree$selected?'元':'局'}}</text>
+                        </span>
+                    </view>
+                    <view class="rankAvator third">
+                        <view class="avatorImg">
+                            <image src="{{$topthree$bouThree.avstar}}"></image>
+                        </view>
+                        <image class="imgTwoOneThree" src="https://res.xingqiu123.com/hall/rank/33.png"></image>
+                        <image class="imgTwoTwo" src="https://res.xingqiu123.com/hall/rank/36.png"></image>
+                        <span class="nameBox nameBoxOne">
+                            <text class="name">{{$topthree$bouThree.nickname}}</text>
+                            <text class="money">{{$topthree$bouThree.rank_score}}{{$topthree$selected?'元':'局'}}</text>
+                        </span>
+                    </view>
+                </view>
+                <view class="rankItem">
+                    <view class="bonusItem" wx:for="{{allRankList}}" wx:key="{{index}}">
+                        <text class="itemRanking">NO.{{item.rank}}</text>
+                        <view class="itemAvator">
+                            <image class="headImg" mode="aspectFill" src="{{item.avstar}}"></image>
+                        </view>
+                        <text class="itemName">{{item.nickname}}</text>
+                        <text class="itemMoney">{{item.rank_score}}{{$rankitem$selected?'元':'局'}}</text>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4" wx:if="{{isLoading}}">
+        <view class="image _e6ed6a4">
+            <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+        </view>
+    </view>
+</view>

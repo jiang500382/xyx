@@ -1,0 +1,170 @@
+<view class="navigationBar {{$header$method}} {{$header$isTall}} _bdb7cee">
+    <view class="wx-arrow_left {{$header$fontColor}} {{$header$tallNav}} _bdb7cee" hidden="{{$header$hiddenBack}}">
+        <view bindtap="$header$navigateBack" class="backFct _bdb7cee" data-item="{{$header$itemType}}"></view>
+    </view>
+    <view class="navigationBarTitleText {{$header$fontColor}} _bdb7cee">{{$header$sceneTitle?$header$sceneTitle:$header$title}}</view>
+</view>
+<view class="header">
+    <image mode="aspectFill" src="http://paopao.hi-hai.com/img/xcx/gameHall/activity/invited/header.png?v=1.1"></image>
+    <view bindtap="showRule" class="detail" data-show="0">
+        <image mode="aspectFill" src="http://paopao.hi-hai.com/img/xcx/gameHall/activity/invited/help.png"></image>
+    </view>
+</view>
+<view class="boxBag">
+    <li bindtap="boxPress" data-id="0" data-item="邀请{{boxData[0].goal}}人即可抽取百元大奖哦。" data-text="邀请{{boxData[0].goal}}人" data-type="{{boxData[0].state}}">
+        <view class="boxIcon"></view>
+        <view class="boxNote">
+            <em>{{shareCount>boxData[0].goal?boxData[0].goal:shareCount}}</em>/{{boxData[0].goal}}
+      </view>
+    </li>
+    <li bindtap="boxPress" data-id="1" data-item="邀请{{boxData[1].goal}}人即可抽取千元大奖哦。" data-text="邀请{{boxData[1].goal}}人" data-type="{{boxData[1].state}}">
+        <view class="boxIcon"></view>
+        <view class="boxNote">
+            <em>{{shareCount>boxData[1].goal?boxData[1].goal:shareCount}}</em>/{{boxData[1].goal}}
+      </view>
+    </li>
+    <li bindtap="boxPress" data-id="2" data-item="邀请{{boxData[2].goal}}人即可抽取万元大奖哦。" data-text="邀请{{boxData[2].goal}}人" data-type="{{boxData[2].state}}">
+        <view class="boxIcon"></view>
+        <view class="boxNote">
+            <em>{{shareCount>boxData[2].goal?boxData[2].goal:shareCount}}</em>/{{boxData[2].goal}}
+      </view>
+    </li>
+</view>
+<view class="shareInfo">
+    <p>邀请好友，点击红包抽大奖</p>
+    <view class="invitedUser">
+        <scroll-view class="slideBox" hidden="{{!userData.length}}" scrollX="true">
+            <view class="userIcon" wx:for="{{userData}}" wx:key="user">
+                <image mode="aspectFill" src="{{item}}"></image>
+            </view>
+        </scroll-view>
+        <view class="noFriend" hidden="{{userData.length}}">
+            <image mode="aspectFill" src="http://paopao.hi-hai.com/img/xcx/noFriend.png"></image>
+        </view>
+    </view>
+    <button bindtap="share" class="invited" openType="share">邀请抽大奖</button>
+    <view class="boast">
+        <view class="{{$boast$method}}">
+            <view class="broadcastsize" wx:if="{{$boast$type!=3}}">
+                <image mode="aspectFill" src="{{$boast$boastImg}}"></image>
+            </view>
+            <view class="carousel" wx:if="{{$boast$type==1||$boast$type==3||$boast$type==4}}">
+                <view class="marquee" style="margin-left:{{$boast$marqueeMargin}}rpx;white-space: nowrap;overflow:hidden;">
+                    <view class="marqueeTitle" style="{{$boast$orientation}}:{{$boast$marqueeDistance}}rpx;font-size: {{$boast$size}}rpx ;animation: kf-marque-animation {{$boast$marquee_time}}s linear infinite;">
+                        <block wx:for="{{$boast$message}}" wx:key="index">
+                            <block wx:if="{{item.type==8}}">
+                                <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.award_type==1}}">恭喜
+                    <text class="name" style="color: #66ffdd;">{{item.name}}</text>成功抽中
+                    <text class="dark" style="color: #ffff66;">{{item.award}}个豆子</text>
+                                </view>
+                                <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.award_type==2}}">恭喜
+                    <text class="name" style="color: #66ffdd;">{{item.name}}</text>成功抽中
+                    <text class="dark" style="color: #ffff66;">{{item.award}}元红包</text>
+                                </view>
+                                <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.award_type==4}}">恭喜
+                    <text class="name" style="color: #66ffdd;">{{item.name}}</text>成功抽中
+                    <text class="dark" style="color: #ffff66;">iPhone X</text>
+                                </view>
+                            </block>
+                            <view class="distance" data-id="{{$boast$type}}" wx:if="{{item.type==7}}">恭喜
+                  <text class="name" style="color: #66ffdd;">{{item.name}}</text>用兑换券领取了
+                  <text class="dark" style="color: #ffff66;">{{item.award}}元红包</text>
+                            </view>
+                            <view class="distance" wx:if="{{item.type==5}}">
+                                <text style="color: #66ffdd;">{{item.name}}</text>
+                  达到{{item.winField}}胜局,获得了
+                  <text style="color: #ffff66;">{{item.award}}元红包</text>
+                            </view>
+                            <view class="distance" wx:elif="{{item.type==4}}">
+                                <text style="color: #66ffdd;">{{item.name}}</text>
+                  在
+                  <text style="color: #ffff66;">{{item.gameName}}</text>天梯赛获得了
+                  <text style="color: #ffff66;">{{item.award}}元奖励</text>
+                            </view>
+                            <view class="distance" wx:elif="{{item.type==2}}">
+                                <text style="color: #66ffdd;">{{item.name}}</text>
+                  在{{item.gameName}}获得了
+                  <text style="color: #ffff66;">{{item.award}} 元奖励</text>
+                            </view>
+                            <view class="distance" wx:elif="{{item.type==1}}">
+                                <text style="color: #66ffdd;">{{item.name}}</text>
+                  在红包赛获得了
+                  <text style="color: #ffff66;">{{item.award}}元奖励</text>
+                            </view>
+                            <view class="distance" data-id="{{item.type}}" wx:elif="{{item.type==-1}}">恭喜{{item.name}}<em>获得了{{item.award}}元奖金</em>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+            <view class="carousel" wx:if="{{$boast$type==2}}">
+                <swiper autoplay="{{$boast$autoplay}}" circular="{{$boast$circular}}" class="changeheight" duration="{{$boast$duration}}" indicatorDots="{{$boast$indicatorDots}}" interval="{{$boast$interval}}" vertical="{{$boast$vertical}}">
+                    <swiper-item wx:for="{{$boast$message}}" wx:key="index">
+                        <view class="message">
+                            <text class="nameColor">{{item.sender.nickname}}</text>
+                            <text class="colon">:</text>
+                            <text>{{item.content.content}}</text>
+                        </view>
+                    </swiper-item>
+                </swiper>
+            </view>
+            <view bindtap="$boast$jumpToChat" class="gotosquare" wx:if="{{$boast$isSquare}}">
+                <image src="https://res.xingqiu123.com/hall/boast/gotosquare.png"></image>
+                <view class="GoToS">进入广场</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="Mask" wx:if="{{isModal}}">
+    <view class="modal">
+        <view class="modalT">{{$pop$modalData.title}}</view>
+        <view class="modalC" wx:if="{{$pop$modalData.type==1}}">
+            <view class="modalImg" wx:if="{{$pop$modalData.image}}"></view>
+            <view class="note" style="text-align:{{item.text_align}}" wx:for="{{$pop$modalData.text}}" wx:key="text">{{item.note}}</view>
+            <view class="subBtn">
+                <button bindtap="$pop$_submit" class="certainBtn btn">{{$pop$modalData.btnText?$pop$modalData.btnText:'确认'}}</button>
+            </view>
+            <view bindtap="$pop$_checkToggle" class="checkBox" data-status="{{$pop$modalData.Checkbox.status}}" wx:if="{{$pop$modalData.Checkbox.disp}}">
+					{{$pop$modalData.Checkbox.note}}
+				</view>
+        </view>
+        <view class="modalC" wx:if="{{$pop$modalData.type==2}}">
+            <view class="noteT2" style="text-align:{{item.text_align}}" wx:for="{{$pop$modalData.text}}" wx:key="text">{{item.note}}</view>
+            <view class="btnGroup">
+                <view class="btnChild">
+                    <image src="https://res.xingqiu123.com/hall/card/btn3.png"></image>
+                    <view bindtap="$pop$_submit" class="fontBtn">先不玩了</view>
+                </view>
+                <view class="btn2"></view>
+                <view class="btnChild">
+                    <navigator appId="wx17e66e26685ed5d0" bindtap="$pop$goToPlayGame" target="miniProgram">
+                        <image src="https://res.xingqiu123.com/hall/card/btn2.png"></image>
+                        <view class="fontBtn">去玩游戏 </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="Mask" wx:if="{{isInviteModal}}">
+    <view class="modal">
+        <view class="modalT">{{$invitePop$modalData.title}}</view>
+        <view class="modalC">
+            <view class="modalP" style="text-align:{{$invitePop$modalData.introAlign}}">{{$invitePop$modalData.intro}}</view>
+            <view class="mmpd">
+                <view class="modalItem" wx:for="{{$invitePop$modalData.text}}" wx:key="text">
+                    <view style="width:{{$invitePop$modalData.imageConfig.width}}rpx;height:{{$invitePop$modalData.imageConfig.width}}rpx;margin:0 auto;background-image:url('{{$invitePop$modalData.image}}');background-size:{{$invitePop$modalData.imageConfig.size}}%;background-position-x:{{item.position}}%"></view>
+                    <view class="note" style="text-align:{{item.text_align}}">{{item.note}}</view>
+                </view>
+            </view>
+            <view class="subBtn">
+                <button bindtap="$invitePop$_submit" class="certainBtn btn">{{$invitePop$modalData.btnText?$invitePop$modalData.btnText:'确认'}}</button>
+            </view>
+        </view>
+    </view>
+</view>
+<view catchtouchmove="$loading$catchTouchMove" class="wrap _e6ed6a4" wx:if="{{isLoading}}">
+    <view class="image _e6ed6a4">
+        <image class="_e6ed6a4" src="../images/common/loding.gif"></image>
+    </view>
+</view>
