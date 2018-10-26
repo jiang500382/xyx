@@ -2,17 +2,27 @@ package com.xyx.base;
 
 import java.io.Serializable;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 
 public class XyxRespone implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private Integer code;
-	private Long time;
-	private String message;
-	private JSONObject value;
-	private String key;
+	protected Integer code;
+	protected Long time;
+	protected String message;
+	protected JSONObject value;
+	protected String key;
+	protected JSONArray array;
 	
+	public JSONArray getArray() {
+		return array;
+	}
+
+	public void setArray(JSONArray array) {
+		this.array = array;
+	}
+
 	public String getKey() {
 		return key;
 	}
@@ -22,25 +32,58 @@ public class XyxRespone implements Serializable {
 	}
 
 	public XyxRespone(String str) throws Exception{
+		init(str);
+	}
+	
+	public XyxRespone(JSONObject jre) throws Exception{
+		init(jre);
+	}
+	
+	public  void init(String str) throws Exception{
 		JSONObject jre = null;
 		try{
 			jre = JSONObject.parseObject(str);
 		}catch(Exception e){
 			throw new Exception("reponse is not json");
 		}
+		init(jre);
+	}
+	
+	public void init(JSONObject jre) throws Exception{
 		this.code = jre.getInteger("code");
 		this.time = jre.getLong("time");
 		this.message = jre.getString("message");
-		this.value = jre.getJSONObject("value");
+		getData(jre,"data");
 	}
 	
-	public boolean checkSuccess(){
+	protected void getData(JSONObject jre,String key){
+		try{
+			value = jre.getJSONObject(key);
+			array = null;
+		}catch(Exception e){
+			array = jre.getJSONArray(key);
+			value = null;
+		}
+	}
+	
+	public boolean checkSuccess()  throws Exception{
+		return checkSuccess(true);
+	}
+	
+	public boolean checkSuccess(boolean execption) throws Exception{
 		if( code == 200 ){
 			return true;
 		}else{
-			return false;
+			if(execption){
+				throw new Exception(message);
+			}else{
+				return false;
+			}
+			
 		}
 	}
+	
+
 	
 	
 	public JSONObject toJSONObject(){

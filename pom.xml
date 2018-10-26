@@ -63,5 +63,7 @@
 		<module>xyx-base</module>
 		<module>xyx-plgy</module>
 		<module>xyx-poker-pdk</module>
+		<module>xyx-scyj</module>
+		
 	</modules>
 </project>

@@ -38,44 +38,51 @@ import com.alibaba.fastjson.JSONObject;
 public class XyxHttpClient {
 	private CookieStore cookieStore = new BasicCookieStore();
 	private CloseableHttpClient httpCilent;
-
+	private Exception httpCilentException;
+	
 	private RequestConfig postRequestConfig;
 	private RequestConfig getRequestConfig;
-	
-	private Map<String,String> urlencodedHeader = new HashMap<String,String>();
-	private Map<String,String> jsonHeader = new HashMap<String,String>();
 
+	private Map<String, String> urlencodedHeader = new HashMap<String, String>();
+	private Map<String, String> jsonHeader = new HashMap<String, String>();
 
-	public XyxHttpClient() throws Exception{
+	public XyxHttpClient() {
 		this(false);
 	}
-	
-	public XyxHttpClient(boolean https) throws Exception {
-		urlencodedHeader.put("content-type", "application/x-www-form-urlencoded");
-		jsonHeader.put("content-type", "application/json;charset=UTF-8");
-		setTimeout(5000);
-		
-		HttpClientBuilder httpClientBuilder = HttpClients.custom().setDefaultCookieStore(cookieStore);
-		
-		if( https ){
-			ignoreVerifySSL(httpClientBuilder);
+
+	public XyxHttpClient(boolean https) {
+		try {
+			urlencodedHeader.put("content-type", "application/x-www-form-urlencoded");
+			jsonHeader.put("content-type", "application/json;charset=UTF-8");
+			setTimeout(5000);
+
+			HttpClientBuilder httpClientBuilder = HttpClients.custom().setDefaultCookieStore(cookieStore);
+
+			if (https) {
+				ignoreVerifySSL(httpClientBuilder);
+			}
+			httpCilent = httpClientBuilder.build();
+
+		} catch (Exception e) {
+			httpCilent = null;
+			httpCilentException = e;
 		}
-		httpClientBuilder.build();
 	}
-	
-	public void setTimeout(int timeout){
-		setTimeout(timeout,timeout,timeout);
+
+	public void setTimeout(int timeout) {
+		setTimeout(timeout, timeout, timeout);
 	}
-	
-	public void setTimeout(int connectTimeout,int requestTimeout,int socketTimeout){
-		postRequestConfig = RequestConfig.custom().setConnectTimeout(connectTimeout).setConnectionRequestTimeout(requestTimeout)
-				.setSocketTimeout(socketTimeout).setRedirectsEnabled(true).build();
-		getRequestConfig = RequestConfig.custom().setConnectTimeout(connectTimeout).setConnectionRequestTimeout(requestTimeout)
-				.setSocketTimeout(socketTimeout).setRedirectsEnabled(true).build();
+
+	public void setTimeout(int connectTimeout, int requestTimeout, int socketTimeout) {
+		postRequestConfig = RequestConfig.custom().setConnectTimeout(connectTimeout)
+				.setConnectionRequestTimeout(requestTimeout).setSocketTimeout(socketTimeout).setRedirectsEnabled(true)
+				.build();
+		getRequestConfig = RequestConfig.custom().setConnectTimeout(connectTimeout)
+				.setConnectionRequestTimeout(requestTimeout).setSocketTimeout(socketTimeout).setRedirectsEnabled(true)
+				.build();
 	}
-	
-	
-	private String phaseReponse2string(HttpResponse response) throws Exception{
+
+	private String phaseReponse2string(HttpResponse response) throws Exception {
 		if (response == null) {
 			return null;
 		}
@@ -87,66 +94,69 @@ public class XyxHttpClient {
 		}
 	}
 
-	public JSONObject phase2json(String str) throws Exception{
-		if( str == null ){
+	public JSONObject phase2json(String str) throws Exception {
+		if (str == null) {
 			return null;
-		}else{
-			return JSONObject.parseObject( str );
+		} else {
+			return JSONObject.parseObject(str);
 		}
 	}
-	
+
 	public JSONObject postJSON(String url, String body) throws Exception {
-		return phase2json(post(url,body));
+		return phase2json(post(url, body));
 	}
-	
+
 	public JSONObject postJSON(String url, JSONObject body) throws Exception {
-		return phase2json(post(url,body));
+		return phase2json(post(url, body));
 	}
-	
+
 	public JSONObject postJSON(String url, String body, Map<String, String> headers) throws Exception {
-		return phase2json(post(url,body,headers));
+		return phase2json(post(url, body, headers));
 	}
-	
+
 	public JSONObject postJSON(String url, HttpEntity entity, Map<String, String> headers) throws Exception {
-		return phase2json(post(url,entity,headers));
+		return phase2json(post(url, entity, headers));
 	}
-	
+
 	public String post(String url, String body) throws Exception {
-		StringEntity entity =null;
-		if( body != null ){
-			entity = new StringEntity(body) ;
+		StringEntity entity = null;
+		if (body != null) {
+			entity = new StringEntity(body);
 		}
-		return post(url,entity,urlencodedHeader);
+		return post(url, entity, urlencodedHeader);
 	}
-	
+
 	public String post(String url, JSONObject body) throws Exception {
-		StringEntity entity =null;
-		if( body != null ){
-			entity = new StringEntity(body.toString()) ;
+		StringEntity entity = null;
+		if (body != null) {
+			entity = new StringEntity(body.toString());
 		}
-		return post(url,entity,jsonHeader);
+		return post(url, entity, jsonHeader);
 	}
-	
+
 	public String post(String url, String body, Map<String, String> headers) throws Exception {
-		StringEntity entity =null;
-		if( body != null ){
-			entity = new StringEntity(body) ;
+		StringEntity entity = null;
+		if (body != null) {
+			entity = new StringEntity(body);
 		}
-		return post(url,entity,headers);
+		return post(url, entity, headers);
 	}
-	
+
 	public String post(String url, HttpEntity entity, Map<String, String> headers) throws Exception {
+		if( httpCilent == null){
+			throw httpCilentException;
+		}
 		HttpPost httpPost = new HttpPost(url);
-		
 		try {
 			httpPost.setConfig(postRequestConfig);
 			for (String key : headers.keySet()) {
 				httpPost.addHeader(key, headers.get(key));
-			};
-			if( entity != null){
+			}
+			;
+			if (entity != null) {
 				httpPost.setEntity(entity);
 			}
-			
+
 			HttpResponse httpResponse = httpCilent.execute(httpPost);
 			if (httpResponse != null) {
 				int code = httpResponse.getStatusLine().getStatusCode();
@@ -155,41 +165,45 @@ public class XyxHttpClient {
 					String newuri = header.getValue();
 					newuri = newuri + "&" + entity.toString();
 					return get(newuri, headers);
-				//	return post(newuri, entity, headers);
+					// return post(newuri, entity, headers);
 				}
 			}
 			String str = phaseReponse2string(httpResponse);
-			
+
 			return str;
 		} catch (Exception e) {
 			throw e;
 		} finally {
-			httpPost.abort();
+			try{
+				httpPost.abort();
+			}catch(Exception e){}
 		}
 	}
-	
+
 	public JSONObject getJSON(String url) throws Exception {
 		return phase2json(get(url));
 	}
-	
-	public JSONObject getJSON(String url,Map<String, String> headers) throws Exception {
-		return phase2json(get(url,headers));
+
+	public JSONObject getJSON(String url, Map<String, String> headers) throws Exception {
+		return phase2json(get(url, headers));
 	}
-	
+
 	public String get(String url) throws Exception {
-		return get(url,new HashMap<String, String>());
+		return get(url, new HashMap<String, String>());
 	}
 
-	public String get(String url,Map<String, String> headers) throws Exception {
-
+	public String get(String url, Map<String, String> headers) throws Exception {
+		if( httpCilent == null){
+			throw httpCilentException;
+		}
 		HttpGet httpGet = new HttpGet(url);
-		
 		try {
 			httpGet.setConfig(getRequestConfig);
 			for (String key : headers.keySet()) {
 				httpGet.addHeader(key, headers.get(key));
-			};
-			
+			}
+			;
+
 			HttpResponse httpResponse = httpCilent.execute(httpGet);
 			if (httpResponse != null) {
 				int code = httpResponse.getStatusLine().getStatusCode();
@@ -199,23 +213,23 @@ public class XyxHttpClient {
 					return get(newuri, headers);
 				}
 			}
-			String str = phaseReponse2string( httpResponse);
+			String str = phaseReponse2string(httpResponse);
 			return str;
 		} catch (Exception e) {
 			throw e;
 		} finally {
-			httpGet.abort();
+			try{
+				httpGet.abort();
+			}catch(Exception e){}
 		}
 	}
-
 
 	public void createCookie(List<BasicClientCookie> cookielist) {
 		for (BasicClientCookie cookie : cookielist) {
 			cookieStore.addCookie(cookie);
 		}
 	}
-	
-	
+
 	/**
 	 * 绕过验证
 	 * 
@@ -223,27 +237,26 @@ public class XyxHttpClient {
 	 * @throws NoSuchAlgorithmException
 	 * @throws KeyManagementException
 	 */
-	
-	public void ignoreVerifySSL(HttpClientBuilder httpClientBuilder) throws Exception{
-			SSLContext sslcontext = createIgnoreVerifySSL();
-			// 设置协议http和https对应的处理socket链接工厂的对象
-			Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.<ConnectionSocketFactory> create()
-					.register("http", PlainConnectionSocketFactory.INSTANCE)
-					// .register("https", new
-					// SSLConnectionSocketFactory(sslcontext))
-					// 正常的SSL连接会验证码所有证书信息
-					// .register("https", new
-					// SSLConnectionSocketFactory(sslcontext)).build();
-					// 只忽略域名验证码
-					.register("https", new SSLConnectionSocketFactory(sslcontext, NoopHostnameVerifier.INSTANCE))
 
-					.build();
-			PoolingHttpClientConnectionManager connManager = new PoolingHttpClientConnectionManager(
-					socketFactoryRegistry);
-			HttpClients.custom().setConnectionManager(connManager);
-			httpClientBuilder.setConnectionManager(connManager);
+	public void ignoreVerifySSL(HttpClientBuilder httpClientBuilder) throws Exception {
+		SSLContext sslcontext = createIgnoreVerifySSL();
+		// 设置协议http和https对应的处理socket链接工厂的对象
+		Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.<ConnectionSocketFactory> create()
+				.register("http", PlainConnectionSocketFactory.INSTANCE)
+				// .register("https", new
+				// SSLConnectionSocketFactory(sslcontext))
+				// 正常的SSL连接会验证码所有证书信息
+				// .register("https", new
+				// SSLConnectionSocketFactory(sslcontext)).build();
+				// 只忽略域名验证码
+				.register("https", new SSLConnectionSocketFactory(sslcontext, NoopHostnameVerifier.INSTANCE))
+
+				.build();
+		PoolingHttpClientConnectionManager connManager = new PoolingHttpClientConnectionManager(socketFactoryRegistry);
+		HttpClients.custom().setConnectionManager(connManager);
+		httpClientBuilder.setConnectionManager(connManager);
 	}
-	
+
 	public SSLContext createIgnoreVerifySSL() throws NoSuchAlgorithmException, KeyManagementException {
 		SSLContext sc = SSLContext.getInstance("SSLv3");
 
@@ -270,4 +283,3 @@ public class XyxHttpClient {
 	}
 
 }
-

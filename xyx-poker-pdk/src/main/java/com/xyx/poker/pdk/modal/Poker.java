@@ -1,36 +1,36 @@
 package com.xyx.poker.pdk.modal;
 
 public class Poker {
-	private String name;
-	private Integer value;
-	private Integer color;
+	private PokerEnum name;
+	private PokerColorEnum color;
 	
-	public Poker(String name){
+	public Poker(PokerEnum name){
 		this(name,null);
 	}
 			
-	public Poker(String name,Integer color){
+	public Poker(PokerEnum name,PokerColorEnum color){
+		this.name = name;
+		this.color = color;
 		
 	}
-	
-	public String getName() {
+
+	public PokerEnum getName() {
 		return name;
 	}
-	public void setName(String name) {
+
+	public void setName(PokerEnum name) {
 		this.name = name;
 	}
-	public Integer getValue() {
-		return value;
-	}
-	public void setValue(Integer value) {
-		this.value = value;
-	}
-	public Integer getColor() {
+
+	public PokerColorEnum getColor() {
 		return color;
 	}
-	public void setColor(Integer color) {
+
+	public void setColor(PokerColorEnum color) {
 		this.color = color;
 	}
+	
+	
 	
 	
 }
