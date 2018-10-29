@@ -3,8 +3,21 @@ package com.xyx.base.util;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class XyxUtil {
+	
+	static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
+	
+	public static void log(String msg){
+		System.out.println(sdf.format(new Date()) + ","+msg);
+	}
+	
+	public static void err(String msg){
+		System.out.println(sdf.format(new Date()) + ",Err:"+msg);
+	}
+	
 	public static String md5(String str) throws NoSuchAlgorithmException {
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update(str.getBytes());
@@ -36,6 +49,18 @@ public class XyxUtil {
 		double r = Math.random() * randomTime;
 		long sleepTime = (long)r + fixedTime;
 		sleep( sleepTime );
+	}
+	
+	
+	public static String getStrTime(){
+		Date now = new Date();
+		return sdf.format(now);
+	}
+	
+	static SimpleDateFormat sdf_file = new SimpleDateFormat("yyyyMMdd_HHmmss"); 
+	public static String getFilenNameTinm(){
+		Date now = new Date();
+		return sdf_file.format(now);
 	}
 	
 }

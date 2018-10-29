@@ -10,13 +10,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class XyxFileUtil {
+	
 	public static List<String> read(String fileName) throws Exception {
+		File file = new File(fileName);
+		return read(file);
+	}
+	
+	public static List<String> read(File file) throws Exception {
 		List<String> list = new ArrayList<String>();
 		BufferedReader br = null;
 		InputStreamReader reader = null;
 		FileInputStream stream = null;
 		try {
-			File file = new File(fileName);
 			stream = new FileInputStream(file);
 			reader = new InputStreamReader( stream );
 			br = new BufferedReader(reader);
@@ -50,11 +55,21 @@ public class XyxFileUtil {
 	}
 	
 	public static void write(String fileName,List<String> list) throws Exception {
-
+		File file = new File(fileName);
+		write(file,list);
+	}
+	
+	public static void write(File file,List<String> list) throws Exception {
 		FileWriter writer = null;
 		BufferedWriter out = null;
 		try {
-			File file = new File(fileName);
+
+	        if (!file.getParentFile().exists()) {
+	            boolean result = file.getParentFile().mkdirs();
+	            if (!result) {
+	               throw new Exception("mkdir failed");
+	            }
+	        }
 			writer = new FileWriter(file);
 			
 			out = new BufferedWriter(writer);
