@@ -1,0 +1,3 @@
+{"uid":19517,"last_time_diff":"7200","flag":true,"money":"4.94","diff_time":0.71,"current_time":1540881050,"is_sign":"0","money_total":"4.94","last_get_time":1540819513}
+{"uid":1388,"last_time_diff":"7200","flag":true,"money":"3.55","diff_time":0.65,"current_time":1540881052,"is_sign":"0","money_total":"3.55","last_get_time":1540824700}
+{"uid":414,"last_time_diff":"7200","flag":true,"money":"3.03","diff_time":21.9,"current_time":1540881055,"is_sign":"0","money_total":"3.03","last_get_time":1538988084}

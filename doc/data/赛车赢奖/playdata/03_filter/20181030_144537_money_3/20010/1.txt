@@ -1,0 +1,5 @@
+{"uid":5176,"last_time_diff":"7200","flag":true,"money":"5.52","diff_time":11.95,"current_time":1540871217,"is_sign":"0","money_total":"5.52","last_get_time":1539838233}
+{"uid":22281,"last_time_diff":"7200","flag":true,"money":"3.01","diff_time":0.91,"current_time":1540871241,"is_sign":"0","money_total":"3.01","last_get_time":1540792296}
+{"uid":7907,"last_time_diff":"7200","flag":true,"money":"4.47","diff_time":1.12,"current_time":1540871243,"is_sign":"0","money_total":"4.47","last_get_time":1540773779}
+{"uid":27946,"last_time_diff":"1252","flag":true,"money":"4.97","diff_time":0.01,"current_time":1540871263,"is_sign":"1","money_total":"4.97","last_get_time":1540870010}
+{"uid":28559,"last_time_diff":"161","flag":true,"money":"4.34","diff_time":0,"current_time":1540871271,"is_sign":"1","money_total":"4.34","last_get_time":1540871110}

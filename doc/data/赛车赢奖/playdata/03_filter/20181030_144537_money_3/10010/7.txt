@@ -1,0 +1,2 @@
+{"uid":22157,"last_time_diff":"7200","flag":true,"money":"3.90","diff_time":1.72,"current_time":1540872191,"is_sign":"0","money_total":"3.90","last_get_time":1540722760}
+{"uid":13744,"last_time_diff":"7200","flag":true,"money":"3.56","diff_time":16.76,"current_time":1540872225,"is_sign":"0","money_total":"3.56","last_get_time":1539423963}
