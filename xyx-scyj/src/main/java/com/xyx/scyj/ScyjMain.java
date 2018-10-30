@@ -37,6 +37,8 @@ public class ScyjMain {
 		if( lf == null ){
 			throw new Exception("no files in dir 01_mapping_ok");
 		}
+
+		
 		Scyj scyj = new Scyj(0);
 		for(int i=0;i<lf.length;i++){
 			if( lf[i].getName().equals("success.txt")){
@@ -51,13 +53,15 @@ public class ScyjMain {
 			
 			String  wf = ds + lf[i].getName().replace(".txt", "") + "/";
 			
+			XyxUtil.log("scan,user num="+uids.size());
+			
 			for(Integer uid : uids){
+				if(( uid < min ) || ( uid > max ) ){
+					continue;
+				}
 				index += 1;
 				if( index % 100 == 0 ){
 					XyxUtil.log("index="+index);
-				}
-				if(( uid < min ) || ( uid > max ) ){
-					continue;
 				}
 				scyj.setUid(uid);
 				try{
@@ -70,12 +74,16 @@ public class ScyjMain {
 					XyxUtil.err(js.toString() );
 				}
 				if( index % pageNum == 0 ){
-					XyxFileUtil.write(wf+(index/pageNum-1)+".txt", datas);
-					datas.clear();
+					String filename=wf+(index/pageNum-1)+".txt";
+					XyxUtil.log("write file,fileName="+filename);
+					XyxFileUtil.write( filename , datas);
+					datas = new ArrayList<String>();
 				}
 			}
 			if( datas.size() > 0 ){
-				XyxFileUtil.write(wf+index/pageNum+".txt", datas);
+				String filename=wf+index/pageNum+".txt";
+				XyxUtil.log("write file,fileName="+filename);
+				XyxFileUtil.write(filename, datas);
 			}
 			
 			XyxUtil.log("scan success,fileName="+lf[i].getName());
@@ -114,6 +122,10 @@ public class ScyjMain {
 				for(String str:lstr){
 					try{
 						JSONObject js = JSONObject.parseObject(str);
+						Integer uid = js.getInteger("uid");
+						if((uid==null) || ( uid < min ) || ( uid > max ) ){
+							continue;
+						}
 						Double diff_time_i = js.getDouble("diff_time");
 						Double money_i = js.getDouble("money");
 						if( (diff_time_i==null) || ( money_i == null ) ){
@@ -178,6 +190,9 @@ public class ScyjMain {
 						Integer uid = js.getInteger("uid");
 						if( uid==null){
 							throw new Exception("uid=null");
+						}
+						if( ( uid < min ) || ( uid > max ) ){
+							throw new Exception("uid out of range");
 						}
 						scyj.setUid(uid);
 						data = scyj.getCurrentData();

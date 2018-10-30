@@ -1,5 +1,0 @@
-{"uid":7924,"last_time_diff":"7200","flag":true,"money":"5.65","diff_time":4.5,"current_time":1540727593,"money_total":"5.65","last_get_time":1540338481}
-{"uid":3739,"last_time_diff":"7200","flag":true,"money":"4.77","diff_time":16.4,"current_time":1540727642,"money_total":"4.77","last_get_time":1539310091}
-{"uid":3362,"last_time_diff":"3527","flag":true,"money":"3.89","diff_time":0.04,"current_time":1540727653,"money_total":"3.89","last_get_time":1540724126}
-{"uid":8563,"last_time_diff":"7200","flag":true,"money":"3.64","diff_time":0.35,"current_time":1540727660,"money_total":"3.64","last_get_time":1540697042}
-{"uid":10471,"last_time_diff":"7200","flag":true,"money":"3.13","diff_time":19.02,"current_time":1540727661,"money_total":"3.13","last_get_time":1539084287}

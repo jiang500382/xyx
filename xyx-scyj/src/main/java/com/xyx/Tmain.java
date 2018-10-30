@@ -15,20 +15,18 @@ public class Tmain {
 			int min = 10;
 			int max = 37000;
 
-			boolean debug = true;
+			boolean debug = false;
 			if (!debug) {
 				if (args.length == 4) {
-					type = args[1];
-					dir = args[2];
-					min = Integer.parseInt(args[3]);
-					max = Integer.parseInt(args[4]);
-					return;
+					type = args[0];
+					dir = args[1];
+					min = Integer.parseInt(args[2]);
+					max = Integer.parseInt(args[3]);
 				} else if (args.length == 2) {
-					type = args[1];
-					dir = args[2];
+					type = args[0];
+					dir = args[1];
 					min = 0;
 					max = Integer.MAX_VALUE;
-					return;
 				} else {
 					System.out.println("./scyj  type dir  min max");
 					return;
@@ -45,12 +43,15 @@ public class Tmain {
 				break;
 			case "filter":
 				sm.filter(40,-1);
-		//		scan.filter(0,3);
+				break;
+			case "filter2":
+				sm.filter(0,3);
 				break;
 			case "play":
 				sm.play(30);
-				break;			
+				break;		
 			default:
+				System.out.println("not support,type="+type);
 				break;
 			}
 
@@ -72,11 +73,8 @@ public class Tmain {
 			// System.out.println(scyj.play());
 			// System.out.println(scyj.putForward());
 			//
-		//	 String sn = scyj.putForward();
-//			 System.out.println("sn=" + sn);
-			 
-			 String sn = "TX20181028220927854884";
-			 //	 String sn = "TX20181029134015683190";
+			 String sn = scyj.putForward();
+			 System.out.println("sn=" + sn);
 			 scyj.tx(sn, openid);
 
 		} catch (Exception e) {
